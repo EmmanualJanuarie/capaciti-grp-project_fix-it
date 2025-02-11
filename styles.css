@@ -1,0 +1,170 @@
+/* --  HTML Styles -- */
+html {
+    background-color: white !important; /*changing background color of html doc*/
+}
+
+/* Body tag styles */
+.navbar{
+    background-color: white; 
+}
+
+.navbar-item, #cat_dropdown{
+    color:#676767;
+}
+
+#wrentch_logo{
+    color: orange;
+}
+
+.navbar-start{
+    position: relative;
+    left:200px;
+
+    /* Size of font for navitems */
+    font-size: 18px;
+    bottom:20px;
+}
+
+.navbar-end{
+    position: relative;
+    right:50px;
+
+    /* Size of font for navitems */
+    font-size: 18px;
+    bottom:20px;
+}
+
+#nav_Section{
+    max-height:100%;
+    height:120px;
+    background-color: white;
+}
+
+/* Removing the dropdown color and setting to orange */
+.navbar-dropdown, .dropdown-items {
+    background-color: #676767 !important;
+    color:white;
+}
+
+.signup-btn{
+    background-color:orange; 
+    color:white;
+
+    border-color: #676767;
+}
+
+/* Logo Styling */
+.navbar-brand{
+    font-size: 30px;
+
+    font-weight: bold;
+
+    /* Positionng of brand/ icon */
+    position: relative;
+    left: 3%;
+    bottom:25px;
+}
+
+.navbar-link, a.navbar-item {
+    background-color: white;
+}
+
+/* Corousel Styling */
+.container{
+    padding:0rem;
+}
+
+.slider-wrapper{
+    position: relative;
+    max-width: 86vw;
+    margin: 0 auto;
+}
+
+.slider{
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left:50%;
+    transform: translate(-50%);
+    z-index: 1;
+}
+
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}
+
+@keyframes slide {
+    0%{
+        left:0;
+    }
+    10%{
+        left:0;
+    }
+    20%{
+        left:-100%;
+    }
+    30%{
+        left:-100%;
+    }
+    40%{
+        left:-200%;
+    }
+    50%{
+        left:-200%;
+    }
+    55%{
+        left:-300%;
+    }
+    65%{
+        left:-300%;
+    }
+    66%{
+        left:-200%;
+    }
+    74%{
+        left:-200%;
+    }
+    75%{
+        left:-100%;
+    }
+    85%{
+        left:-100%;
+    }
+    90%{
+        left:0;
+    }
+    100%{
+        left:0;
+    }
+}
+
+/* --- Effects --- */
+.navbar-start a.navbar-item:hover, #cat_dropdown:hover{
+    color:orange;
+}
