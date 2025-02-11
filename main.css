@@ -1,0 +1,45 @@
+/* --  HTML Styles -- */
+html {
+    background-color: white !important; /*changing background color of html doc*/
+}
+
+.hero {
+    background-image: linear-gradient(120deg, white 50%, orange 50%);
+    height: 100vh;
+}
+
+.logo{
+    font-size: 60px;
+
+    font-weight: bold;
+
+    /* Positionng of brand/ icon */
+    position: relative;
+    left: 3%;
+    bottom:0px;
+}
+#brand_name{
+    color: orange;
+}
+
+#card1, #card2{
+    width:30vw;
+}
+
+/* positioing of the column */
+.column{
+    position:relative;
+    left:120px;
+    bottom:170px;
+}
+
+#card2{
+    position:relative;
+    left:20px;
+    bottom:10px;  
+}
+
+#card1, #card2{
+    box-shadow: 1px 1px 4px #676767;
+}
+

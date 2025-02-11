@@ -1,6 +1,7 @@
 /* --  HTML Styles -- */
 html {
     background-color: white !important; /*changing background color of html doc*/
+    overflow-x: hidden;
 }
 
 /* Body tag styles */
