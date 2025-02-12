@@ -1,3 +1,9 @@
+
+*{
+    margin:0;
+    padding: 0;
+}
+
 /* --  HTML Styles -- */
 html {
     background-color: white !important; /*changing background color of html doc*/
@@ -5,9 +11,19 @@ html {
     overflow-x: hidden;
 }
 
+/* Positioning of hero */
 .hero {
-    background-image: linear-gradient(120deg, white 50%, orange 50%);
-    height: 100vh;
+    height: 420px;
+}
+
+/* Styling for footer information */
+#footer_info{
+    position: relative;
+    bottom: 260px;
+    left: 600px;
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
 }
 
 .logo{
@@ -22,26 +38,54 @@ html {
 }
 #brand_name{
     color: orange;
+    text-shadow: 1px 2px 10px grey ;
 }
 
-#card1, #card2{
-    width:30vw;
+#section_nav{
+    height:20vh;
 }
 
-/* positioing of the column */
-.column{
-    position:relative;
-    left:120px;
-    bottom:170px;
+/* grid card styling */
+.card {
+    padding: 2rem;
+    border: 1px solid rgb(75, 82, 92);
+    border-radius: 10px;
+    background-color: black;
+    text-align: center;
 }
 
-#card2{
-    position:relative;
-    left:20px;
-    bottom:10px;  
+/* card content styling */
+.card-content {
+    padding: 0rem;
+    font-size: 1.2rem; /* Adjust the font size */
+    color: white; /* Ensure text is visible on black background */
 }
 
-#card1, #card2{
-    box-shadow: 1px 1px 4px #676767;
+/* grid container styling */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 500px);
+    gap: 105px;
+    justify-content: center;
+}
+    
+/* Styling for services button */
+#services_btn{
+    position: relative;
+    top:20px;   
+}
+
+/* -- NAVBAR ITEMS -- */
+.navbar-start{
+    position: relative;
+    left:200px;
+
+    /* Size of font for navitems */
+    font-size: 30px;
+    bottom:110px;
+}
+
+.navbar-item{
+    background-color: #FFF9ED;
 }
 
