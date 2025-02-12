@@ -11,20 +11,16 @@ html {
     overflow-x: hidden;
 }
 
-/* Positioning of hero */
-.hero {
-    height: 420px;
-}
-
+/* Bottom part of screen info */
 /* Styling for footer information */
-#footer_info{
+ #footer_info{
     position: relative;
-    bottom: 260px;
+    bottom: 60vh;
     left: 600px;
     color: white;
     font-size: 27px;
     font-weight: bold;
-}
+} 
 
 .logo{
     font-size: 60px;
