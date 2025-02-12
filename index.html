@@ -22,38 +22,71 @@
     <title>fix it</title>
 </head>
 <body>
-    <!-- Body for landing page -->
-    <section class="hero is-fullheight">
-        <div class="logo">
-            <span id="brand_name">fix it</span>
-        </div>
+    <!-- NAVIGATION BAR SECTION -->
+     <section class="hero" id="section_nav">
+      <div class="logo">
+        <span id="brand_name">fix it.</span>
 
-        <div class="columns is-gap">
-            <div class="column" id="column2">
-                <div class="card" id="card1">
-                    <div class="card-content">
-                      <div class="content">
-                            <h1>Enhance Your Home Experience with Certified Professionals</h1>
-                            <p>Transform your home life by hiring certified professionals to tackle everyday tasks and menial jobs around your house.
-                               Let us help you elevate your living space with ease and convenience.</p>
-                               <button class="button" style="background-color: #676767;" id="more_btn">See more</button>
-                      </div>
-                    </div>
-                  </div>
-            </div>
+        <!-- NAVBAR SECTION [START] -->
+        <div class="hero-body">
+          <!-- Navigation bar code -->
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div id="navbarBasicExample" class="navbar-menu">
+                  <div class="navbar-start">
+                    <a class="navbar-item">
+                      Home
+                      </a>
+                      <a class="navbar-item">
+                      About
+                      </a>
+              
+                      <a class="navbar-item">
+                      Services
+                      </a>
 
-            <div class="column">
-                <div class="card" id="card2" style="background-color: white;">
-                    <div class="card-content">
-                      <div class="content">
-                        <img src="/src/img/loading_page.jpg" alt="">
-                      </div>
-                    </div>
+                      <a class="navbar-item">
+                          Contact
+                      </a>
                   </div>
-            </div>
+                </div>
+            </nav>    
         </div>
+        <!-- NAVBAR SECTION [END] -->
+
+      </div>
+     </section>
+
+     <!-- COLUMN SECTION -->
+     <section class="hero is-large" id="column_section">
+      <div class="grid-container">
+        <div class="card">
+          <div class="card-content">
+            <div class="content">
+              <h1>Enhance Your Home Experience with <u>Certified</u> Professionals</h1>
+              <p>Transform your home life by hiring certified professionals to tackle everyday tasks and menial jobs around your house.
+                 Let us help you elevate your living space with ease and convenience.</p>
+                <button class="button" style="background-color: #676767;" id="more_btn">See more</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" id="img_card" style="background-color: white;">
+          <img src="/src/img/loading_page.jpg" alt="">
+        </div>
+      </div>
     </section>
-    
+
+    <!-- FOOTER SECTION -->
+    <section class="hero" id="footer_section">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="orange" fill-opacity="1" d="M0,64L48,58.7C96,53,192,43,288,53.3C384,64,480,96,576,106.7C672,117,768,107,864,101.3C960,96,1056,96,1152,112C1248,128,1344,160,1392,176L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+      </svg>
+
+      <span id="footer_info">
+        <h1>Why struggle, just <span style="color: black; font-weight: bold;">fix it.</span></h1>
+      </span></section>
+
+
+
     <!-- adding main script -->
      <script src="/script.js"></script>
 </body>
