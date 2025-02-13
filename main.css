@@ -14,12 +14,14 @@ html {
 /* Bottom part of screen info */
 /* Styling for footer information */
  #footer_info{
-    position: relative;
-    bottom: 60vh;
-    left: 600px;
+    position: absolute;
+    top: 110%;
+    left: 40%;
     color: white;
     font-size: 27px;
     font-weight: bold;
+
+    z-index: 1;
 } 
 
 .logo{
@@ -77,11 +79,129 @@ html {
     left:200px;
 
     /* Size of font for navitems */
-    font-size: 30px;
+    font-size: 27px;
     bottom:110px;
+
 }
 
 .navbar-item{
     background-color: #FFF9ED;
 }
+
+/* Arrow down styling */
+#angle_down{
+    font-size: 80px;
+
+    position: relative;
+    left: 47%;
+    top: 50px;
+
+    /* changing color of font icon */
+    color: orange;
+}
+
+/* Hover effect for font-icon */
+#angle_down:hover{
+    border-radius: 90px 60px 60px 90px;
+    background-color: #656565;
+
+    width:4vw;
+    cursor: pointer;
+}
+
+.navbar-end{
+    position: relative;
+    right:50px;
+
+    /* Size of font for navitems */
+    font-size: 18px;
+    bottom:110px;   
+}
+
+.navbar-item {
+    background-color: white;
+}
+
+/* Styling for Signup and signin forms */
+.signup-form-container, .signin-form-container{
+    display: grid;  
+    gap: 105px;
+    justify-content: end;
+
+    /* positioning the form */
+    position: fixed;
+    bottom: 30%;
+    right: 0; /* Add this line to position the form on the right */
+
+    z-index: 1;
+
+    display: none;
+
+    /* Add transition for smooth effect */
+}
+
+.signin-form-container{
+    position: fixed;
+    bottom: 46.7%;
+}
+
+#sign_up_form_card{
+    width: 30vw;
+    background-color: orange !important;
+}
+
+#sign_in_form_card{
+    width: 30vw;
+    background-color: #656565 !important;
+}
+.signup-form > input, .signin-form > input{
+    background-color: white;
+    color: black;
+}
+
+form > input::placeholder {
+    color:#656565 !important;
+}
+#Signup_header_text, #Signin_header_text{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#reset_btn{
+    background-color: snow;
+}
+
+#reset_btn:hover{
+    background-color: #dcdcdc;
+}
+
+#submit_btn{
+    background-color: #656565;
+    color:white;
+}
+
+#submit_btn:hover{
+    background-color: lightgray ;
+    color:black;
+}
+
+.buttons{
+    display: flex;
+    justify-content:center;
+
+}
+
+#signinBtn_section > #submit_btn{
+    background-color: orange;
+}
+
+#signinBtn_section > #submit_btn:hover{
+    background-color: #ffae42;
+}
+
+svg{
+    position: relative;
+    top: 2vh; 
+}
+
 
