@@ -76,10 +76,10 @@
                 <div class="navbar-end">
                     <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button signup-btn">
+                        <a class="button signup-btn" id="signupBtn">
                         <strong>Sign up</strong>
                         </a>
-                        <a class="button is-light" style="background-color: #636363; color:white;">
+                        <a class="button is-light" id="loginBtn" style="background-color: #636363; color:white;">
                         Log in
                         </a>
                     </div>
@@ -93,25 +93,82 @@
 
        <!-- SEARCH BAR SECTION [START] -->
        <section class="hero is-large container" style="background-color: white;">
-        <div class="slider-wrapper">
-            <div class="slider">
+
+        <!-- Code for sign up form -->
+      <div class="signup-form-container" id="signup_container">
+        <div class="card" id="sign_up_form_card">
+          <div class="card-content">
+            <span id="Signup_header_text">Sign Up</span><br><br>
+            <form class="signup-form">
+              <input class="input" type="text" placeholder="First Name" /><br> <br>
+              <input class="input" type="text" placeholder="Last Name" /><br> <br>
+              <input class="input" type="email" placeholder="Email Address" /><br> <br>
+              <input class="input" type="email" placeholder="Password" /><br> <br>
+
+              <div class="buttons">
+                <input class="button is-primary" id="reset_btn" type="reset" value="Clear" />
+                <input class="button is-primary" id="submit_btn" type="submit" value="Sign Up" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+       <!-- Code for sign up form -->
+       <div class="signin-form-container" id="signin_container">
+        <div class="card" id="sign_in_form_card">
+          <div class="card-content">
+            <span id="Signin_header_text">Sign In</span><br><br>
+            <form class="signin-form">
+              <input class="input" type="email" placeholder="Email Address" /><br> <br>
+              <input class="input" type="email" placeholder="Password" /><br> <br>
+
+              <div class="buttons" id="signinBtn_section">
+                <input class="button is-primary" id="reset_btn" type="reset" value="Clear" />
+                <input class="button is-primary" id="submit_btn" type="submit" value="Sign In" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-wrapper">
+        <div class="slider">
+            <div class="img-container active">
                 <img id="slide-1" src="../../src/img/enis-yavuz-tZtgozUpZZc-unsplash.jpg">
+            </div>
+            <div class="img-container">
                 <img id="slide-2" src="../../src/img/erol-ahmed-d3pTF3r_hwY-unsplash.jpg">
+            </div>
+            <div class="img-container">
                 <img id="slide-3" src="../../src/img/javier-allegue-barros-55bVEzGVnzY-unsplash.jpg">
             </div>
-            <div class="slider-nav">
-                <a href="#slide-1"></a>
-                <a href="#slide-2"></a>
-                <a href="#slide-3"></a>
-            </div>
         </div>
-        <div class="hero-body">
-          
-        </div>
+    </div>
+
+    <div class="field has-addons has-addons-centered">
+        <p class="control">
+          <span class="select">
+            <select>
+              <option>$</option>
+              <option>£</option>
+              <option>€</option>
+            </select>
+          </span>
+        </p>
+        <p class="control">
+          <input class="input" type="text" placeholder="Amount of money">
+        </p>
+        <p class="control">
+          <button class="button is-primary">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </p>
+      </div>
+
       </section>
-      <!-- SEARCH BAR SECTION [START] -->
     
 <!-- Adding script for js file -->
- <script rel="text/script" src="/App/home-page/home-page.js"></script>
+ <script rel="text/javascript" src="/App/home-page/home-page.js"></script>
 </body>
 </html>
