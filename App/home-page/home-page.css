@@ -13,12 +13,13 @@ html {
     color:#676767;
 }
 
+
 .navbar-start{
     position: relative;
     left:200px;
 
     /* Size of font for navitems */
-    font-size: 18px;
+    font-size: 27px;
     bottom:34px;
 }
 
@@ -28,7 +29,7 @@ html {
 
     /* Size of font for navitems */
     font-size: 18px;
-    bottom:20px;
+    bottom:30px;
 }
 
 #nav_Section{
@@ -41,6 +42,10 @@ html {
 .navbar-dropdown, .dropdown-items {
     background-color: #676767 !important;
     color:white;
+}
+
+.navbar-dropdown{
+    font-size: 20px;
 }
 
 .signup-btn{
@@ -74,102 +79,134 @@ html {
     background-color: white;
 }
 
-/* Corousel Styling */
-.container{
-    padding:0rem;
+/* -- Corousel Styling -- */
+.container {
+    padding: 0rem;
 }
 
-.slider-wrapper{
-    position: relative;
-    max-width: 86vw;
-    margin: 0 auto;
-}
-
-.slider{
+.slider-wrapper {
+    overflow: hidden;
+    height: 800px;
+    width: 90vw;
+    margin-left: 6px;
+    margin-top: 20px;
     display: flex;
-    aspect-ratio: 16 / 9;
-    overflow-x: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
     border-radius: 0.5rem;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    aspect-ratio: 16 / 9;
+
+    position: relative;
+    right: 240px;
 }
 
-.slider img{
-    flex: 1 0 100%;
-    scroll-snap-align: start;
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.img-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.slider-nav{
-    display: flex;
-    column-gap: 1rem;
-    position: absolute;
-    bottom: 1.25rem;
-    left:50%;
-    transform: translate(-50%);
-    z-index: 1;
-}
-
-.slider-nav a{
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: 0.75;
-    transition: opacity ease 250ms;
-}
-
-.slider-nav a:hover {
+.img-container.active {
     opacity: 1;
 }
 
-@keyframes slide {
-    0%{
-        left:0;
-    }
-    10%{
-        left:0;
-    }
-    20%{
-        left:-100%;
-    }
-    30%{
-        left:-100%;
-    }
-    40%{
-        left:-200%;
-    }
-    50%{
-        left:-200%;
-    }
-    55%{
-        left:-300%;
-    }
-    65%{
-        left:-300%;
-    }
-    66%{
-        left:-200%;
-    }
-    74%{
-        left:-200%;
-    }
-    75%{
-        left:-100%;
-    }
-    85%{
-        left:-100%;
-    }
-    90%{
-        left:0;
-    }
-    100%{
-        left:0;
-    }
+/* Keyframes for fade animation */
+@keyframes fade {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
 }
 
 /* --- Effects --- */
 .navbar-start a.navbar-item:hover, #cat_dropdown:hover{
     color:orange;
+}
+
+/* Styling for Signup and signin forms */
+.signup-form-container, .signin-form-container{
+    display: grid;  
+    gap: 105px;
+    justify-content: end;
+
+    /* positioning the form */
+    position: fixed;
+    bottom: 30%;
+    right: 0; /* Add this line to position the form on the right */
+
+    z-index: 1;
+
+    display: none;
+
+    /* Add transition for smooth effect */
+}
+
+.signin-form-container{
+    position: fixed;
+    bottom: 46.7%;
+}
+
+#sign_up_form_card{
+    width: 30vw;
+    background-color: orange !important;
+}
+
+#sign_in_form_card{
+    width: 30vw;
+    background-color: #656565 !important;
+}
+.signup-form > input, .signin-form > input{
+    background-color: white;
+    color: black;
+}
+
+form > input::placeholder {
+    color:#656565 !important;
+}
+#Signup_header_text, #Signin_header_text{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#reset_btn{
+    background-color: snow;
+}
+
+#reset_btn:hover{
+    background-color: #dcdcdc;
+}
+
+#submit_btn{
+    background-color: #656565;
+    color:white;
+}
+
+#submit_btn:hover{
+    background-color: lightgray ;
+    color:black;
+}
+
+.buttons{
+    display: flex;
+    justify-content:center;
+
+}
+
+#signinBtn_section > #submit_btn{
+    background-color: orange;
+}
+
+#signinBtn_section > #submit_btn:hover{
+    background-color: #ffae42;
 }
