@@ -146,28 +146,70 @@
         </div>
     </div>
 
-    <div class="field has-addons has-addons-centered">
-        <p class="control">
-          <span class="select">
-            <select>
-              <option>$</option>
-              <option>£</option>
-              <option>€</option>
-            </select>
-          </span>
-        </p>
-        <p class="control">
-          <input class="input" type="text" placeholder="Amount of money">
-        </p>
-        <p class="control">
-          <button class="button is-primary">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </p>
+      <!-- Search bar container card -->
+      <div class="card" id="searchbar-container">
+        <div class="card-content">
+          <i class="fa-solid fa-magnifying-glass" id="search_icon"></i><input class="input" id="services_input" type="text" placeholder="Tutor, Plumber, Mechanic...">
+          <i class="fa-solid fa-location-dot" id="loaction_icon"></i><input class="input"  id="provinces_input" type="text" placeholder="Provinces">
+
+          <a class="button signup-btn" id="searchBtn">
+            <strong>Search</strong>
+          </a>
+
+          <p class="vl"></p>
+        </div>
       </div>
 
-      </section>
-    
+      <!--Card Section-->
+      <div class="container-wrapper">
+        <div class="slider-wrapper">
+          <div class="card-list">
+            <div class="card-item card-shadow" onclick="toGardner()">
+              <div class="icon-container" id="gardner_icon">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+              <h2>Gardner</h2>
+            </div>
+            <div class="card-item card-shadow" onclick="toTutor()">
+              <div class="icon-container" id="tutor_icon">
+                <i class="fa-solid fa-person-chalkboard"></i>
+              </div>
+              <h2>Tutor</h2>
+            </div>
+            <div class="card-item card-shadow" onclick="toTechnician()">
+              <div class="icon-container" id="computer_icon">
+                <i class="fa-solid fa-computer"></i>
+              </div>
+              <h2>Technician</h2>
+            </div>
+            <div class="card-item card-shadow" onclick="toMechanic()">
+              <div class="icon-container">
+                <i class="fa-solid fa-toolbox" id="mechanic_icon"></i>
+              </div>
+              <h2>Mechanic</h2>
+            </div>
+            <div class="card-item card-shadow" onclick="toPlumber()">
+              <div class="icon-container" id="plumber_icon">
+                <i class="fa-solid fa-faucet-drip"></i>
+              </div>
+              <h2>Plumber</h2>
+            </div>
+            <div class="card-item card-shadow" onclick="toPlumber()">
+              <div class="icon-container" id="plumber_icon">
+                <i class="fa-solid fa-faucet-drip"></i>
+              </div>
+              <h2>Plumber</h2>
+            </div>
+            <div class="card-item card-shadow" onclick="toPlumber()">
+              <div class="icon-container" id="plumber_icon">
+                <i class="fa-solid fa-faucet-drip"></i>
+              </div>
+              <h2>Plumber</h2>
+            </div>
+            
+          </div>
+        </div>
+    </section>
 <!-- Adding script for js file -->
  <script rel="text/javascript" src="/App/home-page/home-page.js"></script>
 </body>
