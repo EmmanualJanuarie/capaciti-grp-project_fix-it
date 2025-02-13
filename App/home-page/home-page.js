@@ -39,14 +39,51 @@ function toggleSigninform() {
 }
 
 // --- courosel js code -----
-let currentIndex = 0;
-    const slides = document.querySelectorAll('.img-container');
-    const totalSlides = slides.length;
+let currentCardIndex = 0;
+const cards = document.querySelectorAll('.card-item');
+const totalCards = cards.length;
 
-    function showNextSlide() {
-        slides[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + 1) % totalSlides;
-        slides[currentIndex].classList.add('active');
-    }
+function showNextCard() {
+  const currentCard = cards[currentCardIndex];
 
-    setInterval(showNextSlide, 5000); // Change slide every 3 seconds
+  currentCardIndex = (currentCardIndex + 1) % totalCards;
+
+  // Move the current card to the end of the list after it fades out
+  setTimeout(() => {
+    currentCard.style.left = `${totalCards * 220}px`;
+    currentCard.style.position = 'relative';
+    currentCard.style.left = '0';
+    document.querySelector('.card-list').appendChild(currentCard);
+  }, 1000); // Adjust this timing to match the transition duration
+}
+
+// Initialize first card
+cards[0].classList.add('fade-in');
+
+setInterval(showNextCard, 3000); 
+
+
+setInterval(showNextCard, 3000); // Change card every 3 seconds
+
+
+
+// -- functions for the services cards
+function toGardner(){
+    window.location.href = "#Gardner";
+}
+
+function toTutor(){
+    window.location.href = "#Tutor";
+}
+
+function toTechnician(){
+    window.location.href = "#Technician";
+}
+
+function toMechanic(){
+    window.location.href = "#Mechanic";
+}
+
+function toPlumber(){
+    window.location.href = "#Plumber";
+}
