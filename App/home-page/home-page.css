@@ -95,8 +95,10 @@ html {
     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
     aspect-ratio: 16 / 9;
 
+    justify-content: center;
+
     position: relative;
-    right: 240px;
+    right: 190px;
 }
 
 .slider {
@@ -128,6 +130,7 @@ html {
     0%, 100% { opacity: 0; }
     50% { opacity: 1; }
 }
+
 
 /* --- Effects --- */
 .navbar-start a.navbar-item:hover, #cat_dropdown:hover{
@@ -209,4 +212,191 @@ form > input::placeholder {
 
 #signinBtn_section > #submit_btn:hover{
     background-color: #ffae42;
+    height: 6vh;
 }
+
+/* --- Search bar section --- */
+#provinces_input{
+    width:25vw;
+    margin-left: 60px;
+    background-color: white;
+    color:#656565;
+}
+
+#search_icon{
+    font-size: 20px;
+    position: relative;
+    top: 9px;
+}
+
+#services_input{
+    width:25vw;
+    margin-left: 20px;  
+    background-color: white;
+    color:#656565;
+}
+
+#loaction_icon{
+    font-size: 20px;
+    position: relative;
+    top: 9px;
+    left: 28px;
+
+    box-shadow: 0px 1px 0px 0px white;
+}
+
+#searchbar-container{
+    position: relative;
+    bottom: 400px;
+    background-color: white;
+}
+
+.vl {
+    border-left: 2px solid grey;
+    height: 60px;
+    margin-left: 20px;
+
+    position: absolute;
+    left: 540px;
+    bottom:16px;
+}
+
+#searchBtn{
+    margin-left: 20px;
+    width: 180px;
+}
+
+.card-content > input::placeholder{
+    color:#656565;
+}
+
+/* featured services cards */
+
+.card-list {
+    display: flex;
+    flex-direction: grid;
+    align-items: center; 
+    gap: 20px;
+    width: 100%; 
+}
+
+.card-list .card-item {
+    background-color: white;
+    background: orange(230, 162, 37);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-item:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    transform: translateY(-10px); /* Added transform for hover effect */
+}
+
+
+#mechanic_icon{
+    font-size: 40px;
+}
+#tutor_icon{
+    font-size:40px
+}
+#gardner_icon{
+    font-size:35px
+}
+#computer_icon{
+    font-size: 40px;
+}
+#plumber_icon{
+    font-size: 40px;
+}
+
+.icon-container{
+    background-color:white;
+    border-radius: 100px;
+    height:13vh;
+    width:8vw;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.card-list .card-item .user-icon{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    border: 3px solid #fff;
+    padding:4px;
+
+    
+}
+.container-wrapper{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 30vh;
+
+    position: relative;
+    bottom: 300px;
+}
+
+
+.card-list .card-item .btn{
+    font-size: 1.25 rem;
+    padding:10px 35px;
+    color:lightgrey;
+    border-radius: 6px;
+    font-weight: 150;
+    cursor: pointer;
+    background:gray;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+
+}
+.card-list .card-item .btn:hover{
+    background:rgb(206, 103, 13);
+    border: 1px solid white;
+    color:#fff;
+}
+
+.card-item:hover{
+   cursor: pointer;
+}
+
+.slider-wrapper{
+    box-shadow: none;
+}
+
+.card-shadow{
+    box-shadow: 0 1rem 1rem -0.75rem hsla(0, 0%, 0%, 0.25);
+}
+
+
+/* -- Carousel Styling -- */
+.container-wrapper {
+    width: 200vw;
+  }
+  
+  .slider-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-list {
+    display: flex;
+    transition: transform 1s ease-in-out;
+  }
+  
+  
