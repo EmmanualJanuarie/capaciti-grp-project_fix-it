@@ -38,15 +38,19 @@ function toggleSigninform() {
     }
 }
 
-// --- courosel js code -----
+// --- courosel js code for services images-----
 let currentCardIndex = 0;
 const cards = document.querySelectorAll('.card-item');
 const totalCards = cards.length;
+
+// For diagnostic checks
+console.log("There are: " + totalCards + " cards active");
 
 function showNextCard() {
   const currentCard = cards[currentCardIndex];
 
   currentCardIndex = (currentCardIndex + 1) % totalCards;
+    console.log("What card index we at -> " + currentCardIndex);
 
   // Move the current card to the end of the list after it fades out
   setTimeout(() => {
@@ -57,13 +61,46 @@ function showNextCard() {
   }, 1000); // Adjust this timing to match the transition duration
 }
 
+// --- courosel js code for main image carousel -----
+let currentIndex = 0;
+    const slides = document.querySelectorAll('.img-container');
+    const totalSlides = slides.length;
+    function showNextSlide() {
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % totalSlides;
+        slides[currentIndex].classList.add('active');
+    }
+    setInterval(showNextSlide, 5000); // Change slide every 3 seconds
+
 // Initialize first card
 cards[0].classList.add('fade-in');
 
-setInterval(showNextCard, 3000); 
-
-
 setInterval(showNextCard, 3000); // Change card every 3 seconds
+
+
+
+// --- courosel js code for services cards-----
+let featured_currentCardIndex = 0;
+const feature_cards = document.querySelectorAll('.services-card-item');
+const feature_totalCards = feature_cards.length;
+
+function showNext_FeatureServicesCard() {
+  const feture_currentCard = feature_cards[currentCardIndex];
+
+  currentCardIndex = (currentCardIndex + 1) % feature_totalCards;
+
+  // Move the current card to the end of the list after it fades out
+  setTimeout(() => {
+    feture_currentCard.style.left = `${totalCards * 220}px`;
+    feture_currentCard.style.position = 'relative';
+    feture_currentCard.style.left = '0';
+    document.querySelector('.services-card-list').appendChild(feture_currentCard);
+  }, 1000); // Adjust this timing to match the transition duration
+}
+
+setInterval(showNext_FeatureServicesCard, 3000); // Change slide every 3 seconds
+
+
 
 
 
