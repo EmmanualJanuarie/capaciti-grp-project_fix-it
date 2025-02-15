@@ -7,11 +7,20 @@
     <!-- CDN Link for Bulma.io -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
 
+    <!-- CDN Link for Bulma carousel -->
+    <link href="~bulma-carousel/dist/css/bulma-carousel.min.css" rel="stylesheet">
+
     <!-- Fav icon for website fix it  -->
     <link rel="icon" type="image/x-icon" href="../../src/img/wrench.png">
 
+    <!-- Swipper CDN Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
     <!-- font awesome link for css file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
+
+    <!-- Link for google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
 
     <!-- Adding link for css file -->
      <link rel="stylesheet" href="/App/home-page/home-page.css">
@@ -20,200 +29,251 @@
 </head>
 <body>
 
-   <!--                            NAVBAR SECTION [START]                           -->
-   <section class="hero" id="nav_Section">
+  <!--                            NAVBAR SECTION [START]                           -->
+  <section class="section">
     <div class="hero-body">
-       <!-- Navigation bar code -->
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-            <a class="navbar-item" id="navbar_logo" href="/App/home-page/home-page.html">
-                fix it.
-            </a>
-            </div>
-        
-            <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item">
-                About
-                </a>
-        
-                <a class="navbar-item">
-                Services
-                </a>
+      <!-- Navigation bar code -->
+       <nav class="navbar" role="navigation" aria-label="main navigation">
+           <div class="navbar-brand">
+           <a class="navbar-item" id="navbar_logo" href="/App/home-page/home-page.html">
+               fix it.
+           </a>
+           </div>
+       
+           <div id="navbarBasicExample" class="navbar-menu">
+           <div class="navbar-start">
+               <a class="navbar-item">
+               About
+               </a>
+       
+               <a class="navbar-item">
+               Services
+               </a>
 
-                <a class="navbar-item">
-                    Contact
-                </a>
-        
-                <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link" id="cat_dropdown">
-                    Browse by category
-                </a>
-        
-                <div class="navbar-dropdown">
-                    <a class="navbar-item dropdown-items">
-                        Medical
-                    </a>
-                    <a class="navbar-item dropdown-items">
-                        Engineering
-                    </a>
-                    <a class="navbar-item dropdown-items">
-                        Education 
-                    </a>   
-                    <a class="navbar-item dropdown-items">
-                        Information Technology
-                    </a>  
-                    <a class="navbar-item dropdown-items" >
-                        Finance
-                    </a> 
-                    <a class="navbar-item dropdown-items">
-                        Odd Jobs
-                    </a>
-                </div>
-                </div>
-            </div>
-        
-            <div class="navbar-end">
-                <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button signup-btn" id="signupBtn">
-                    <strong>Sign up</strong>
-                    </a>
-                    <a class="button is-light" id="loginBtn" style="background-color: #636363; color:white;">
-                    Log in
-                    </a>
-                </div>
-                </div>
-            </div>
-            </div>
-        </nav>    
+               <a class="navbar-item">
+                   Contact
+               </a>
+       
+               <div class="navbar-item has-dropdown is-hoverable">
+               <a class="navbar-link" id="cat_dropdown">
+                   Browse by category
+               </a>
+       
+               <div class="navbar-dropdown">
+                   <a class="navbar-item dropdown-items">
+                       Medical
+                   </a>
+                   <a class="navbar-item dropdown-items">
+                       Engineering
+                   </a>
+                   <a class="navbar-item dropdown-items">
+                       Education 
+                   </a>   
+                   <a class="navbar-item dropdown-items">
+                       Information Technology
+                   </a>  
+                   <a class="navbar-item dropdown-items" >
+                       Finance
+                   </a> 
+                   <a class="navbar-item dropdown-items">
+                       Odd Jobs
+                   </a>
+               </div>
+               </div>
+           </div>
+       
+           <div class="navbar-end">
+               <div class="navbar-item">
+               <div class="buttons">
+                   <a class="button signup-btn" id="signupBtn">
+                   <strong>Sign up</strong>
+                   </a>
+                   <a class="button is-light" id="loginBtn" style="background-color: #636363; color:white;">
+                   Log in
+                   </a>
+               </div>
+               </div>
+           </div>
+           </div>
+       </nav>    
+   </div>
+  </section>
+
+  <!--                                   NAVBAR SECTION [END]                          -->
+
+ 
+ <!--                       SEARCH BAR SECTION [START]                                  -->
+  <section class="section is-large container">
+    <div class="slider-wrapper">
+      <div class="slider">
+          <div class="img-container active">
+              <img id="slide-1" src="../../src/img/mechanic.png">
+          </div>
+          <div class="img-container">
+              <img id="slide-2" src="../../src/img/hairdresser.png">
+          </div>
+          <div class="img-container">
+              <img id="slide-3" src="../../src/img/tutor.png">
+          </div>
+          <div class="img-container">
+            <img id="slide-4" src="../../src/img/gardener.png">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Search bar container card -->
+    <div class="card " id="searchbar-container">
+      <div class="card-content">
+        <i class="fa-solid fa-magnifying-glass" id="search_icon"></i><input class="input" id="services_input" type="text" placeholder="Tutor, Plumber, Mechanic...">
+        <i class="fa-solid fa-location-dot" id="loaction_icon"></i><input class="input"  id="provinces_input" type="text" placeholder="Provinces">
+    
+        <a class="button signup-btn" id="searchBtn">
+          <strong>Search</strong>
+        </a>
+      </div>
     </div>
   </section>
-<!--                                   NAVBAR SECTION [END]                          -->
 
+  <!--                       SEARCH BAR SECTION [START]                                  -->
 
-<!--                       SEARCH BAR SECTION [START]                                  -->
-<section class="hero container" style="background-color: white;">
-
-  <!-- Code for sign up form -->
-<div class="signup-form-container" id="signup_container">
-  <div class="card" id="sign_up_form_card">
-    <div class="card-content">
-      <span id="Signup_header_text">Sign Up</span><br><br>
-      <form class="signup-form">
-        <input class="input" type="text" placeholder="First Name" /><br> <br>
-        <input class="input" type="text" placeholder="Last Name" /><br> <br>
-        <input class="input" type="email" placeholder="Email Address" /><br> <br>
-        <input class="input" type="email" placeholder="Password" /><br> <br>
-
-        <div class="buttons">
-          <input class="button is-primary" id="reset_btn" type="reset" value="Clear" />
-          <input class="button is-primary" id="submit_btn" type="submit" value="Sign Up" />
+  <!---                                 Card Section                          -->
+  <section class="section is-small" id="services_card">
+    <div class="container-wrapper">
+      <div class="slider-wrapper">
+        <div class="card-list">
+          <div class="card-item card-shadow" onclick="toGardner()">
+            <div class="icon-container" id="gardner_icon">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <h2>Gardener</h2>
+          </div>
+          <div class="card-item card-shadow" onclick="toTutor()">
+            <div class="icon-container" id="tutor_icon">
+              <i class="fa-solid fa-person-chalkboard"></i>
+            </div>
+            <h2>Tutor</h2>
+          </div>
+          <div class="card-item card-shadow" onclick="toTechnician()">
+            <div class="icon-container" id="computer_icon">
+              <i class="fa-solid fa-computer"></i>
+            </div>
+            <h2>Technician</h2>
+          </div>
+          <div class="card-item card-shadow" onclick="toMechanic()">
+            <div class="icon-container">
+              <i class="fa-solid fa-toolbox" id="mechanic_icon"></i>
+            </div>
+            <h2>Mechanic</h2>
+          </div>
+          <div class="card-item card-shadow" onclick="toPlumber()">
+            <div class="icon-container" id="plumber_icon">
+              <i class="fa-solid fa-faucet-drip"></i>
+            </div>
+            <h2>Plumber</h2>
+          </div>
+          <div class="card-item card-shadow" onclick="toPlumber()">
+            <div class="icon-container" id="plumber_icon">
+              <i class="fa-solid fa-faucet-drip"></i>
+            </div>
+            <h2>Plumber</h2>
+          </div>
+          <div class="card-item card-shadow" onclick="toPlumber()">
+            <div class="icon-container" id="plumber_icon">
+              <i class="fa-solid fa-faucet-drip"></i>
+            </div>
+            <h2>Plumber</h2>
+          </div>
         </div>
-      </form>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
+  <!--                       SEARCH BAR SECTION [END]                                  -->
 
- <!-- Code for sign up form -->
- <div class="signin-form-container" id="signin_container">
-  <div class="card" id="sign_in_form_card">
-    <div class="card-content">
-      <span id="Signin_header_text">Sign In</span><br><br>
-      <form class="signin-form">
-        <input class="input" type="email" placeholder="Email Address" /><br> <br>
-        <input class="input" type="email" placeholder="Password" /><br> <br>
+<!---                                 Feature services Card Section                          -->
+<section class="section is-large">
 
-        <div class="buttons" id="signinBtn_section">
-          <input class="button is-primary" id="reset_btn" type="reset" value="Clear" />
-          <input class="button is-primary" id="submit_btn" type="submit" value="Sign In" />
-        </div>
-      </form>
+  <span id="featured_services_card_header">Featured Services</span>
+
+   <div class="services-container swiper">
+    <div class="services-card-wrapper">
+      <ul class="services-card-list swiper-wrapper">
+        <!-- card 1 -->
+        <li class="services-card-item swiper-slide">
+          <a href="#" class="services-card-link">
+            <img src="/src/img/loading_page.jpg" alt="" class="sevices-card-image">
+
+            <p class="badge">Mechanic</p>
+            <h2 class="card-title">[JOHN] <br><br><i class="fa-solid fa-location-dot"></i>   [Location]</h2><br>
+          </a>
+        </li>
+        <!-- card 2 -->
+        <li class="services-card-item swiper-slide">
+          <a href="#" class="services-card-link">
+            <img src="/src/img/loading_page.jpg" alt="" class="sevices-card-image">
+
+            <p class="badge">Mechanic</p>
+            <h2 class="card-title">[ADAM] <br><br><i class="fa-solid fa-location-dot"></i>   [Location]</h2><br>
+          </a>
+        </li>
+        <!-- card 3 -->
+        <li class="services-card-item swiper-slide">
+          <a href="#" class="services-card-link">
+            <img src="/src/img/loading_page.jpg" alt="" class="sevices-card-image">
+
+            <p class="badge">Mechanic</p>
+            <h2 class="card-title">[MIKE] <br><br><i class="fa-solid fa-location-dot"></i>   [Location]</h2><br>
+          </a>
+        </li>
+        <!-- card 4 -->
+        <li class="services-card-item swiper-slide">
+          <a href="#" class="services-card-link">
+            <img src="/src/img/loading_page.jpg" alt="" class="sevices-card-image">
+
+            <p class="badge">Mechanic</p>
+            <h2 class="card-title">[KYLE] <br><br><i class="fa-solid fa-location-dot"></i>   [Location]</h2><br>
+          </a>
+        </li>
+        <!-- card 5 -->
+        <li class="services-card-item swiper-slide">
+          <a href="#" class="services-card-link">
+            <img src="/src/img/loading_page.jpg" alt="" class="sevices-card-image">
+
+            <p class="badge">Mechanic</p>
+            <h2 class="card-title">[SAM] <br><br><i class="fa-solid fa-location-dot"></i>   [Location]</h2><br>
+          </a>
+        </li>
+        <!-- card 6 -->
+        <li class="services-card-item swiper-slide">
+          <a href="#" class="services-card-link">
+            <img src="/src/img/loading_page.jpg" alt="" class="sevices-card-image">
+
+            <p class="badge">Mechanic</p>
+            <h2 class="card-title">[MAX] <br><br><i class="fa-solid fa-location-dot"></i>   [Location]</h2><br>
+          </a>
+        </li>
+        <!-- card 7 -->
+        <li class="services-card-item swiper-slide">
+          <a href="#" class="services-card-link">
+            <img src="/src/img/loading_page.jpg" alt="" class="sevices-card-image">
+
+            <p class="badge">Mechanic</p>
+            <h2 class="card-title">[ALEX] <br><br><i class="fa-solid fa-location-dot"></i>   [Location]</h2><br>
+          </a>
+        </li>
+      </ul>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
     </div>
-  </div>
-</div>
-
-<div class="slider-wrapper">
-  <div class="slider">
-      <div class="img-container active">
-          <img id="slide-1" src="../../src/img/enis-yavuz-tZtgozUpZZc-unsplash.jpg">
-      </div>
-      <div class="img-container">
-          <img id="slide-2" src="../../src/img/erol-ahmed-d3pTF3r_hwY-unsplash.jpg">
-      </div>
-      <div class="img-container">
-          <img id="slide-3" src="../../src/img/javier-allegue-barros-55bVEzGVnzY-unsplash.jpg">
-      </div>
-  </div>
-</div>
-
-<!-- Search bar container card -->
-<div class="card" id="searchbar-container">
-  <div class="card-content">
-    <i class="fa-solid fa-magnifying-glass" id="search_icon"></i><input class="input" id="services_input" type="text" placeholder="Tutor, Plumber, Mechanic...">
-    <i class="fa-solid fa-location-dot" id="loaction_icon"></i><input class="input"  id="provinces_input" type="text" placeholder="Provinces">
-
-    <a class="button signup-btn" id="searchBtn">
-      <strong>Search</strong>
-    </a>
-  </div>
-</div>
-
-<!---                                 Card Section                          -->
+   </div>
+ 
 </section>
 
-<div class="container-wrapper">
-  <div class="slider-wrapper">
-    <div class="card-list">
-      <div class="card-item card-shadow" onclick="toGardner()">
-        <div class="icon-container" id="gardner_icon">
-          <i class="fa-solid fa-seedling"></i>
-        </div>
-        <h2>Gardner</h2>
-      </div>
-      <div class="card-item card-shadow" onclick="toTutor()">
-        <div class="icon-container" id="tutor_icon">
-          <i class="fa-solid fa-person-chalkboard"></i>
-        </div>
-        <h2>Tutor</h2>
-      </div>
-      <div class="card-item card-shadow" onclick="toTechnician()">
-        <div class="icon-container" id="computer_icon">
-          <i class="fa-solid fa-computer"></i>
-        </div>
-        <h2>Technician</h2>
-      </div>
-      <div class="card-item card-shadow" onclick="toMechanic()">
-        <div class="icon-container">
-          <i class="fa-solid fa-toolbox" id="mechanic_icon"></i>
-        </div>
-        <h2>Mechanic</h2>
-      </div>
-      <div class="card-item card-shadow" onclick="toPlumber()">
-        <div class="icon-container" id="plumber_icon">
-          <i class="fa-solid fa-faucet-drip"></i>
-        </div>
-        <h2>Plumber</h2>
-      </div>
-      <div class="card-item card-shadow" onclick="toPlumber()">
-        <div class="icon-container" id="plumber_icon">
-          <i class="fa-solid fa-faucet-drip"></i>
-        </div>
-        <h2>Plumber</h2>
-      </div>
-      <div class="card-item card-shadow" onclick="toPlumber()">
-        <div class="icon-container" id="plumber_icon">
-          <i class="fa-solid fa-faucet-drip"></i>
-        </div>
-        <h2>Plumber</h2>
-      </div>
-      
-    </div>
-  </div>
-</div>
+  <!---                                 End of feature services Card Section                          -->
 
-<!--                       SEARCH BAR SECTION [END]                                  -->
-
+   
 
 
 
@@ -221,5 +281,43 @@
 
 <!-- Adding script for js file -->
  <script rel="text/javascript" src="/App/home-page/home-page.js"></script>
+
+ <!-- Scripot tag for Swipper js -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+ <script>
+  // Swipper js scripts
+new Swiper('.services-card-wrapper', {
+    loop: true,
+
+    spaceBetween: 30,
+  
+    // Pagnation bullets
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // Responsice breakpoints
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 3
+        }
+    }
+  });
+ </script>
 </body>
 </html>
