@@ -30,7 +30,7 @@
 <body>
 
   <!--                            NAVBAR SECTION [START]                           -->
-  <section class="section">
+  <section class="section" id="nav_Section">
     <div class="hero-body">
       <!-- Navigation bar code -->
        <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -42,15 +42,15 @@
        
            <div id="navbarBasicExample" class="navbar-menu">
            <div class="navbar-start">
-               <a class="navbar-item">
+               <a class="navbar-item" href="/App/about-page/about-page.html">
                About
                </a>
        
-               <a class="navbar-item">
+               <a class="navbar-item" href="/App/services-page/services-page.html">
                Services
                </a>
 
-               <a class="navbar-item">
+               <a class="navbar-item" href="/App/contact-page/contact-page.html">
                    Contact
                </a>
        
@@ -58,37 +58,16 @@
                <a class="navbar-link" id="cat_dropdown">
                    Browse by category
                </a>
-       
-               <div class="navbar-dropdown">
-                   <a class="navbar-item dropdown-items">
-                       Medical
-                   </a>
-                   <a class="navbar-item dropdown-items">
-                       Engineering
-                   </a>
-                   <a class="navbar-item dropdown-items">
-                       Education 
-                   </a>   
-                   <a class="navbar-item dropdown-items">
-                       Information Technology
-                   </a>  
-                   <a class="navbar-item dropdown-items" >
-                       Finance
-                   </a> 
-                   <a class="navbar-item dropdown-items">
-                       Odd Jobs
-                   </a>
-               </div>
                </div>
            </div>
        
            <div class="navbar-end">
                <div class="navbar-item">
                <div class="buttons">
-                   <a class="button signup-btn" id="signupBtn">
+                   <a class="button signup-btn" id="signupBtn" target="_blank" href="/App/signup-page/signup-page.html">
                    <strong>Sign up</strong>
                    </a>
-                   <a class="button is-light" id="loginBtn" style="background-color: #636363; color:white;">
+                   <a class="button is-light" id="loginBtn" target="_blank" href="/App/login-page/login-page.html" style="background-color: #636363; color:white;">
                    Log in
                    </a>
                </div>
@@ -101,9 +80,103 @@
 
   <!--                                   NAVBAR SECTION [END]                          -->
 
+  <!--                            Categories SECTION [START]                           -->
+
+  <section class="section is-medium" id="categories_section">
+    <div class="header_info">
+      <h1 class="title">What are you looking for?</h1>
+    <h2 class="subtitle">
+      Select a category to start your journey.
+    </h2>
+    </div>
+
+    <!-- grid for categories -->
+    <div class="grid-container"> 
+      <div class="grid-card">
+          <i class="fa-solid fa-seedling"></i>
+          <h2>Home Improvement and Renovationg</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-person-chalkboard"></i>
+          <h2>Education</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-computer"></i>
+          <h2>Information Technology</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-toolbox" id="mechanic_icon"></i>
+          <h2>Automotive Service</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-faucet-drip"></i>
+          <h2>Pumbing and Pipefitting.</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-paint-roller"></i>
+          <h2>Home Decor</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-car"></i>
+          <h2>Transport</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-regular fa-object-group"></i>
+          <h2>Creative Service</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-kitchen-set"></i>
+          <h2>Hospitality</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-house"></i>
+          <h2>Home and Personal Care</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-mask"></i>
+          <h2>Beauty and Wellness</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-plane-departure"></i>
+          <h2>Entertainment and Leisure</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-heart-pulse"></i>
+          <h2>Health and Fitness</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-coins"></i>
+          <h2>Financial and Insurance</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-paw"></i>
+          <h2>Pet Services</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-house-lock"></i>
+          <h2>Home Security</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-broom"></i>
+          <h2>Specialty Cleaning</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-truck-front"></i>
+          <h2>Moving and Relocation</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-laptop"></i>
+          <h2>Remote and Virtual Learning</h2>
+      </div>
+</div>
+    
+    <div class="close" id="close_btn">Close</div>
+  </section>
+
+  <!--                            Categories SECTION [End]                           -->
  
  <!--                       SEARCH BAR SECTION [START]                                  -->
-  <section class="section is-large container">
+  <section class="section is-large container" id="search_section">
     <div class="slider-wrapper">
       <div class="slider">
           <div class="img-container active">
@@ -173,15 +246,15 @@
           </div>
           <div class="card-item card-shadow" onclick="toPlumber()">
             <div class="icon-container" id="plumber_icon">
-              <i class="fa-solid fa-faucet-drip"></i>
+              <i class="fa-solid fa-paint-roller"></i>
             </div>
-            <h2>Plumber</h2>
+            <h2>Painter</h2>
           </div>
           <div class="card-item card-shadow" onclick="toPlumber()">
             <div class="icon-container" id="plumber_icon">
-              <i class="fa-solid fa-faucet-drip"></i>
+              <i class="fa-solid fa-car"></i>
             </div>
-            <h2>Plumber</h2>
+            <h2>Chauffeur</h2>
           </div>
         </div>
       </div>
@@ -190,7 +263,8 @@
   <!--                       SEARCH BAR SECTION [END]                                  -->
 
 <!---                                 Feature services Card Section                          -->
-<section class="section is-large">
+
+<section class="section is-large" id="featured_services_section">
 
   <span id="featured_services_card_header">Featured Services</span>
 
@@ -273,6 +347,108 @@
 
   <!---                                 End of feature services Card Section                          -->
 
+<!---                                 More info section                          -->
+  <section class="section is-medium" id="more_info_section">
+    <div class="card">
+      <div class="card-content">
+        <div class="columns is-8">
+          <!-- Column 1 -->
+          <div class="column">
+            <!-- Card-image -->
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="/src/img/more_info_image.jpg" alt="Placeholder image"/>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- column 2 -->
+          <div class="column">
+            <!-- Card-text -->
+            <div class="card">
+              <div class="card-content">
+                <p class="title" style="color: white;">
+                  Does <u>fix it.</u> solve any of your challenges?
+                </p>
+                <p class="subtitle">If not, we would like to hear your feeback.</p>
+
+                <button class="button is-rounded" id="more_info_contact_btn" onclick="toContactUs_page()">Contact us</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--                                 End of More info section                             -->
+
+
+<!--                                   Section for footer                                    -->
+<section class="section is-medium" id="footer_section" style="background-color: #656565;">
+  <div class="columns">
+    <div class="column" id="column_1">
+      <div class="footer-brand">
+        <a class="navbar-item" id="footer_logo" href="/App/home-page/home-page.html" style="background-color: #656565;">
+            fix it.
+        </a>
+        </div>
+        <p id="footer_logo_subtext">Empowering skilled individuals to connect,<br>
+          create, and thrive. Bridging the gap between<br>
+          unemployment and opportunity by providing a <br>platform
+          for talented workers to offer their services to the community</p>
+
+          <div class="contact_logo">
+            <a href="#fixit_facebook_account">
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="#fixit_instagram_account">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#fixit_x.com_account">      
+              <i class="fa-brands fa-square-x-twitter"></i>
+            </a>
+            <a href="#fixit_LinkedIn_account">      
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+    </div>
+    <div class="column" id="column_2">
+      <span class="column2_header">Services</span>
+      <ul id="column2_list">
+        <li><a href="#" class="list-item">Education</a></li>
+        <li><a href="#" class="list-item">Home Decor</a></li>
+        <li><a href="#" class="list-item">Transport</a></li>
+        <li><a href="#" class="list-item">Hospitality</a></li>
+        <li><a href="#" class="list-item">Finacne</a></li>
+        <li><a href="#" class="list-item">Transport</a></li>
+        <li><a href="../services-page/services-page.html" class="list-item">more...</a></li>
+      </ul>
+    </div>
+    <div class="column" id="column_3">
+      <span class="column3_header">Useful Links</span>
+      <ul id="column3_list"> 
+        <li><a href="#" class="list-item">Services</a></li>
+        <li><a href="#" class="list-item">FAQs</a></li>
+        <li><a href="#" class="list-item">Help</a></li>
+        <li><a href="#" class="list-item">Sign-up</a></li>
+      </ul>
+    </div>
+    <div class="column" id="column_4">
+      <span class="column4_header">Company</span>
+      <ul id="column4_list">
+        <li><a href="#" class="list-item">About Us</a></li>
+        <li><a href="#" class="list-item">Contact</a></li>
+      </ul>
+    </div>
+    <hr>
+    <p class="copyright-info">Copyright&copy;  2025 Design and Develop by Tri-tech </p>
+  </div>
+</section>
+
+
+<!--                                  End of Section for footer                                    -->
    
 
 
