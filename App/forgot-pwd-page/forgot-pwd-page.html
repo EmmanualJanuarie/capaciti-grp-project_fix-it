@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CDN Link for Bulma.io -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+  <!-- Fav icon for website fix it  -->
+  <link rel="icon" type="image/x-icon" href="/src/img/wrench.png">
+
+  <!-- font awesome link for css file -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
+
+
+  <!-- Adding link for css file -->
+    <title>Rest Password</title>
+
+    <style>
+        html{
+            overflow-y: hidden;
+        }
+
+        /* --                                  Login Stylng Section                        */
+        #landingPage_section{
+            background-image: url('/src/img/image_1.jpg');
+            background-size: cover; /* Resize the background image to cover the entire container */
+            background-position: center;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            
+        }
+
+        #landingPage_section::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.3); /* Semi-transparent white overlay */
+            backdrop-filter: blur(1px); /* Frosted glass effect */
+            -webkit-backdrop-filter: blur(10px); /* For Safari */
+        }
+
+        input::placeholder{
+            color: black !important;
+        }
+
+        #email, #pwd, #signup_btn{
+            width: 85%;
+            height: 60px;
+            margin: 20px;
+            background-color: white ;
+            color: black;
+        }
+
+        .card-container{
+            width: 40%;
+        }
+
+        #signup_header {
+            text-align: center;
+            font-size: 40px;
+            color: black;
+        }
+
+        #signup_btn{
+            background-color: black ;
+            color: white;
+        }
+
+        #signup_btn:hover{
+            background-color: #656565;
+        }
+
+        .frosted-glass {
+            background: rgba(255, 255, 255, 0.3); /* White with 30% opacity */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+            -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+            padding: 20px; /* Padding inside the card */
+            border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle border */
+        }
+
+        .control{
+            color: black;
+            font-size: 24px;
+            text-align: left;
+            margin-left: 70px;
+        }
+
+        #mesg1, #mesg2{
+            color: black;
+            text-align: left;
+            margin: 130px;
+        }
+
+        #login_btn{
+            text-decoration: underline;
+            color: black;
+        }
+
+        #forgot_btn{
+            color: black;
+        }
+
+        #login_btn:hover, #forgot_btn:hover{
+            color: #656565;
+        }
+
+    </style>
+</head>
+<body>
+    <!--                            Sign up page columns  SECTION [START]                           -->
+    <section class="section is-large" id="landingPage_section">
+        <div class="card-container">
+            <div class="card frosted-glass">
+                <div class="card-content">
+                    <form>
+                        <span id="signup_header">Reset Password</span><br><br>
+                        <input class="input is-rounded" type="email" id="email" placeholder="Email Address" />
+
+                        <input class="input is-rounded" type="password" id="pwd" placeholder="New Password" />
+
+                        <input class="input is-rounded" type="password" id="pwd" placeholder="Repeat Password" />
+
+                        <input class="button is-link is-rounded" type="submit" id="signup_btn" value="Reset Password"/>
+                    </form>
+                  </div>
+                </div>
+        </div>
+       </section>
+        <!--                            Landing page columns  SECTION [End]                           -->
+    
+</body>
+</html>
