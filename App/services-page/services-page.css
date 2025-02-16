@@ -1,0 +1,198 @@
+/*  -----                                  [ HTML STYLING ]                                ------ */
+html {
+    background-color: white !important; /*changing background color of html doc*/
+    overflow-x: hidden;
+}
+
+/*  -----                                  [End of html styling ]                            ---- */
+
+
+/*  ----                                   [NAV BAR STYLING ]                                 ---- */
+/* Changing background color of navbar */
+.navbar{
+    background-color: white;
+    box-shadow: 0 0rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);  
+    width: 100vw;
+    height: 27vh;
+
+    position: relative;
+    right: 50px;
+    bottom: 220px;
+}
+
+/* changing text color - Navbar items and dropdown text */
+.navbar-item, #cat_dropdown{
+    color:#676767;
+}
+
+/* Positioning & styling - NavBar items */
+.navbar-start{
+    position: relative;
+    left:200px;
+
+    /* Size of font for navitems */
+    font-size: 27px;
+    top:180px;
+    height: 10vh;
+}
+
+/* Positioning & styling - NavBar buttons  */
+.navbar-end{
+    position: relative;
+    right:50px;
+
+    /* Size of font for navitems */
+    font-size: 18px;
+    top:80px;
+}
+
+/* Sizing and color - Entire nav section  */
+#nav_Section{
+    position: fixed;
+    z-index: 1;
+    max-height:100%;
+    height:120px;
+    background-color: white;
+}
+
+/* Removing the dropdown color and setting to orange */
+.navbar-dropdown, .dropdown-items {
+    background-color: #676767 !important;
+    color:white;
+}
+
+/* Font size - navbar dropdown element */
+.navbar-dropdown{
+    font-size: 20px;
+}
+
+/* background color & text color - Sign Up button */
+.signup-btn{
+    background-color:orange; 
+    color:white;
+
+    border-color: #676767;
+}
+
+/* Positioning & styling - NavBar brand(logo section)  */
+.navbar-brand{
+    font-size: 30px;
+
+    font-weight: bold;
+
+    /* Positionng of brand/ icon */
+    position: relative;
+    left: 3%;
+
+    height: 10vh;
+    top:180px;
+    
+}
+
+/* styling - logo */
+#navbar_logo{
+    color:orange;
+    text-shadow: 1px 2px 10px grey ;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+/* Background color - every navbar link and item */
+.navbar-link, a.navbar-item {
+    background-color: white;
+}
+
+/* hover effect to change color of navitems and dropdown options */
+.navbar-start a.navbar-item:hover, #cat_dropdown:hover{
+    color:orange;
+}
+
+
+/*  ----                                   [End of Nav bar styling ]                                 ---- */
+
+ /*  ----                                   [Categories Section]                                        ---- */
+  /* Styling Grid */
+  .header_info{
+    display:grid;
+    justify-content: center;
+    margin-top: 100px;
+  }
+
+  .title{
+    font-size: 60px;
+    font-weight: bold;
+    color: #656565;
+  }
+
+  .subtitle{
+    text-align: center;
+    font-size: 25px;
+    margin-top: auto;
+  }
+
+  
+h1{
+    margin:30px 0;
+}
+
+.grid-card h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.grid-card i{
+    font-size: 45px;
+    font-weight: bold;
+}
+
+
+.grid-card{
+    padding:2em;
+    border:1px solid rgb(75,82,92);
+    border-radius:10px;
+    background-color: #656565;
+    text-align: center;
+
+}
+.grid-container {
+     display: grid; 
+     grid-template-columns: 
+     repeat(auto-fit, minmax(300px, 1fr));
+     gap:15px; 
+     justify-content: center;
+     padding: 50px;
+     color:white;
+
+     font-family: 'NewTitle-Variable', Avenir Next Condensed, Arial Narrow, Impact, sans-serif; 
+} 
+
+img {
+    padding: 3px; 
+    border-radius: 5px;
+}
+
+.grid-card:hover {
+    border: 1px solid gray;
+    box-sizing: border-box;
+  
+    transform: scale(0.9);
+  
+    cursor: pointer;
+}
+
+.close{
+    text-align: center;
+    font-size: 29px;
+    cursor: pointer;
+}
+
+.close:hover{
+    text-decoration: underline;
+}
+
+#categories_section{
+    display: none;
+}
+
+  /*  ----                                   [End of Categories Section]                                        ---- */
