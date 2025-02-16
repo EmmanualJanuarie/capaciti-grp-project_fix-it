@@ -11,197 +11,265 @@ html {
     overflow-x: hidden;
 }
 
-/* Bottom part of screen info */
-/* Styling for footer information */
- #footer_info{
-    position: absolute;
-    top: 110%;
-    left: 40%;
-    color: white;
-    font-size: 27px;
-    font-weight: bold;
+/*  ----                                   [NAV BAR STYLING ]                                 ---- */
+/* Changing background color of navbar */
+.navbar{
+    background-color: white;
+    box-shadow: 0 0rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);  
+    width: 100vw;
+    height: 27vh;
 
-    z-index: 1;
-} 
-
-.logo{
-    font-size: 60px;
-
-    font-weight: bold;
-
-    /* Positionng of brand/ icon */
     position: relative;
-    left: 3%;
-    bottom:0px;
-}
-#brand_name{
-    color: orange;
-    text-shadow: 1px 2px 10px grey ;
+    right: 50px;
+    bottom: 220px;
 }
 
-#section_nav{
-    height:20vh;
+/* changing text color - Navbar items and dropdown text */
+.navbar-item, #cat_dropdown{
+    color:#676767;
 }
 
-/* grid card styling */
-.card {
-    padding: 2rem;
-    border: 1px solid rgb(75, 82, 92);
-    border-radius: 10px;
-    background-color: black;
-    text-align: center;
-}
-
-/* card content styling */
-.card-content {
-    padding: 0rem;
-    font-size: 1.2rem; /* Adjust the font size */
-    color: white; /* Ensure text is visible on black background */
-}
-
-/* grid container styling */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 500px);
-    gap: 105px;
-    justify-content: center;
-}
-    
-/* Styling for services button */
-#services_btn{
-    position: relative;
-    top:20px;   
-}
-
-/* -- NAVBAR ITEMS -- */
+/* Positioning & styling - NavBar items */
 .navbar-start{
     position: relative;
     left:200px;
 
     /* Size of font for navitems */
     font-size: 27px;
-    bottom:110px;
-
+    top:180px;
+    height: 10vh;
 }
 
-.navbar-item{
-    background-color: #FFF9ED;
-}
-
-/* Arrow down styling */
-#angle_down{
-    font-size: 80px;
-
-    position: relative;
-    left: 47%;
-    top: 50px;
-
-    /* changing color of font icon */
-    color: orange;
-}
-
-/* Hover effect for font-icon */
-#angle_down:hover{
-    border-radius: 90px 60px 60px 90px;
-    background-color: #656565;
-
-    width:4vw;
-    cursor: pointer;
-}
-
+/* Positioning & styling - NavBar buttons  */
 .navbar-end{
     position: relative;
     right:50px;
 
     /* Size of font for navitems */
     font-size: 18px;
-    bottom:110px;   
+    top:80px;
 }
 
-.navbar-item {
-    background-color: white;
-}
-
-/* Styling for Signup and signin forms */
-.signup-form-container, .signin-form-container{
-    display: grid;  
-    gap: 105px;
-    justify-content: end;
-
-    /* positioning the form */
+/* Sizing and color - Entire nav section  */
+#nav_Section{
     position: fixed;
-    bottom: 30%;
-    right: 0; /* Add this line to position the form on the right */
-
     z-index: 1;
-
-    display: none;
-
-    /* Add transition for smooth effect */
-}
-
-.signin-form-container{
-    position: fixed;
-    bottom: 46.7%;
-}
-
-#sign_up_form_card{
-    width: 30vw;
-    background-color: orange !important;
-}
-
-#sign_in_form_card{
-    width: 30vw;
-    background-color: #656565 !important;
-}
-.signup-form > input, .signin-form > input{
+    max-height:100%;
+    height:120px;
     background-color: white;
-    color: black;
 }
 
-form > input::placeholder {
-    color:#656565 !important;
-}
-#Signup_header_text, #Signin_header_text{
-    font-weight: bold;
-    font-size: 30px;
-}
-
-#reset_btn{
-    background-color: snow;
-}
-
-#reset_btn:hover{
-    background-color: #dcdcdc;
-}
-
-#submit_btn{
-    background-color: #656565;
+/* Removing the dropdown color and setting to orange */
+.navbar-dropdown, .dropdown-items {
+    background-color: #676767 !important;
     color:white;
 }
 
-#submit_btn:hover{
-    background-color: lightgray ;
-    color:black;
+/* Font size - navbar dropdown element */
+.navbar-dropdown{
+    font-size: 20px;
 }
 
-.buttons{
-    display: flex;
-    justify-content:center;
+/* background color & text color - Sign Up button */
+.signup-btn{
+    background-color:orange; 
+    color:white;
 
+    border-color: #676767;
 }
 
-#signinBtn_section > #submit_btn{
-    background-color: orange;
-}
+/* Positioning & styling - NavBar brand(logo section)  */
+.navbar-brand{
+    font-size: 30px;
 
-#signinBtn_section > #submit_btn:hover{
-    background-color: #ffae42;
-}
+    font-weight: bold;
 
-svg{
+    /* Positionng of brand/ icon */
     position: relative;
-    top: 2vh; 
+    left: 3%;
+
+    height: 10vh;
+    top:180px;
+    
+}
+
+/* styling - logo */
+#navbar_logo{
+    color:orange;
+    text-shadow: 1px 2px 10px grey ;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+/* Background color - every navbar link and item */
+.navbar-link, a.navbar-item {
+    background-color: white;
+}
+
+/* hover effect to change color of navitems and dropdown options */
+.navbar-start a.navbar-item:hover, #cat_dropdown:hover{
+    color:orange;
 }
 
 
+/*  ----                                   [End of Nav bar styling ]                                 ---- */
+
+ /*  ----                                   [Categories Section]                                        ---- */
+  /* Styling Grid */
+  .header_info{
+    display:grid;
+    justify-content: center;
+    margin-top: 100px;
+  }
+
+  .title{
+    font-size: 60px;
+    font-weight: bold;
+    color: #656565;
+  }
+
+  .subtitle{
+    text-align: center;
+    font-size: 25px;
+    margin-top: auto;
+  }
+
+  
+h1{
+    margin:30px 0;
+}
+
+.grid-card h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.grid-card i{
+    font-size: 45px;
+    font-weight: bold;
+}
+
+
+.grid-card{
+    padding:2em;
+    border:1px solid rgb(75,82,92);
+    border-radius:10px;
+    background-color: #656565;
+    text-align: center;
+
+}
+.grid-container {
+     display: grid; 
+     grid-template-columns: 
+     repeat(auto-fit, minmax(300px, 1fr));
+     gap:15px; 
+     justify-content: center;
+     padding: 50px;
+     color:white;
+
+     font-family: 'NewTitle-Variable', Avenir Next Condensed, Arial Narrow, Impact, sans-serif; 
+} 
+
+img {
+    padding: 3px; 
+    border-radius: 5px;
+}
+
+.grid-card:hover {
+    border: 1px solid gray;
+    box-sizing: border-box;
+  
+    transform: scale(0.9);
+  
+    cursor: pointer;
+}
+
+.close{
+    text-align: center;
+    font-size: 29px;
+    cursor: pointer;
+}
+
+.close:hover{
+    text-decoration: underline;
+}
+
+#categories_section{
+    display: none;
+}
+
+  /*  ----                                   [End of Categories Section]                                        ---- */
+
+  /*                                         Column section [START]                                                          */
+  /* #landingPage_section{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+
+    position: relative;
+    top: 80px;
+  } */
+
+  #landingPage_section{
+    background-image: url('/src/img/landing_background_image_2.jpg');
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    justify-content: end;
+  }
+
+  #landingPage_section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white overlay */
+    backdrop-filter: blur(2px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+  }
+
+  .content p{
+    font-size: 28px;
+  }
+
+  .content button{
+    font-size: 25px;
+  }
+  .card-container{
+    width: 50%;
+  }
+
+  .card-container > .card{
+    background-color: transparent;
+  }
+
+  #content-header{
+    font-size: 90px;
+    font-weight: bold;
+  }
+
+  #more_btn{
+    margin-top: 20px;
+  }
+
+  #contactus_btn{
+    margin-top: 20px;
+  }
+
+  
+.content{
+    color: black;
+   
+}
+
+
+
+   /*                                         Column section [END]                                                          */
