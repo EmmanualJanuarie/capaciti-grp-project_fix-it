@@ -1,0 +1,99 @@
+html{
+    overflow-y: hidden;
+}
+
+/* --                                  Login Stylng Section                        */
+#landingPage_section{
+    background-image: url('/src/img/image_3.jpg');
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    
+  }
+
+  #landingPage_section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white overlay */
+    backdrop-filter: blur(1px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+  }
+
+  #fname, #lname{
+    width: 40%;
+    height: 60px;
+    margin: 20px;
+    background-color: white ;
+    color: black;
+  }
+
+  input::placeholder{
+    color: black !important;
+  }
+
+  #email, #pwd, #signup_btn{
+    width: 85%;
+    height: 60px;
+    margin: 20px;
+    background-color: white ;
+    color: black;
+  }
+
+  .card-container{
+    width: 40%;
+  }
+
+  #signup_header {
+    text-align: center;
+    font-size: 40px;
+    color: black;
+  }
+
+  #signup_btn{
+    background-color: black ;
+    color: white;
+  }
+
+  #signup_btn:hover{
+    background-color: #656565;
+  }
+
+  .frosted-glass {
+    background: rgba(255, 255, 255, 0.3); /* White with 30% opacity */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+    padding: 20px; /* Padding inside the card */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle border */
+}
+
+.control{
+    color: black;
+    font-size: 24px;
+    text-align: left;
+    margin-left: 70px;
+}
+
+#mesg{
+    color: black;
+    text-align: left;
+}
+
+#login_btn{
+    text-decoration: underline;
+    color: black;
+}
+
+#login_btn:hover{
+    color: #656565;
+}
