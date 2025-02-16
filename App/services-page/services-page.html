@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CDN Link for Bulma.io -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+  <!-- Fav icon for website fix it  -->
+  <link rel="icon" type="image/x-icon" href="/src/img/wrench.png">
+
+  <!-- font awesome link for css file -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
+
+
+  <!-- Adding link for css file -->
+  <link rel="stylesheet" href="/App/services-page/services-page.css">
+    <title>fix it | Services</title>
+</head>
+<body>
+
+    <!--                            NAVBAR SECTION [START]                           -->
+  <section class="section" id="nav_Section">
+    <div class="hero-body">
+      <!-- Navigation bar code -->
+       <nav class="navbar" role="navigation" aria-label="main navigation">
+           <div class="navbar-brand">
+           <a class="navbar-item" id="navbar_logo" href="/App/home-page/home-page.html">
+               fix it.
+           </a>
+           </div>
+       
+           <div id="navbarBasicExample" class="navbar-menu">
+           <div class="navbar-start">
+               <a class="navbar-item" href="/App/about-page/about-page.html">
+               About
+               </a>
+       
+               <a class="navbar-item" href="/App/services-page/services-page.html">
+               Services
+               </a>
+
+               <a class="navbar-item" href="/App/contact-page/contact-page.html">
+                   Contact
+               </a>
+       
+               <div class="navbar-item has-dropdown is-hoverable">
+               <a class="navbar-link" id="cat_dropdown">
+                   Browse by category
+               </a>
+               </div>
+           </div>
+       
+           <div class="navbar-end">
+               <div class="navbar-item">
+               <div class="buttons">
+                   <a class="button signup-btn" target="_blank" href="/App/signup-page/signup-page.html" id="signupBtn">
+                   <strong>Sign up</strong>
+                   </a>
+                   <a class="button is-light" id="loginBtn" target="_blank" href="/App/login-page/login-page.html" style="background-color: #636363; color:white;">
+                   Log in
+                   </a>
+               </div>
+               </div>
+           </div>
+           </div>
+       </nav>    
+   </div>
+  </section>
+
+  <!--                                   NAVBAR SECTION [END]                          -->
+
+  <!--                            Categories SECTION [START]                           -->
+
+  <section class="section is-medium" id="categories_section">
+    <div class="header_info">
+      <h1 class="title">What are you looking for?</h1>
+    <h2 class="subtitle">
+      Select a category to start your journey.
+    </h2>
+    </div>
+
+    <!-- grid for categories -->
+    <div class="grid-container"> 
+      <div class="grid-card">
+          <i class="fa-solid fa-seedling"></i>
+          <h2>Home Improvement and Renovationg</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-person-chalkboard"></i>
+          <h2>Education</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-computer"></i>
+          <h2>Information Technology</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-toolbox" id="mechanic_icon"></i>
+          <h2>Automotive Service</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-faucet-drip"></i>
+          <h2>Pumbing and Pipefitting.</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-paint-roller"></i>
+          <h2>Home Decor</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-car"></i>
+          <h2>Transport</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-regular fa-object-group"></i>
+          <h2>Creative Service</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-kitchen-set"></i>
+          <h2>Hospitality</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-house"></i>
+          <h2>Home and Personal Care</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-mask"></i>
+          <h2>Beauty and Wellness</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-plane-departure"></i>
+          <h2>Entertainment and Leisure</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-heart-pulse"></i>
+          <h2>Health and Fitness</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-coins"></i>
+          <h2>Financial and Insurance</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-paw"></i>
+          <h2>Pet Services</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-house-lock"></i>
+          <h2>Home Security</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-broom"></i>
+          <h2>Specialty Cleaning</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-truck-front"></i>
+          <h2>Moving and Relocation</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-laptop"></i>
+          <h2>Remote and Virtual Learning</h2>
+      </div>
+</div>
+    
+    <div class="close" id="close_btn">Close</div>
+  </section>
+
+  <!--                            Categories SECTION [End]                           -->
+
+   <script src="/App/services-page/services-page.js"></script> 
+</body>
+</html>
