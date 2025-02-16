@@ -23,125 +23,190 @@
   <title>fix it</title>
 </head>
 <body>
-    <!-- NAVIGATION BAR SECTION -->
-    <section class="hero" id="section_nav">
-      <div class="logo">
-        <span id="brand_name">fix it.</span>
+    <!--                            NAVBAR SECTION [START]                           -->
+  <section class="section" id="nav_Section">
+    <div class="hero-body">
+      <!-- Navigation bar code -->
+       <nav class="navbar" role="navigation" aria-label="main navigation">
+           <div class="navbar-brand">
+           <a class="navbar-item" id="navbar_logo" href="/App/home-page/home-page.html">
+               fix it.
+           </a>
+           </div>
+       
+           <div id="navbarBasicExample" class="navbar-menu">
+           <div class="navbar-start">
+               <a class="navbar-item" href="/App/about-page/about-page.html">
+               About
+               </a>
+       
+               <a class="navbar-item" href="/App/services-page/services-page.html">
+               Services
+               </a>
 
-        <!-- NAVBAR SECTION [START] -->
-        <div class="hero-body">
-          <!-- Navigation bar code -->
-            <nav class="navbar" role="navigation" aria-label="main navigation">
-                <div id="navbarBasicExample" class="navbar-menu">
-                  <div class="navbar-start">
-                    <a class="navbar-item" href="/App/home-page/home-page.html">
-                      Home
-                      </a>
-                      <a class="navbar-item" href="/App/about-page/about-page.html">
-                      About
-                      </a>
-              
-                      <a class="navbar-item" href="/App/services-page/services-page.html">
-                      Services
-                      </a>
+               <a class="navbar-item" href="/App/contact-page/contact-page.html">
+                   Contact
+               </a>
+       
+               <div class="navbar-item has-dropdown is-hoverable">
+               <a class="navbar-link" id="cat_dropdown">
+                   Browse by category
+               </a>
+               </div>
+           </div>
+       
+           <div class="navbar-end">
+               <div class="navbar-item">
+               <div class="buttons">
+                   <a class="button signup-btn" target="_blank" href="/App/signup-page/signup-page.html" id="signupBtn">
+                   <strong>Sign up</strong>
+                   </a>
+                   <a class="button is-light" id="loginBtn" target="_blank" href="/App/login-page/login-page.html" style="background-color: #636363; color:white;">
+                   Log in
+                   </a>
+               </div>
+               </div>
+           </div>
+           </div>
+       </nav>    
+   </div>
+  </section>
 
-                      <a class="navbar-item" href="/App/contact-page/contact-page.html">
-                          Contact
-                      </a>
-                  </div>
-                </div>
+  <!--                                   NAVBAR SECTION [END]                          -->
 
-                <div class="navbar-end">
-                  <div class="navbar-item">
-                  <div class="buttons">
-                      <a class="button signup-btn" id="signupBtn">
-                      <strong>Sign up</strong>
-                      </a>
-                      <a class="button is-light" id="loginBtn" style="background-color: #636363; color:white;">
-                      Log in
-                      </a>
-                  </div>
-                  </div>
-              </div>
-            </nav>    
-        </div>
-      </div>
-     </section>
-    <!-- NAVBAR SECTION [END] -->
+  <!--                            Categories SECTION [START]                           -->
 
-
-    <!-- COLUMN SECTION -->
-    <section class="hero is-small" id="column_section" style="height: 20vh;">
-
-      <!-- Code for sign up form -->
-      <div class="signup-form-container" id="signup_container">
-        <div class="card" id="sign_up_form_card">
-          <div class="card-content">
-            <span id="Signup_header_text">Sign Up</span><br><br>
-            <form class="signup-form">
-              <input class="input" type="text" placeholder="First Name" /><br> <br>
-              <input class="input" type="text" placeholder="Last Name" /><br> <br>
-              <input class="input" type="email" placeholder="Email Address" /><br> <br>
-              <input class="input" type="email" placeholder="Password" /><br> <br>
-
-              <div class="buttons">
-                <input class="button is-primary" id="reset_btn" type="reset" value="Clear" />
-                <input class="button is-primary" id="submit_btn" type="submit" value="Sign Up" />
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-
-       <!-- Code for sign up form -->
-       <div class="signin-form-container" id="signin_container">
-        <div class="card" id="sign_in_form_card">
-          <div class="card-content">
-            <span id="Signin_header_text">Sign In</span><br><br>
-            <form class="signin-form">
-              <input class="input" type="email" placeholder="Email Address" /><br> <br>
-              <input class="input" type="email" placeholder="Password" /><br> <br>
-
-              <div class="buttons" id="signinBtn_section">
-                <input class="button is-primary" id="reset_btn" type="reset" value="Clear" />
-                <input class="button is-primary" id="submit_btn" type="submit" value="Sign In" />
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <!-- The columns -->
-      <div class="grid-container">
-        <div class="card">
-          <div class="card-content">
-            <div class="content">
-              <h1>Enhance Your Home Experience with <u>Certified</u> Professionals</h1>
-              <p>Transform your home life by hiring certified professionals to tackle everyday tasks and menial jobs around your house.
-                 Let us help you elevate your living space with ease and convenience.</p>
-                <button class="button" style="background-color: #676767;" id="more_btn">See more</button>
-            </div>
-          </div>
-        </div>
-        <div class="card" id="img_card" style="background-color: white;">
-          <img src="/src/img/loading_page.jpg" alt="landing page image">
-        </div>
-      </div>
-
-      <!-- Font-awesome icon for button -->
-      <i class="fa-solid fa-circle-arrow-down" id="angle_down"></i>
-
-    <!-- bottom section of code  -->
-    <div class="pattern">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="orange" fill-opacity="1" d="M0,64L48,58.7C96,53,192,43,288,53.3C384,64,480,96,576,106.7C672,117,768,107,864,101.3C960,96,1056,96,1152,112C1248,128,1344,160,1392,176L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-    </svg>
-    <span id="footer_info">
-      <h1>Why struggle, just <span style="color: black; font-weight: bold;">fix it.</span></h1>
-    </span>
+  <section class="section is-medium" id="categories_section">
+    <div class="header_info">
+      <h1 class="title">What are you looking for?</h1>
+    <h2 class="subtitle">
+      Select a category to start your journey.
+    </h2>
     </div>
+
+    <!-- grid for categories -->
+    <div class="grid-container"> 
+      <div class="grid-card">
+          <i class="fa-solid fa-seedling"></i>
+          <h2>Home Improvement and Renovationg</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-person-chalkboard"></i>
+          <h2>Education</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-computer"></i>
+          <h2>Information Technology</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-toolbox" id="mechanic_icon"></i>
+          <h2>Automotive Service</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-faucet-drip"></i>
+          <h2>Pumbing and Pipefitting.</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-paint-roller"></i>
+          <h2>Home Decor</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-car"></i>
+          <h2>Transport</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-regular fa-object-group"></i>
+          <h2>Creative Service</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-kitchen-set"></i>
+          <h2>Hospitality</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-house"></i>
+          <h2>Home and Personal Care</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-mask"></i>
+          <h2>Beauty and Wellness</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-plane-departure"></i>
+          <h2>Entertainment and Leisure</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-heart-pulse"></i>
+          <h2>Health and Fitness</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-coins"></i>
+          <h2>Financial and Insurance</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-paw"></i>
+          <h2>Pet Services</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-house-lock"></i>
+          <h2>Home Security</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-broom"></i>
+          <h2>Specialty Cleaning</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-truck-front"></i>
+          <h2>Moving and Relocation</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-laptop"></i>
+          <h2>Remote and Virtual Learning</h2>
+      </div>
+</div>
+    
+    <div class="close" id="close_btn">Close</div>
+  </section>
+
+  <!--                            Categories SECTION [End]                           -->
+
+
+    <!--                            Landing page columns  SECTION [START]                           -->
+    <section class="section is-large" id="landingPage_section">
+     <div class="card-container">
+      <div class="card">
+        <div class="card-content">
+          <div class="content">
+            <span id="content-header">Enhance Your Home Experience with <br><u>Certified</u> Professionals</span>
+            <p>Transform your home life by hiring certified professionals to <br> 
+              tackle everyday tasks and menial jobs around your house.<br>
+               Let us help you elevate your living space with ease and convenience.</p>
+
+               <button class="button is-link is-rounded" style="background-color: white; color: black;" id="more_btn">See more</button>
+               <button class="button is-rounded" id="contactus_btn">Contact Us</button>
+          </div>
+        </div>
+      </div>
+     </div>
     </section>
+     <!--                            Landing page columns  SECTION [End]                           -->
   
-    <script src="/script.js"></script>
+  <!-- Script tag for landing page -->
+  <script src="/script.js"></script>
+
+  <!-- Utilizing scripting from Home page -->
+   <script>
+    // Variable for category section
+    let categories_section = document.getElementById('categories_section');
+
+    // event listener for category section to toggle section
+document.getElementById('close_btn').addEventListener('click', () => {
+    categories_section.style.display = "none";
+});
+
+// event listener for category section to remove section
+document.getElementById('cat_dropdown').addEventListener('click', () => {
+    categories_section.style.display = "block";
+});
+   </script>
 </body>
 </html>
