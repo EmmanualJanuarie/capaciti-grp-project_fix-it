@@ -4,14 +4,54 @@ let signup_container = document.getElementById("signup_container");
 // variable for signuin container
 let signin_container = document.getElementById("signin_container");
 
+// Variable for category section
+let categories_section = document.getElementById('categories_section');
+
+// Variable for search section
+let search_section = document.getElementById('search_section');
+
+// Variable for services card section
+let services_card = document.getElementById('services_card');
+
+// Variable for More_info card section
+let more_info_section = document.getElementById('more_info_section');
+
+// Variable for footer_section card section
+let footer_section = document.getElementById('footer_section');
+
+// Variable for featured services  section
+let featured_services_section = document.getElementById('featured_services_section');
+
+
+// event listener for category section to toggle section
+document.getElementById('close_btn').addEventListener('click', () => {
+    categories_section.style.display = "none";
+    search_section.style.display = "block";
+    services_card.style.display = "block";
+    featured_services_section.style.display = "block";
+    more_info_section.style.display = "block";
+    footer_section.style.display = "block";
+    window.location.href = "../home-page/home-page.html";
+    
+});
+
+// event listener for category section to remove section
+document.getElementById('cat_dropdown').addEventListener('click', () => {
+    categories_section.style.display = "block";
+    search_section.style.display = "none";
+    services_card.style.display = "none";
+    more_info_section.style.display = "none";
+    footer_section.style.display = "none";
+    featured_services_section.style.display = "none";
+});
+
+
 // boolean variable for form
 var form_toggled = false;
 
 document.getElementById('signupBtn').addEventListener('click', () => {
     form_toggled = !form_toggled;
     toggleSignupform();
-
-
 });
 
 document.getElementById('loginBtn').addEventListener('click', () => {
@@ -123,4 +163,8 @@ function toMechanic(){
 
 function toPlumber(){
     window.location.href = "#Plumber";
+}
+
+function toContactUs_page(){
+    window.location.href = "../contact-page/contact-page.html";
 }
