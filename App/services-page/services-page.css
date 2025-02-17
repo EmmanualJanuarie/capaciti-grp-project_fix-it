@@ -226,11 +226,29 @@ img {
     color: #656565;
 }
 
-#services_categories_cards{
+/*  ----                                   [End of Sevices information Section]                               ---- */
+
+/*  ----                                   [Start of Services card Section]                               ---- */
+#services_grid_container{
     display: grid;
-    grid-template-columns:repeat(2, auto) ;
+    grid-template-columns:repeat(4, auto) ;
     gap: 20px;
     justify-content: center;
+    text-align: center;
+
+}
+
+#services_grid_container .columns{
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    border-radius:20px 20px 20px 20px;
+}
+
+#services_grid_container .columns:hover{
+    transform: scale(1.1);
+}
+
+#services_grid_container .card{
+    background-color: white;
 }
 
 .column-vertical-mode{
@@ -244,20 +262,63 @@ img {
     border-radius:20px 20px 0px 0px;
 }
 
-/* removing cursor of grid-card */
-#services_grid_container > .grid-card:hover{
-    cursor: default;
-    transform: scale(1.9);
-    justify-content: center;
-}
-
 #services_grid_container > .grid-card{
     width: 500px;
 }
 
 #services_grid_container{
-    gap: 130px;
-    flex-direction: rows;
+    gap: 10px;
+    justify-content: center;
 }
 
-/*  ----                                   [End of Sevices information Section]                               ---- */
+
+.text-title{
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.text-subtitle{
+    color: #656565;
+    margin-bottom: 30px;
+}
+
+.view-btn{
+    color:#656565;
+    text-decoration: underline;
+}
+
+.view-btn:hover{
+    color:orange;
+}
+
+.icon{
+    color:#656565;
+    background-color: white;
+    border-radius: 75px;
+    width: 90px;
+    height: 90px;
+
+    position: relative;
+    left: 8%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+   
+    
+    border-radius: 50%;
+}
+
+.icon-column{
+    position: relative;
+}
+
+.text-column{
+    position: relative;
+    bottom: 70px;
+}
+
+#section_3{
+    background-color: orange;
+}
