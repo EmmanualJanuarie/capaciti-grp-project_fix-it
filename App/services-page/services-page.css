@@ -195,4 +195,69 @@ img {
     display: none;
 }
 
-  /*  ----                                   [End of Categories Section]                                        ---- */
+  /*  ----                                   [End of Categories Section]                               ---- */
+
+/*  ----                                   [Sevices information Section]                               ---- */
+/* Positioning of the service section */
+#Services_info_section{
+    position: relative;
+    top: 50px;
+
+    /* Setting the alignment of the container */
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* background color of container */
+#services_info_card_content{
+    background-color: white !important;
+}
+
+/* font size of the title */
+.title{
+    font-size: 90px;
+}
+
+.subtitle{
+    margin-top: 40px;
+    color: #656565;
+}
+
+#services_categories_cards{
+    display: grid;
+    grid-template-columns:repeat(2, auto) ;
+    gap: 20px;
+    justify-content: center;
+}
+
+.column-vertical-mode{
+    display: grid;
+    flex-direction: column;
+   
+}
+
+/* Styling of image */
+.column > img{
+    border-radius:20px 20px 0px 0px;
+}
+
+/* removing cursor of grid-card */
+#services_grid_container > .grid-card:hover{
+    cursor: default;
+    transform: scale(1.9);
+    justify-content: center;
+}
+
+#services_grid_container > .grid-card{
+    width: 500px;
+}
+
+#services_grid_container{
+    gap: 130px;
+    flex-direction: rows;
+}
+
+/*  ----                                   [End of Sevices information Section]                               ---- */
