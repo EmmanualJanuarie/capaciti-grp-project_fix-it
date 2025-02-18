@@ -231,7 +231,7 @@ img {
 /*  ----                                   [Start of Services card Section]                               ---- */
 #services_grid_container{
     display: grid;
-    grid-template-columns:repeat(4, auto) ;
+    grid-template-columns:repeat(3, auto) ;
     gap: 20px;
     justify-content: center;
     text-align: center;
@@ -277,16 +277,20 @@ img {
     font-weight: bold;
     font-size: 25px;
     margin-bottom: 10px;
+
+    font-size: 30px;
 }
 
 .text-subtitle{
     color: #656565;
     margin-bottom: 30px;
+    font-size: 25px;
 }
 
 .view-btn{
     color:#656565;
     text-decoration: underline;
+    font-size: 25px;
 }
 
 .view-btn:hover{
@@ -319,6 +323,191 @@ img {
     bottom: 70px;
 }
 
-#section_3{
+/*  ----                                   [End of Services card Section]                               ---- */
+
+
+/*  ----                                   [Start of fixit inquiry section]                               ---- */
+#fixit_inquiry_section{
     background-color: orange;
+
+    display: flex;
+    justify-content: center;
+}
+
+#list_items{
+    text-align: left;
+    list-style: none;
+
+    font-size: 30px;
+}
+
+#text_column_header{
+    font-size: 40px;
+    text-align: center;
+}
+
+#img_column > .card, #text_column > .card{
+    background-color:black;
+}
+
+#btn_list_item{
+    text-align: center;
+}
+
+#btn_list_item a{
+    background-color: #656565;
+    width: 290px;
+
+    position: relative;
+    right: 5%;
+    font-size: 20px;
+}
+
+
+
+#img_column img{
+    height: 110%;
+}
+
+#img_column .card{
+    height: 101%;
+}
+
+/*  ----                                   [End of fixit inquiry section]                               ---- */
+
+/*  ----                                   [Start of Join us section]                                        ---- */
+#join_us_section{
+    text-align: center;
+}
+
+#join_us_section .subtitle{
+    font-size: 30px;
+}
+
+#joinus_btn{
+    font-size: 27px;
+}
+
+/*  ----                                   [End of Join us section]                                        ---- */
+
+
+
+/*  ----                                   [Start of footer section]                                        ---- */
+
+#footer_section{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Postion - column 1 */
+#column_1{
+    position: relative;
+    right:50%;
+    bottom: 10%;
+    text-align: left;
+}
+
+/* Styling for fotter logo */
+#footer_logo{
+    color:white;
+    text-shadow: 1px 2px 10px grey ;
+    font-size: 40px;
+    font-weight: bold;
+
+    width: 390px;
+}
+
+#footer_logo:hover{
+    color: orange;
+}
+
+#footer_section > .columns{
+    position: relative;
+    bottom: 80px;
+    left:11%;
+}
+
+#footer_logo_subtext{
+    margin-left: 12px;
+    color: white;
+}
+
+.contact_logo{
+    font-size: 20px;
+    margin-left: 12px;
+    margin-top: 20px;
+}
+
+.contact_logo > a:link{
+    color: white;
+}
+
+.contact_logo > a:hover{
+    color: orange;
+}
+
+.column2_header, .column3_header , .column4_header{
+    font-size: 23px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#column2_list{
+    text-align: left;
+    margin-left: 39px;
+}
+
+#column3_list{
+    text-align: left;
+    margin-left: 19px;
+}
+
+#column4_list{
+    text-align: left;
+    margin-left: 33px;
+}
+
+
+
+.list-item{
+    color: white;
+}
+
+.list-item:hover{
+    color: orange;
+}
+
+hr{
+    background-color: white;
+    position: absolute;
+    right:1%;
+    top:250px;
+
+    width: 150%;
+}
+
+.copyright-info{
+    position: absolute;
+    top: 300px;
+    right: 1110px;
+    color: #fff;
+    width: 40%;
+}
+
+/*                                           End of footer section                                   */
+
+/* Setting font styling  */
+#featured_services_card_header{
+    font-size: 45px;
+    font-weight: bold;
+    position: relative;
+
+    display:flex;
+    justify-content: start;
+
+    position: relative;
+    left: 80px;
+
+    color: #656565;
 }
