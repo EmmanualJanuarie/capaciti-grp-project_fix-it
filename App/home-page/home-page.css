@@ -619,6 +619,9 @@ img {
 
  /*  ----                                   [End of More info section]                                        ---- */
 
+
+ /*  ----                                   [Start of footer section]                                        ---- */
+
 #footer_section{
     display: flex;
     justify-content: center;
@@ -720,5 +723,6 @@ hr{
     width: 40%;
 }
 
+/*                                           End of footer section                                   */
 
   
