@@ -196,22 +196,30 @@ img {
 }
 
   /*  ----                                   [End of Categories Section]                               ---- */
-
-  /* #card-container {
-    display: flex;
+#pagination_section{
+    display: grid;
+    justify-content: center;    
+}
+  #card-container {
+    display: grid;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 90px;
+
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.card {
-    width: 150px;
-    height: 200px;
-    border: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f9f9f9;
-    border-radius: 5px;
+.image-item{
+    width: 15vw;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.card{
+    background-color: transparent;
+}
+
+.columns{
+    flex-direction: column;
 }
 
 #pagination {
@@ -237,4 +245,29 @@ img {
 
 #pagination .active {
     background-color: #0056b3;
-} */
+}
+
+.header-text{
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
+
+.location-text{
+    font-size: 25px;
+}
+
+.price-text{
+    font-size: 25px;
+}
+
+#prev-button , #next-button{
+    background-color: orange;
+    font-size: 30px;
+    color: white;
+}
+
+#page-numbers{
+    background-color: orange;
+    font-size: 20px;
+}
