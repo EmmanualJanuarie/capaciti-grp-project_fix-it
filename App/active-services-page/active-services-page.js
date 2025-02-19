@@ -15,7 +15,7 @@ document.getElementById('cat_dropdown').addEventListener('click', () => {
 const cards = Array.from({ length: 50}, (_, i)=> `Card ${i + 1}`);
 
 // constant variable for toatl amount of cards per page
-const cardsPerPage = 10;
+const cardsPerPage = 9;
 
 // determines the current page by default value
 let currentPage = 1;
@@ -36,6 +36,68 @@ function renderCards(){
         const cardElement = document.createElement('div');
         cardElement.className = 'card';
         cardContainer.appendChild(cardElement);
+
+        // js script fo column
+        const columns = document.createElement('div');
+        columns.className = 'columns';
+
+        // js script for the two columns
+        // column 1
+        const img_column = document.createElement('div');
+        img_column.className = 'img-column';
+        // adding column to columns container
+        columns.appendChild(img_column);
+
+        // Adding image tage to image column
+        const imgTag = document.createElement('img');
+        imgTag.className = 'image-item';
+        img_column.appendChild(imgTag);//adding image tag to image column
+
+        // Adding image to href attribute
+        imgTag.src = "../../src/img/Automative_Services.jpg";
+
+
+        // column 2
+        const text_column = document.createElement('div');
+        text_column.className = 'text-column';
+        // adding column to columns container
+        columns.appendChild(text_column);
+
+
+        // creating header 1 tag
+        const header_tag = document.createElement('h1');
+        header_tag.className = 'header-text';
+        header_tag.textContent = "[Company Name]";
+        // adding header tag to the  text column
+        text_column.appendChild(header_tag);
+
+        // paragraph tag for Location
+        const location = document.createElement('p');
+        location.className = 'location-text';
+        location.textContent = "[Province, Local location]";
+        // Adding paragraph tag to text_columns
+        text_column.appendChild(location);
+
+        // paragraph text for Price
+        const price = document.createElement('p');
+        price.className = 'price-text';
+        price.textContent = "[R0.00]";
+        // Adding paragraph text to text columns
+        text_column.appendChild(price);
+
+
+        // adding columns ta to cardElement
+        cardElement.appendChild(columns);
+        // js script code for p tag
+        const ptag = document.createElement('p');
+        ptag.className = 'services-card-text';
+        cardElement.appendChild(ptag);
+
+        
+        cardElement.appendChild(prevBtn);
+        cardElement.appendChild(pageNumbers);
+        cardElement.appendChild(nextBtn);
+
     });
 
     prevBtn.disabled = currentPage === 1;
