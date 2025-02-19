@@ -115,9 +115,10 @@ function updatePageNumbers(){
         pageNumberButton.className = i === currentPage ? 'active' : '';
         pageNumberButton.addEventListener('click', () => {
             currentPage = i;
+            updatePageNumbers();
             renderCards();
         });
-        pageNumberButton.appendChild(pageNumberButton);
+        pageNumbers.appendChild(pageNumberButton);
     }
 }
 
