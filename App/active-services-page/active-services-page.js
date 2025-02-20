@@ -1,11 +1,18 @@
 // event listener for category section to toggle section
 document.getElementById('close_btn').addEventListener('click', () => {
     document.getElementById('categories_section').style.display = "none";
+    document.getElementById('aside_section').style.display = "block";
+    document.getElementById('pagination_section').style.display = "block";
+    document.getElementById('footer_section').style.display = "block";
+    window.location.href = "/App/active-services-page/active-services-page.html";
 });
 
 // event listener for category section to remove section
 document.getElementById('cat_dropdown').addEventListener('click', () => {
     document.getElementById('categories_section').style.display = "block";
+    document.getElementById('aside_section').style.display = "none";
+    document.getElementById('pagination_section').style.display = "none";
+    document.getElementById('footer_section').style.display = "none";
 });
 
 
@@ -15,7 +22,7 @@ document.getElementById('cat_dropdown').addEventListener('click', () => {
 const cards = Array.from({ length: 50}, (_, i)=> `Card ${i + 1}`);
 
 // constant variable for toatl amount of cards per page
-const cardsPerPage = 9;
+const cardsPerPage = 21;
 
 // determines the current page by default value
 let currentPage = 1;
@@ -34,12 +41,12 @@ function renderCards(){
 
     visibleCards.forEach(card => {
         const cardElement = document.createElement('div');
-        cardElement.className = 'card';
+        cardElement.className = 'pag-card';
         cardContainer.appendChild(cardElement);
 
         // js script fo column
         const columns = document.createElement('div');
-        columns.className = 'columns';
+        columns.className = 'pag-columns';
 
         // js script for the two columns
         // column 1

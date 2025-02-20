@@ -196,9 +196,12 @@ img {
 }
 
   /*  ----                                   [End of Categories Section]                               ---- */
+
+   /*  ----                                   [Start of Pagination Section]                               ---- */
 #pagination_section{
     display: grid;
-    justify-content: center;    
+    justify-content: center;
+    height: 340vh;    
 }
   #card-container {
     display: grid;
@@ -214,11 +217,11 @@ img {
     border-radius: 20px 20px 20px 20px;
 }
 
-.card{
+.pag-card{
     background-color: transparent;
 }
 
-.columns{
+.pag-columns{
     flex-direction: column;
 }
 
@@ -289,39 +292,185 @@ img {
     background-color: #007bff;
     color: white;
 }
+ /*  ----                                   [End of Pagination Section]                               ---- */
 
-
-/* Aside stuff */
-#search_bar_aside {
+/*  ----                                   [Start of aside Section]                               ---- */
+#aside_section {
     width: 20%;
     float: left;
     position: relative;
-    bottom: 1980px;
-    margin-left: 20px;
+    bottom: 4040px;
+    right: 0%;
 }
 
-#lists_aside{
-    width: 20%;
+#search_bar {
+    width: 190%;
     float: left;
     position: relative;
-    bottom: 1780px;
-    margin-left: 20px;
+    top: 153px;
+    right: 220%;
+
+    margin-bottom: 40px;
 }
-#search_bar_aside input{
+
+#aside_section input{
     background-color: white;
     color: black;
     height: 80px;
     font-size: 25px;
 }
 
-#search_bar_aside i{
+#aside_section i{
     position: relative;
     top: 20px;
     font-size: 30px;
     margin-right: 30px;
 }
 
-#search_bar_aside input::placeholder{
+#aside_section input::placeholder{
     color: black;
 }
+
+.heading-size h1{
+    font-size: 50px;
+    color: black;
+    font-weight: 100;
+}
+
+.loaction_list h1{
+    font-size: 50px;
+    color: black;
+    font-weight: 100;
+}
+
+.heading-size li{
+    font-size: 25px;
+    color: #656565;
+    margin-top: 20px;
+}
+
+.heading-size a{
+    color: #656565;
+}
+
+.heading-size a:hover{
+    color: orange;
+}
+
+
+
+#list-field{
+    width: 180%;
+    position: relative;
+    right: 610px;
+    top: 140px;
+}
+
+/*  ----                                   [Start of aside Section]                               ---- */
+
+
+/*  ----                                   [Start of footer section]                                        ---- */
+
+#footer_section{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Postion - column 1 */
+#column_1{
+    position: relative;
+    right:50%;
+    bottom: 10%;
+    text-align: left;
+}
+
+/* Styling for fotter logo */
+#footer_logo{
+    color:white;
+    text-shadow: 1px 2px 10px grey ;
+    font-size: 40px;
+    font-weight: bold;
+
+    width: 390px;
+}
+
+#footer_logo:hover{
+    color: orange;
+}
+
+#footer_section > .columns{
+    position: relative;
+    bottom: 80px;
+    left:11%;
+}
+
+#footer_logo_subtext{
+    margin-left: 12px;
+    color: white;
+}
+
+.contact_logo{
+    font-size: 20px;
+    margin-left: 12px;
+    margin-top: 20px;
+}
+
+.contact_logo > a:link{
+    color: white;
+}
+
+.contact_logo > a:hover{
+    color: orange;
+}
+
+.column2_header, .column3_header , .column4_header{
+    font-size: 23px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#column2_list{
+    text-align: left;
+    margin-left: 39px;
+}
+
+#column3_list{
+    text-align: left;
+    margin-left: 19px;
+}
+
+#column4_list{
+    text-align: left;
+    margin-left: 33px;
+}
+
+
+
+.list-item{
+    color: white;
+}
+
+.list-item:hover{
+    color: orange;
+}
+
+hr{
+    background-color: white;
+    position: absolute;
+    right:1%;
+    top:250px;
+
+    width: 150%;
+}
+
+.copyright-info{
+    position: absolute;
+    top: 300px;
+    right: 1110px;
+    color: #fff;
+    width: 40%;
+}
+
+/*                                           End of footer section                                   */
 
