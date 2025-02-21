@@ -178,108 +178,113 @@
  
   <!--                            Pagination SECTION [START]                           -->
   <section class="section is-large" id="pagination_section">
-    <div id="card-container">
-      <div class="columns pag_columns">
-        <div class="column">
-          <div class="card" id="pag-card">
-            <div class="card-content">
-              <div id="pagination">
-                <div class="pagination-columns">
-                  <button class="button is-rounded" id="prev-button">Previous</button>
-                  <div id="page-numbers"></div>
-                  <button class="button is-rounded" id="next-button">Next</button>
+    <div class="columns">
+      <!-- Column 1 -->
+      <div class="column" id="sidebar_column">
+        <aside id="aside_section">
+          <div class="field" id="search_bar">
+            <p class="control has-icons-right">
+              <input class="input" type="type" placeholder="Search for service" />
+              <span class="icon is-small is-right">
+                <i class="fa-solid fa-magnifying-glass" style="color:black;"></i>
+              </span>
+            </p>
+          </div>
+      
+          <div class="field" id="list-field" >
+            <div class="all_lists">
+              <!-- Category list -->
+              <div class="heading-size">
+                <h1>Categories</h1>
+                <ul>
+                  <li><a href="">Home Improvement and Renovation</a></li>
+                  <li><a href="">Education</a></li>
+                  <li><a href="">Information Technology</a></li>
+                  <li><a href="">Automotive Service</a></li>
+                  <li><a href="">Plumbing and Pipefitting</a></li>
+                  <li><a href="">Home Decor</a></li>
+                  <li><a href="">Transport</a></li>
+                  <li><a href="">Creative Service</a></li>
+                  <li><a href="">Hospitality</a></li>
+                  <li><a href="">Home and Personal Care</a></li>
+                  <li><a href="">Beauty and Wellness</a></li>
+                  <li><a href="">Entertainment and Leisure</a></li>
+                  <li><a href="">Health and Fitness</a></li>
+                  <li><a href="">Financial and Insurance</a></li>
+                  <li><a href="">Pet Services</a></li>
+                  <li><a href="">Home Security</a></li>
+                  <li><a href="">Specialty Cleaning</a></li>
+                  <li><a href="">Moving and Relocation</a></li>
+                  <li><a href="">Remote and Virtual Learning</a></li>
+                  <li><a href="">Clerical Work</a></li>
+                  <li><a href="">Manual Labour</a></li>
+                </ul>
+              </div>
+      
+              <!-- Location list -->
+              <div class="heading-size">
+                <h1>Location</h1>
+                <ul>
+                  <li><a href="">Eastern Cape</a></li>
+                  <li><a href="">Western Cape</a></li>
+                  <li><a href="">Limpopo</a></li>
+                  <li><a href="">Free State</a></li>
+                  <li><a href="">Northern Cape</a></li>
+                  <li><a href="">Gauteng</a></li>
+                  <li><a href="">Mpumalanga</a></li>
+                  <li><a href="">North West</a></li>
+                  <li><a href="">KwaZulu-Natal</a></li>
+                </ul>
+              </div>
+      
+              <!-- Filter by price list -->
+              <div class="heading-size">
+                <h1>Filter By Price</h1>
+                <ul>
+                  <li><a href="">Less than R200</a></li>
+                  <li><a href="">R200 - R300</a></li>
+                  <li><a href="">R300 - R400</a></li>
+                  <li><a href="">R400 - R500</a></li>
+                  <li><a href="">R500 - R600</a></li>
+                </ul>
+              </div>
+      
+              <!-- Sort By  -->
+              <div class="heading-size">
+                <h1>Sort By</h1>
+                <ul>
+                  <li><a href="">Name (A - Z)</a></li>
+                  <li><a href="">Name (Z - A)</a></li>
+                  <li><a href="">Price (Low - High)</a></li>
+                  <li><a href="">Price (High - Low)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Column 2 -->
+       <div class="column" id="pagination_column">
+        <div id="card-container">
+          <div class="columns pag_columns">
+            <div class="column">
+              <div class="card" id="pag-card">
+                <div class="card-content">
+                  <div id="pagination">
+                    <div class="pagination-columns">
+                      <button class="button is-rounded" id="prev-button">Previous</button>
+                      <div id="page-numbers"></div>
+                      <button class="button is-rounded" id="next-button">Next</button>
+                    </div>
+                  </div>
+                </div>
                 </div>
               </div>
             </div>
-            </div>
           </div>
-        </div>
-      </div>
-      
-
-
-    <aside id="aside_section">
-      <div class="field" id="search_bar">
-        <p class="control has-icons-right">
-          <input class="input" type="type" placeholder="Search for service" />
-          <span class="icon is-small is-right">
-            <i class="fa-solid fa-magnifying-glass" style="color:black;"></i>
-          </span>
-        </p>
-      </div>
-  
-      <div class="field" id="list-field" >
-        <div class="all_lists">
-          <!-- Category list -->
-          <div class="heading-size">
-            <h1>Categories</h1>
-            <ul>
-              <li><a href="">Home Improvement and Renovation</a></li>
-              <li><a href="">Education</a></li>
-              <li><a href="">Information Technology</a></li>
-              <li><a href="">Automotive Service</a></li>
-              <li><a href="">Plumbing and Pipefitting</a></li>
-              <li><a href="">Home Decor</a></li>
-              <li><a href="">Transport</a></li>
-              <li><a href="">Creative Service</a></li>
-              <li><a href="">Hospitality</a></li>
-              <li><a href="">Home and Personal Care</a></li>
-              <li><a href="">Beauty and Wellness</a></li>
-              <li><a href="">Entertainment and Leisure</a></li>
-              <li><a href="">Health and Fitness</a></li>
-              <li><a href="">Financial and Insurance</a></li>
-              <li><a href="">Pet Services</a></li>
-              <li><a href="">Home Security</a></li>
-              <li><a href="">Specialty Cleaning</a></li>
-              <li><a href="">Moving and Relocation</a></li>
-              <li><a href="">Remote and Virtual Learning</a></li>
-              <li><a href="">Clerical Work</a></li>
-              <li><a href="">Manual Labour</a></li>
-            </ul>
-          </div>
-  
-          <!-- Location list -->
-          <div class="heading-size">
-            <h1>Location</h1>
-            <ul>
-              <li><a href="">Eastern Cape</a></li>
-              <li><a href="">Western Cape</a></li>
-              <li><a href="">Limpopo</a></li>
-              <li><a href="">Free State</a></li>
-              <li><a href="">Northern Cape</a></li>
-              <li><a href="">Gauteng</a></li>
-              <li><a href="">Mpumalanga</a></li>
-              <li><a href="">North West</a></li>
-              <li><a href="">KwaZulu-Natal</a></li>
-            </ul>
-          </div>
-  
-          <!-- Filter by price list -->
-          <div class="heading-size">
-            <h1>Filter By Price</h1>
-            <ul>
-              <li><a href="">Less than R200</a></li>
-              <li><a href="">R200 - R300</a></li>
-              <li><a href="">R300 - R400</a></li>
-              <li><a href="">R400 - R500</a></li>
-              <li><a href="">R500 - R600</a></li>
-            </ul>
-          </div>
-  
-          <!-- Sort By  -->
-          <div class="heading-size">
-            <h1>Sort By</h1>
-            <ul>
-              <li><a href="">Name (A - Z)</a></li>
-              <li><a href="">Name (Z - A)</a></li>
-              <li><a href="">Price (Low - High)</a></li>
-              <li><a href="">Price (High - Low)</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </aside>
-  
+       </div>
+    </div>
   </section>
    <!--                            Pagination SECTION [End]                           -->
 

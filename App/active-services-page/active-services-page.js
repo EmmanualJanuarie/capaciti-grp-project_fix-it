@@ -19,7 +19,7 @@ document.getElementById('cat_dropdown').addEventListener('click', () => {
 
 // Pagination Js
 // renders amount of cards
-const cards = Array.from({ length: 50}, (_, i)=> `Card ${i + 1}`);
+const cards = Array.from({ length: 63}, (_, i)=> `Card ${i + 1}`);
 
 // constant variable for toatl amount of cards per page
 const cardsPerPage = 21;
@@ -38,7 +38,7 @@ function renderCards(){
     const start = (currentPage - 1) * cardsPerPage; // calculates starting index of cards to be displayed on viewd page.
     const end = start + cardsPerPage;//Determines the ending index
     const visibleCards = cards.slice(start, end);//Obtains subset of the cards(determines the amount of cards shown at view)
-
+    const pagination_col = document.getElementById('pagination_column');
     visibleCards.forEach(card => {
         const cardElement = document.createElement('div');
         cardElement.className = 'pag-card';
@@ -104,6 +104,8 @@ function renderCards(){
         cardElement.appendChild(prevBtn);
         cardElement.appendChild(pageNumbers);
         cardElement.appendChild(nextBtn);
+
+        pagination_col.appendChild(cardContainer);
 
     });
 

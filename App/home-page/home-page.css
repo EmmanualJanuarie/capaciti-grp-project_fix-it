@@ -160,11 +160,12 @@ html {
 }
 
 /* Positioning & Styling - images inside image container  */ 
-.img-container img {
+#search_section img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    border-radius: 30px 30px 30px 30px;
 }
 
 /* Styling - active image container -> opacity set  */ 
