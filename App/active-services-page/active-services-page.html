@@ -22,53 +22,30 @@
 </head>
 <body>
      <!--                            NAVBAR SECTION [START]                           -->
-  <section class="section" id="nav_Section">
-    <div class="hero-body">
-      <!-- Navigation bar code -->
-       <nav class="navbar" role="navigation" aria-label="main navigation">
-           <div class="navbar-brand">
-           <a class="navbar-item" id="navbar_logo" href="/App/home-page/home-page.html">
-               fix it.
-           </a>
-           </div>
-       
-           <div id="navbarBasicExample" class="navbar-menu">
-           <div class="navbar-start">
-               <a class="navbar-item" href="/App/about-page/about-page.html">
-               About
-               </a>
-       
-               <a class="navbar-item" href="/App/services-page/services-page.html">
-               Services
-               </a>
+     <header>
+      <nav>
+          <ul class="nav-bar">
+              <li class="logo"><a class="navbar-item" id="navbar_logo" href="/index.html">
+                  fix it.
+              </a></li>
+              <input type="checkbox" id="check">
+              <span class="menu">
+                  <li><a href="/App/about-page/about-page.html">About Us</a></li>
+                  <li><a href="/App/services-page/services-page.html">Services</a></li>
+                  <li><a href="/App/contact-page/contact-page.html">Contact Us</a></li>
+                  <li><a href="#Browse by category" id="cat_dropdown">Browse by category <i class="fa-solid fa-caret-down" id="drp-arrow"></i></a></li>
 
-               <a class="navbar-item" href="/App/contact-page/contact-page.html">
-                   Contact
-               </a>
-       
-               <div class="navbar-item has-dropdown is-hoverable">
-               <a class="navbar-link" id="cat_dropdown">
-                   Browse by category
-               </a>
-               </div>
-           </div>
-       
-           <div class="navbar-end">
-               <div class="navbar-item">
-               <div class="buttons">
-                   <a class="button signup-btn" target="_blank" href="/App/signup-page/signup-page.html" id="signupBtn">
-                   <strong>Sign up</strong>
-                   </a>
-                   <a class="button is-light" id="loginBtn" target="_blank" href="/App/login-page/login-page.html" style="background-color: #636363; color:white;">
-                   Log in
-                   </a>
-               </div>
-               </div>
-           </div>
-           </div>
-       </nav>    
-   </div>
-  </section>
+                  <span class="menu-buttons">
+                      <li><a class="button" href="#About" id="signupBtn" target="_blank">Sign Up</a></li>
+                      <li><a class="button" href="#Services" id="loginBtn" target="_blank">Log in</a></li>
+                      <li><a class="button" href="#Services" id="manageBtn" target="_blank">Manage</a></li>
+                  </span>
+                  <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
+              </span>
+              <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></i></label>
+          </ul>
+      </nav>
+  </header>
 
   <!--                                   NAVBAR SECTION [END]                          -->
 
@@ -289,72 +266,95 @@
    <!--                            Pagination SECTION [End]                           -->
 
    <!--                                   Section for footer                                    -->
-<section class="section is-medium" id="footer_section" style="background-color: #656565;">
-  <div class="columns">
-    <div class="footer-column" id="column_1">
-      <div class="footer-brand">
-        <a class="navbar-item" id="footer_logo" href="/App/home-page/home-page.html" style="background-color: #656565;">
-            fix it.
-        </a>
-        </div>
-        <p id="footer_logo_subtext">Empowering skilled individuals to connect,<br>
-          create, and thrive. Bridging the gap between<br>
-          unemployment and opportunity by providing a <br>platform
-          for talented workers to offer their services to the community</p>
-
-          <div class="contact_logo">
-            <a href="#fixit_facebook_account">
-              <i class="fa-brands fa-square-facebook"></i>
-            </a>
-            <a href="#fixit_instagram_account">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="#fixit_x.com_account">      
-              <i class="fa-brands fa-square-x-twitter"></i>
-            </a>
-            <a href="#fixit_LinkedIn_account">      
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
+<footer>
+  <section class="section is-medium" id="footer_section" style="background-color: #656565;">
+    <div class="columns">
+      <div class="footer-column" id="column_1">
+        <div class="footer-brand">
+          <a class="navbar-item" id="footer_logo" href="/index.html" style="background-color: #656565;">
+              fix it.
+          </a>
           </div>
+          <p id="footer_logo_subtext">Empowering skilled individuals to connect,<br>
+            create, and thrive. Bridging the gap between<br>
+            unemployment and opportunity by providing a <br>platform
+            for talented workers to offer their services to the community</p>
+  
+            <div class="contact_logo">
+              <a href="#fixit_facebook_account">
+                <i class="fa-brands fa-square-facebook"></i>
+              </a>
+              <a href="#fixit_instagram_account">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#fixit_x.com_account">      
+                <i class="fa-brands fa-square-x-twitter"></i>
+              </a>
+              <a href="#fixit_LinkedIn_account">      
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+      </div>
+      <div class="column" id="column_2">
+        <span class="column2_header">Services</span>
+        <ul id="column2_list">
+          <li><a href="#" class="list-item">Education</a></li>
+          <li><a href="#" class="list-item">Home Decor</a></li>
+          <li><a href="#" class="list-item">Transport</a></li>
+          <li><a href="#" class="list-item">Hospitality</a></li>
+          <li><a href="#" class="list-item">Finacne</a></li>
+          <li><a href="#" class="list-item">Transport</a></li>
+          <li><a href="../services-page/services-page.html" class="list-item">more...</a></li>
+        </ul>
+      </div>
+      <div class="column" id="column_3">
+        <span class="column3_header">Useful Links</span>
+        <ul id="column3_list"> 
+          <li><a href="#" class="list-item">Services</a></li>
+          <li><a href="#" class="list-item">FAQs</a></li>
+          <li><a href="#" class="list-item">Help</a></li>
+          <li><a href="#" class="list-item">Sign-up</a></li>
+        </ul>
+      </div>
+      <div class="column" id="column_4">
+        <span class="column4_header">Company</span>
+        <ul id="column4_list">
+          <li><a href="#" class="list-item">About Us</a></li>
+          <li><a href="#" class="list-item">Contact</a></li>
+        </ul>
+      </div>
+      <hr>
+      <p class="copyright-info">Copyright&copy;  2025 Design and Develop by Tri-tech </p>
     </div>
-    <div class="column" id="column_2">
-      <span class="column2_header">Services</span>
-      <ul id="column2_list">
-        <li><a href="#" class="list-item">Education</a></li>
-        <li><a href="#" class="list-item">Home Decor</a></li>
-        <li><a href="#" class="list-item">Transport</a></li>
-        <li><a href="#" class="list-item">Hospitality</a></li>
-        <li><a href="#" class="list-item">Finacne</a></li>
-        <li><a href="#" class="list-item">Transport</a></li>
-        <li><a href="../services-page/services-page.html" class="list-item">more...</a></li>
-      </ul>
-    </div>
-    <div class="column" id="column_3">
-      <span class="column3_header">Useful Links</span>
-      <ul id="column3_list"> 
-        <li><a href="#" class="list-item">Services</a></li>
-        <li><a href="#" class="list-item">FAQs</a></li>
-        <li><a href="#" class="list-item">Help</a></li>
-        <li><a href="#" class="list-item">Sign-up</a></li>
-      </ul>
-    </div>
-    <div class="column" id="column_4">
-      <span class="column4_header">Company</span>
-      <ul id="column4_list">
-        <li><a href="#" class="list-item">About Us</a></li>
-        <li><a href="#" class="list-item">Contact</a></li>
-      </ul>
-    </div>
-    <hr>
-    <p class="copyright-info">Copyright&copy;  2025 Design and Develop by Tri-tech </p>
-  </div>
-</section>
-
-
+  </section>
+  
+  
+</footer>
 <!--                                  End of Section for footer                                    -->
 
     
     <script src="/App/active-services-page/active-services-page.js"></script>
+
+    <!-- Utilizing scripting from Home page -->
+   <script>
+    // Variable for category section
+    let categories_section = document.getElementById('categories_section');
+
+   // Event listener for category section to toggle section
+document.getElementById('close_btn').addEventListener('click', () => {
+    categories_section.style.display = "none";
+    document.getElementById('drp-arrow').classList.remove('fa-caret-up');
+    document.getElementById('drp-arrow').classList.add('fa-caret-down');
+});
+
+// Event listener for category section to remove section
+document.getElementById('cat_dropdown').addEventListener('click', () => {
+    categories_section.style.display = "block";
+    document.getElementById('drp-arrow').classList.remove('fa-caret-down');
+    document.getElementById('drp-arrow').classList.add('fa-caret-up');
+});
+
+   </script>
     
 </body>
 </html>

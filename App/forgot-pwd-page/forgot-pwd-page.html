@@ -61,7 +61,7 @@
         }
 
         .card-container{
-            width: 40%;
+            width: 600px;
         }
 
         #signup_header {
@@ -116,6 +116,57 @@
         }
 
     </style>
+
+    <!-- Styles -->
+    <style>
+        @media screen and (max-width:700px){
+          .card{
+              width: 400px;
+              text-align: center;
+          }
+        }
+  
+        @media screen and (max-width:600px){
+            .card{
+                width: 440px;
+                text-align: center;
+            }
+        }
+  
+        @media screen and (max-width:400px){
+            .card{
+                width: 350px;
+                text-align: center;
+            }
+        }
+  
+        @media (max-width:350px){
+            .card{
+                width: 320px;
+                text-align: center;
+            }
+        }
+  
+        @media (max-width:310px){
+            .card{
+                width: 280px;
+                text-align: center;
+            }
+        }
+  
+  
+        /* NOTSUPPORTED DEVICES */
+        @media (max-width: 300px) {
+  
+            #landingPage_section{
+                background-image: url('/src/img/DEVICE-NOT-SUPPORTED.png');
+                object-fit: cover;
+            }
+            .card{
+                display: none;
+            }
+        }
+       </style>
 </head>
 <body>
     <!--                            Sign up page columns  SECTION [START]                           -->

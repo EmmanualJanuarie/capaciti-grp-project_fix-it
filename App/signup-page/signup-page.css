@@ -13,6 +13,7 @@ html{
     align-items: center;
     text-align: center;
     position: relative;
+    flex-wrap: wrap;
     
   }
 
@@ -28,10 +29,10 @@ html{
     -webkit-backdrop-filter: blur(10px); /* For Safari */
   }
 
-  #fname, #lname{
-    width: 40%;
+  #flname{
+    width: 830px;
     height: 60px;
-    margin: 20px;
+    margin: 0px;
     background-color: white ;
     color: black;
   }
@@ -41,15 +42,19 @@ html{
   }
 
   #email, #pwd, #signup_btn{
-    width: 85%;
+    width: 830px;
+    margin-top: 20px;
     height: 60px;
-    margin: 20px;
+    margin-bottom: 0px;
     background-color: white ;
     color: black;
   }
+  #login_btn{
+    margin-bottom: 200px;
+  }
 
   .card-container{
-    width: 40%;
+    width: 600px;
   }
 
   #signup_header {
@@ -61,6 +66,8 @@ html{
   #signup_btn{
     background-color: black ;
     color: white;
+
+    width: 84%;
   }
 
   #signup_btn:hover{
@@ -80,8 +87,8 @@ html{
 .control{
     color: black;
     font-size: 24px;
-    text-align: left;
-    margin-left: 70px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 #mesg{

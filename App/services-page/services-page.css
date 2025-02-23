@@ -8,105 +8,142 @@ html {
 
 
 /*  ----                                   [NAV BAR STYLING ]                                 ---- */
-/* Changing background color of navbar */
-.navbar{
-    background-color: white;
-    box-shadow: 0 0rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);  
-    width: 100vw;
-    height: 27vh;
-
-    position: relative;
-    right: 50px;
-    bottom: 220px;
-}
-
-/* changing text color - Navbar items and dropdown text */
-.navbar-item, #cat_dropdown{
-    color:#676767;
-}
-
-/* Positioning & styling - NavBar items */
-.navbar-start{
-    position: relative;
-    left:200px;
-
-    /* Size of font for navitems */
-    font-size: 27px;
-    top:180px;
-    height: 10vh;
-}
-
-/* Positioning & styling - NavBar buttons  */
-.navbar-end{
-    position: relative;
-    right:50px;
-
-    /* Size of font for navitems */
-    font-size: 18px;
-    top:80px;
-}
-
-/* Sizing and color - Entire nav section  */
-#nav_Section{
-    position: fixed;
-    z-index: 10;
-    max-height:100%;
-    height:120px;
-    background-color: white;
-}
-
-/* Removing the dropdown color and setting to orange */
-.navbar-dropdown, .dropdown-items {
-    background-color: #676767 !important;
-    color:white;
-}
-
-/* Font size - navbar dropdown element */
-.navbar-dropdown{
-    font-size: 20px;
-}
-
-/* background color & text color - Sign Up button */
-.signup-btn{
-    background-color:orange; 
-    color:white;
-
-    border-color: #676767;
-}
-
-/* Positioning & styling - NavBar brand(logo section)  */
-.navbar-brand{
-    font-size: 30px;
-
-    font-weight: bold;
-
-    /* Positionng of brand/ icon */
-    position: relative;
-    left: 3%;
-
-    height: 10vh;
-    top:180px;
-    
-}
-
-/* styling - logo */
 #navbar_logo{
     color:orange;
     text-shadow: 1px 2px 10px grey ;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: bold;
 }
 
-/* Background color - every navbar link and item */
-.navbar-link, a.navbar-item {
+.nav-bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding:12px 20px;
     background-color: white;
+    box-shadow: 0 0rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    position: fixed;
+    z-index: 10;
 }
 
-/* hover effect to change color of navitems and dropdown options */
-.navbar-start a.navbar-item:hover, #cat_dropdown:hover{
-    color:orange;
+/* background color & text color - Sign Up button */
+.menu-buttons #signupBtn, #manageBtn{
+  background-color:orange; 
+  color:white;
+
+  border-color: #676767;
 }
 
+#manageBtn{
+  display: none;
+}
+
+/* background color & text color - Sign Up button */
+.menu-buttons #loginBtn{
+  color:white;
+
+  border-color: #676767;
+}
+
+.menu{
+    display: flex;
+    position: fixed;
+    right: 40%;
+}
+
+.menu li{
+    padding-left: 30px;
+}
+
+.menu li a{
+    display: inline-block;
+    text-decoration: none;
+    color:#656565;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    font-size: 20px;
+}
+
+.menu li a::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover{
+  color: orange;
+}
+
+.open-menu, .close-menu{
+    position: relative;
+    color: black;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.open-menu{
+    top: 50%;
+    right: 20px;
+    transform: translateX(-50%);
+}
+.close-menu{
+    top: 20px;
+    right: 20px;
+}
+
+#check{
+    display: none;
+}
+
+.menu-buttons{
+    display: flex;
+    position: fixed;
+    right: 4%;
+    top:28px;
+}
+
+
+@media(max-width:610px){
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width:80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #656565;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .menu li{
+        margin-top: 40px;
+    }
+    .menu li a {
+        padding: 10px;
+    }
+
+    .open-menu, .close-menu{
+        display: block;
+    }
+    #check:checked ~ .menu {
+        right: 0;
+    }
+
+    .menu-buttons{
+        display: none;
+    }
+}
 
 /*  ----                                   [End of Nav bar styling ]                                 ---- */
 
@@ -208,6 +245,7 @@ img {
 
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     
 }
 
@@ -328,6 +366,107 @@ img {
 }
 
 /*  ----                                   [End of Services card Section]                               ---- */
+
+ /*  ----                                   [Featured Services Courosel]                                        ---- */
+
+
+  /* Setting font styling  */
+  #featured_services_card_header{
+    font-size: 45px;
+    font-weight: bold;
+    position: relative;
+    bottom: 100px;
+}
+  .services-card-list .services-card-item .services-card-link{
+    user-select: none;
+    display: block;
+    background: white;
+    padding: 18px;
+    
+    text-decoration: none;
+
+    border: 2px solid transparent;
+    transition: 0.2s ease;
+
+    height: 2px;
+  }
+
+  .services-card-link{
+    display: none;
+  }
+
+
+  .services-card-wrapper{
+    max-width: 100%;
+    height: 60vh;
+    border-radius: 12px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+  }
+
+
+  .services-card-item{
+    box-shadow: 0 10px 10px  rgba(0, 0, 0, 0.5) ;
+    width:30%;
+    
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-title{
+    margin-bottom: 90%;
+  }
+
+  .services-card-list .services-card-link .services-card-image{
+    width: 10%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    
+  }
+
+  .services-card-link img{
+    border-radius: 10px;
+  }
+
+  .badge{
+    color:white;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    background: rgb(241, 179, 64);
+    width: fit-content;
+    border-radius: 50px;
+ 
+  }
+
+  .badge , .card-title, .card-button{
+    margin-left: 20px;
+  }
+
+  .services-card-list, .services-card-link, .card-title{
+    font-size: 1.19rem;
+    color: #656565;
+    font-weight: 600;
+  }
+
+  .services-card-link{
+    display: none;
+  }
+
+  .swiper{
+    z-index: 0;
+  }
+
+  
+
+  .services-card-item:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    transform: translateY(10px); /* Added transform for hover effect */
+    }
+
+/*  ----                                   [End of Featured Services Courosel]                                   ---- */
 
 
 /*  ----                                   [Start of fixit inquiry section]                               ---- */
@@ -515,3 +654,512 @@ hr{
 
     color: #656565;
 }
+
+/*                                           Media Querie                                            */
+@media(max-width: 1500px) {
+    .menu {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 100;
+      background-color: #656565;
+      transition: all 0.2s ease-in-out;
+    }
+
+    #cat_dropdown {
+      color: white;
+    }
+
+    .menu-buttons {
+      display: none;
+    }
+
+    #categories_section {
+      display: none;
+    }
+
+    .open-menu, .close-menu {
+      display: block;
+    }
+
+    #check:checked ~ .menu {
+      right: 0;
+    }
+
+    .menu li {
+      margin-top: 40px;
+    }
+
+    .menu li a {
+      padding: 10px;
+      color: white;
+    }
+
+    #services_grid_container{
+        display: grid;
+        grid-template-columns:repeat(2, auto) ;
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+    
+    }
+    #img_column img{
+        height: 100%;
+    }
+
+    #img_column .card{
+        height: 35.7%;
+    }
+
+    #footer_section .columns{
+        margin-top:90px;
+    }
+
+    #column_1{
+        right: 50px;
+    }
+
+    #column_2{
+        position: relative;
+        right: 100px;
+        bottom: 10px;
+    }
+
+    #column2_list{
+        margin-right: 50px;
+    }
+
+    #column_3{
+        position: relative;
+        right: 100px;
+        bottom: 10px;
+    }
+
+    #column3_list{
+        margin-right: 20px;
+    }
+
+    #column_4{
+        position: relative;
+        right: 100px;
+        bottom: 10px;
+    }
+
+    #column4_list{
+        margin-right: 80px;
+    }
+
+    .copyright-info{
+        right: 350px;
+    }
+
+    
+
+  }
+
+  @media(max-width: 1030px) {
+    .menu {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 100;
+      background-color: #656565;
+      transition: all 0.2s ease-in-out;
+    }
+
+    #cat_dropdown {
+      color: white;
+    }
+
+    .menu-buttons {
+      display: none;
+    }
+
+    #categories_section {
+      display: none;
+    }
+
+    .open-menu, .close-menu {
+      display: block;
+    }
+
+    #check:checked ~ .menu {
+      right: 0;
+    }
+
+    .menu li {
+      margin-top: 40px;
+    }
+
+    .menu li a {
+      padding: 10px;
+      color: white;
+    }
+
+    #services_grid_container{
+        display: grid;
+        grid-template-columns:repeat(1, auto) ;
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+    
+    }
+
+    #featured_services_card_header{
+        margin-top: 200px;
+    }
+
+    #img_column img{
+        height: 100%;
+    }
+
+    #footer_section .columns{
+        margin-top:90px;
+    }
+
+    #column_1{
+        top: 2px;
+        right: 50px;
+    }
+
+    #column_2{
+        position: relative;
+        right: 100px;
+        bottom: 10px;
+    }
+
+    #column2_list{
+        margin-right: 50px;
+    }
+
+    #column_3{
+        position: relative;
+        right: 100px;
+        bottom: 10px;
+    }
+
+    #column3_list{
+        margin-right: 20px;
+    }
+
+    #column_4{
+        position: relative;
+        right: 100px;
+        bottom: 10px;
+    }
+
+    #column4_list{
+        margin-right: 80px;
+    }
+    
+    hr{
+        display: none;
+    }
+
+    .copyright-info{
+        right: 350px;
+    }
+
+  }
+
+  @media(max-width: 800px) {
+    .menu {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 100;
+      background-color: #656565;
+      transition: all 0.2s ease-in-out;
+    }
+
+    #cat_dropdown {
+      color: white;
+    }
+
+    html {
+      overflow-y: scroll;
+    }
+
+    .menu-buttons {
+      display: none;
+    }
+
+    #categories_section {
+      display: none;
+    }
+
+    .open-menu, .close-menu {
+      display: block;
+    }
+
+    #check:checked ~ .menu {
+      right: 0;
+    }
+
+    .menu li {
+      margin-top: 40px;
+    }
+
+    .menu li a {
+      padding: 10px;
+      color: white;
+    }
+
+    #services_grid_container{
+        display: grid;
+        grid-template-columns:repeat(1, auto) ;
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+    }  
+
+    #img_column img{
+        height: 100%;
+    }
+
+    #featured_services_card_header{
+        margin-top: 200px;
+    }
+
+    #img_column img{
+        height: 100%;
+    }
+
+    #footer_section .columns{
+        margin-top:90px;
+    }
+
+    #column_1{
+        top: 2px;
+        right: 50px;
+    }
+
+    #column_2{
+        position: relative;
+        right: 100px;
+        bottom: 10px;
+    }
+
+    #column2_list{
+        margin-right: 50px;
+        text-align: center;
+    }
+
+    #column_3{
+        position: relative;
+        right: 100px;
+        bottom: 10px;
+    }
+
+    #column3_list{
+        margin-right: 20px;
+        text-align: center;
+    }
+
+    #column_4{
+        position: relative;
+        right: 100px;
+        bottom: 10px;
+    }
+
+    #column4_list{
+        margin-right: 30px;
+        text-align: center;
+    }
+    
+    hr{
+        display: none;
+    }
+
+    .copyright-info{
+        right: 250px;
+        top: 750px;
+    }
+
+  }
+
+  @media screen and (max-width: 690px) {
+    .menu {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 100;
+      background-color: #656565;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .menu li {
+      margin-top: 40px;
+    }
+
+    .menu li a {
+      padding: 10px;
+      color: white;
+    }
+
+    .open-menu, .close-menu {
+      display: block;
+    }
+
+    #check:checked ~ .menu {
+      right: 0;
+    }
+
+    .menu-buttons {
+      display: none;
+    }
+
+    #categories_section {
+      display: none;
+    }
+
+    #content-header {
+      font-size: 20px;
+      position: relative;
+      right: 190px;
+      top: 40px;
+    }
+
+    #cat_dropdown {
+      color: white;
+    }
+
+    html {
+      overflow-y: scroll;
+    }
+
+    #services_grid_container{
+        display: grid;
+        grid-template-columns:repeat(1, auto) ;
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #featured_services_card_header{
+        margin-top: 200px;
+        margin-right: 60px;
+    }
+
+    #img_column img{
+        height: 100%;
+    }
+
+    #column_1{
+        top: 2px;
+        right: 50px;
+    }
+
+    #column_2{
+        position: relative;
+        right: 50px;
+        bottom: 10px;
+    }
+
+    #column2_list{
+        margin-right: 50px;
+        text-align: center;
+    }
+
+    #column_3{
+        position: relative;
+        right: 50px;
+        bottom: 10px;
+    }
+
+    #column3_list{
+        margin-right: 20px;
+        text-align: center;
+    }
+
+    #column_4{
+        position: relative;
+        right: 50px;
+        bottom: 10px;
+    }
+
+    #column4_list{
+        margin-right: 30px;
+        text-align: center;
+    }
+    
+    hr{
+        display: none;
+    }
+
+    .copyright-info{
+        right: 200px;
+        top: 750px;
+    }
+    
+  }
+
+
+  /* Unsupported devices */
+  @media screen and (max-width: 400px) {
+    .nav-bar{
+      display: none;
+    }
+
+    #content-header{
+         display: none;
+        }
+
+    #landingPage_section .columns{
+        display: none;
+    }
+
+    html {
+    
+      background-image: url('/src/img/DEVICE-NOT-SUPPORTED.png');
+      background-repeat: no-repeat;
+      object-fit: cover;
+      background-position: center;
+    }
+
+    #Services_info_section{
+        display: none;
+    }
+
+    #services_categories_cards{
+        display: none;
+    }
+
+    #featured_services_section{
+        display: none;
+    }
+
+    #fixit_inquiry_section{
+        display: none;
+    }
+
+    #join_us_section{
+        display: none;
+    }
+
+    #footer_section{
+        display: none;
+    }
+
+
+  }

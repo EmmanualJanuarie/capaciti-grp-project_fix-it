@@ -1,0 +1,225 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+/*  ----                                   [NAV BAR STYLING ]                                 ---- */
+#navbar_logo{
+    color:orange;
+    text-shadow: 1px 2px 10px grey ;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.nav-bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding:12px 20px;
+    background-color: white;
+    box-shadow: 0 0rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    position: fixed;
+    z-index: 10;
+}
+
+/* background color & text color - Sign Up button */
+.menu-buttons #signupBtn, #manageBtn{
+  background-color:orange; 
+  color:white;
+
+  border-color: #676767;
+}
+
+#manageBtn{
+  display: none;
+}
+
+/* background color & text color - Sign Up button */
+.menu-buttons #loginBtn{
+  color:white;
+
+  border-color: #676767;
+}
+
+.menu{
+    display: flex;
+    position: fixed;
+    right: 40%;
+}
+
+.menu li{
+    padding-left: 30px;
+}
+
+.menu li a{
+    display: inline-block;
+    text-decoration: none;
+    color:#656565;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    font-size: 20px;
+}
+
+.menu li a::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover{
+  color: orange;
+}
+
+.open-menu, .close-menu{
+    position: relative;
+    color: black;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.open-menu{
+    top: 50%;
+    right: 20px;
+    transform: translateX(-50%);
+}
+.close-menu{
+    top: 20px;
+    right: 20px;
+}
+
+#check{
+    display: none;
+}
+
+.menu-buttons{
+    display: flex;
+    position: fixed;
+    right: 4%;
+    top:28px;
+}
+
+
+@media(max-width:610px){
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width:80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #656565;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .menu li{
+        margin-top: 40px;
+    }
+    .menu li a {
+        padding: 10px;
+    }
+
+    .open-menu, .close-menu{
+        display: block;
+    }
+    #check:checked ~ .menu {
+        right: 0;
+    }
+
+    .menu-buttons{
+        display: none;
+    }
+}
+
+/*  ----                                   [End of Nav bar styling ]                                 ---- */
+.card{
+    width: 30vw;
+
+    position: relative;
+    left:3%;
+    bottom:10%;
+    justify-content: left;
+}
+
+#contact_section{
+    display: flex;
+    justify-content: center;
+}
+ 
+
+body{
+    font-family:Outfit;
+    background:linear-gradient(orange,white)
+}
+.contact-container{
+    height:60hv;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.contact-left{
+    display:flex;
+    flex-direction:column;
+    align-items: start;
+    gap: 20px;
+}
+.contact-left-title h2{
+    font-weight: 600;
+    color: grey;
+    font-weight: 40px;
+    margin-bottom:5px;
+}
+.contact-left-title hr{
+    border:none;
+    width: 120px;
+    height: 5px;
+    background-color:orange;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border:none;
+    padding: left 25px;;
+    font-weight: 500;
+    color: grey;
+    border-radius: 50px;
+}
+.contact-left textarea{
+    height: 140px;
+    padding-top:15px;
+    border-radius: 20px;
+}
+.contact-inputs:focus{
+    border: 2px solid grey;
+}
+.contact-inputs::placeholder{
+    color:grey;
+}
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color:orange;
+    gap: 10px;
+    border:none;
+    border-radius: 50px;
+    background:linear-gradient(270,white);
+    cursor: pointer;
+}
+
+

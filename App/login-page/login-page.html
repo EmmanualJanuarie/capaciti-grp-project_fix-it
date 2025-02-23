@@ -17,6 +17,57 @@
   <!-- Adding link for css file -->
   <link rel="stylesheet" href="/App/login-page/login-page.css">
     <title>Login</title>
+
+    <!-- Styles -->
+    <style>
+        @media screen and (max-width:700px){
+          .card{
+              width: 400px;
+              text-align: center;
+          }
+        }
+  
+        @media screen and (max-width:600px){
+            .card{
+                width: 440px;
+                text-align: center;
+            }
+        }
+  
+        @media screen and (max-width:400px){
+            .card{
+                width: 350px;
+                text-align: center;
+            }
+        }
+  
+        @media (max-width:350px){
+            .card{
+                width: 320px;
+                text-align: center;
+            }
+        }
+  
+        @media (max-width:310px){
+            .card{
+                width: 280px;
+                text-align: center;
+            }
+        }
+  
+  
+        /* NOTSUPPORTED DEVICES */
+        @media (max-width: 300px) {
+  
+            #landingPage_section{
+                background-image: url('/src/img/DEVICE-NOT-SUPPORTED.png');
+                object-fit: cover;
+            }
+            .card{
+                display: none;
+            }
+        }
+       </style>
 </head>
 <body>
     <!--                            Sign up page columns  SECTION [START]                           -->
@@ -33,7 +84,7 @@
                         <input class="button is-link is-rounded" type="submit" id="signup_btn" value="Sign Up"/>
                     </form>
 
-                    <span id="mesg1">Have an account?<a href="/App/signup-page/signup-page.html" alt="Link to login page" id="login_btn">signup</a></span>
+                    <span id="mesg1">Have an account?<a href="/App/signup-page/signup-page.html" alt="Link to login page" id="login_btn">signup</a></span><br><br>
                     <span id="mesg2"><a href="/App/forgot-pwd-page/forgot-pwd-page.html" id="forgot_btn" target="_blank">Forgot Password</a></span>
                   </div>
                 </div>

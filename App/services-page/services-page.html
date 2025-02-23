@@ -13,6 +13,9 @@
   <!-- font awesome link for css file -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
 
+   <!-- Swipper CDN Link -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
 
   <!-- Adding link for css file -->
   <link rel="stylesheet" href="/App/services-page/services-page.css">
@@ -21,54 +24,30 @@
 <body>
 
     <!--                            NAVBAR SECTION [START]                           -->
-  <section class="section" id="nav_Section">
-    <div class="hero-body">
-      <!-- Navigation bar code -->
-       <nav class="navbar" role="navigation" aria-label="main navigation">
-           <div class="navbar-brand">
-           <a class="navbar-item" id="navbar_logo" href="/App/home-page/home-page.html">
-               fix it.
-           </a>
-           </div>
-       
-           <div id="navbarBasicExample" class="navbar-menu">
-           <div class="navbar-start">
-               <a class="navbar-item" href="/App/about-page/about-page.html">
-               About
-               </a>
-       
-               <a class="navbar-item" href="/App/services-page/services-page.html">
-               Services
-               </a>
+    <header>
+      <nav>
+          <ul class="nav-bar">
+              <li class="logo"><a class="navbar-item" id="navbar_logo" href="/index.html">
+                  fix it.
+              </a></li>
+              <input type="checkbox" id="check">
+              <span class="menu">
+                  <li><a href="/App/about-page/about-page.html">About Us</a></li>
+                  <li><a href="/App/services-page/services-page.html">Services</a></li>
+                  <li><a href="/App/contact-page/contact-page.html">Contact Us</a></li>
+                  <li><a href="#Browse by category" id="cat_dropdown">Browse by category <i class="fa-solid fa-caret-down" id="drp-arrow"></i></a></li>
 
-               <a class="navbar-item" href="/App/contact-page/contact-page.html">
-                   Contact
-               </a>
-       
-               <div class="navbar-item has-dropdown is-hoverable">
-               <a class="navbar-link" id="cat_dropdown">
-                   Browse by category
-               </a>
-               </div>
-           </div>
-       
-           <div class="navbar-end">
-               <div class="navbar-item">
-               <div class="buttons">
-                   <a class="button signup-btn" target="_blank" href="/App/signup-page/signup-page.html" id="signupBtn">
-                   <strong>Sign up</strong>
-                   </a>
-                   <a class="button is-light" id="loginBtn" target="_blank" href="/App/login-page/login-page.html" style="background-color: #636363; color:white;">
-                   Log in
-                   </a>
-               </div>
-               </div>
-           </div>
-           </div>
-       </nav>    
-   </div>
-  </section>
-
+                  <span class="menu-buttons">
+                      <li><a class="button" href="#About" id="signupBtn" target="_blank">Sign Up</a></li>
+                      <li><a class="button" href="#Services" id="loginBtn" target="_blank">Log in</a></li>
+                      <li><a class="button" href="#Services" id="manageBtn" target="_blank">Manage</a></li>
+                  </span>
+                  <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
+              </span>
+              <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></i></label>
+          </ul>
+      </nav>
+  </header>
   <!--                                   NAVBAR SECTION [END]                          -->
 
   <!--                            Categories SECTION [START]                           -->
@@ -301,7 +280,7 @@
               <div class="card-text">
                 <div class="text">
                   <p class="text-title">Home Decor</p>
-                  <p class="text-subtitle">Looking to elevate your living space? <b>fix it.</b> connects you with talented decorators for stylish, personalized, and affordable solutions from minor updates to makeovers.</p>
+                  <p class="text-subtitle">Looking to elevate your living space? <b>fix it.</b> connects you with talented decorators for stylish, personalized, and affordable solutions <br>from minor updates to makeovers.</p>
                   <a href="#" class="view-btn">View Service</a>
                 </div>
               </div>
@@ -462,7 +441,7 @@
               <div class="card-text">
                 <div class="text">
                   <p class="text-title">Financial and Insurance</p>
-                  <p class="text-subtitle">Need financial or insurance services? <b>fix it.</b> connects you with experts for financial planning, investment advice, and comprehensive insurance solutions.</p>
+                  <p class="text-subtitle">Need financial or insurance services? <b>fix it.</b> connects you with experts for financial planning, investment advice, and comprehensive<br> insurance solutions.</p>
                   <a href="#" class="view-btn">View Service</a>
                 </div>
               </div>
@@ -508,7 +487,7 @@
               <div class="card-text">
                 <div class="text">
                   <p class="text-title">Home Security</p>
-                  <p class="text-subtitle">Need home security solutions? <b>fix it.</b> connects you with certified professionals for comprehensive services, including alarm systems, cameras, and smart locks.</p>
+                  <p class="text-subtitle">Need home security solutions? <b>fix it.</b> connects you with certified professionals for comprehensive services, including alarm systems, <br>cameras, and smart locks.</p>
                   <a href="#" class="view-btn">View Service</a>
                 </div>
               </div>
@@ -577,7 +556,7 @@
               <div class="card-text">
                 <div class="text">
                   <p class="text-title">Remote and Virtual Learning</p>
-                  <p class="text-subtitle">Looking for remote learning? <b>fix it.</b> connects you with certified educators and comprehensive online courses, from academic subjects to skill-building workshops.</p>
+                  <p class="text-subtitle">Looking for remote learning? <b>fix it.</b> connects you with certified educators and comprehensive online courses, from academic subjects to <br>skill-building workshops.</p>
                   <a href="#" class="view-btn">View Service</a>
                 </div>
               </div>
@@ -623,7 +602,7 @@
               <div class="card-text">
                 <div class="text">
                   <p class="text-title">Automative Services</p>
-                  <p class="text-subtitle">Need automotive repairs or maintenance? <b>fix it.</b> connects you with certified mechanics for routine maintenance and major repairs, delivering reliable service at affordable rates.</p>
+                  <p class="text-subtitle">Need automotive repairs or maintenance? <b>fix it.</b> connects you with certified mechanics for routine maintenance and major repairs, delivering <br>reliable service at affordable rates.</p>
                   <a href="#" class="view-btn">View Service</a>
                 </div>
               </div>
@@ -659,6 +638,91 @@
   </section>
 
   <!--              Section to present Cards for Categories[END]                 -->
+
+  <!---                                 Feature services Card Section                          -->
+
+<section class="section is-large" id="featured_services_section">
+
+  <span id="featured_services_card_header">Featured Services</span>
+
+   <div class="services-container swiper">
+    <div class="services-card-wrapper">
+      <ul class="services-card-list swiper-wrapper">
+        <!-- card 1 -->
+        <li class="services-card-item swiper-slide">
+          <a href="#" class="services-card-link">
+            <img src="/src/img/loading_page.jpg" alt="" class="sevices-card-image">
+
+            <p class="badge">Mechanic</p>
+            <h2 class="card-title">[JOHN] <br><br><i class="fa-solid fa-location-dot"></i>   [Location]</h2><br>
+          </a>
+        </li>
+        <!-- card 2 -->
+        <li class="services-card-item swiper-slide">
+          <a href="#" class="services-card-link">
+            <img src="/src/img/loading_page.jpg" alt="" class="sevices-card-image">
+
+            <p class="badge">Mechanic</p>
+            <h2 class="card-title">[ADAM] <br><br><i class="fa-solid fa-location-dot"></i>   [Location]</h2><br>
+          </a>
+        </li>
+        <!-- card 3 -->
+        <li class="services-card-item swiper-slide">
+          <a href="#" class="services-card-link">
+            <img src="/src/img/loading_page.jpg" alt="" class="sevices-card-image">
+
+            <p class="badge">Mechanic</p>
+            <h2 class="card-title">[MIKE] <br><br><i class="fa-solid fa-location-dot"></i>   [Location]</h2><br>
+          </a>
+        </li>
+        <!-- card 4 -->
+        <li class="services-card-item swiper-slide">
+          <a href="#" class="services-card-link">
+            <img src="/src/img/loading_page.jpg" alt="" class="sevices-card-image">
+
+            <p class="badge">Mechanic</p>
+            <h2 class="card-title">[KYLE] <br><br><i class="fa-solid fa-location-dot"></i>   [Location]</h2><br>
+          </a>
+        </li>
+        <!-- card 5 -->
+        <li class="services-card-item swiper-slide">
+          <a href="#" class="services-card-link">
+            <img src="/src/img/loading_page.jpg" alt="" class="sevices-card-image">
+
+            <p class="badge">Mechanic</p>
+            <h2 class="card-title">[SAM] <br><br><i class="fa-solid fa-location-dot"></i>   [Location]</h2><br>
+          </a>
+        </li>
+        <!-- card 6 -->
+        <li class="services-card-item swiper-slide">
+          <a href="#" class="services-card-link">
+            <img src="/src/img/loading_page.jpg" alt="" class="sevices-card-image">
+
+            <p class="badge">Mechanic</p>
+            <h2 class="card-title">[MAX] <br><br><i class="fa-solid fa-location-dot"></i>   [Location]</h2><br>
+          </a>
+        </li>
+        <!-- card 7 -->
+        <li class="services-card-item swiper-slide">
+          <a href="#" class="services-card-link">
+            <img src="/src/img/loading_page.jpg" alt="" class="sevices-card-image">
+
+            <p class="badge">Mechanic</p>
+            <h2 class="card-title">[ALEX] <br><br><i class="fa-solid fa-location-dot"></i>   [Location]</h2><br>
+          </a>
+        </li>
+      </ul>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+    </div>
+   </div>
+ 
+</section>
+
+  <!---                                 End of feature services Card Section                          -->
 
   <!--              Why choose fix it for Categories[Start]                 -->      
   <section class="section is-medium" id="fixit_inquiry_section">
@@ -712,7 +776,7 @@
   <div class="columns">
     <div class="column" id="column_1">
       <div class="footer-brand">
-        <a class="navbar-item" id="footer_logo" href="/App/home-page/home-page.html" style="background-color: #656565;">
+        <a class="navbar-item" id="footer_logo" href="/index.html" style="background-color: #656565;">
             fix it.
         </a>
         </div>
@@ -773,5 +837,70 @@
 <!--                                  End of Section for footer                                    -->
 
    <script src="/App/services-page/services-page.js"></script> 
+
+   <!-- Adding script for js file -->
+ <script rel="text/javascript" src="/App/home-page/home-page.js"></script>
+
+ <!-- Scripot tag for Swipper js -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+ <script>
+  // Swipper js scripts
+new Swiper('.services-card-wrapper', {
+    loop: true,
+
+    spaceBetween: 30,
+  
+    // Pagnation bullets
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // Responsice breakpoints
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 3
+        }
+    }
+  });
+ </script>
+
+ <!-- Script tag for landing page -->
+ <script src="/script.js"></script>
+
+ <!-- Utilizing scripting from Home page -->
+  <script>
+   // Variable for category section
+   let categories_section = document.getElementById('categories_section');
+
+  // Event listener for category section to toggle section
+document.getElementById('close_btn').addEventListener('click', () => {
+   categories_section.style.display = "none";
+   document.getElementById('drp-arrow').classList.remove('fa-caret-up');
+   document.getElementById('drp-arrow').classList.add('fa-caret-down');
+});
+
+// Event listener for category section to remove section
+document.getElementById('cat_dropdown').addEventListener('click', () => {
+   categories_section.style.display = "block";
+   document.getElementById('drp-arrow').classList.remove('fa-caret-down');
+   document.getElementById('drp-arrow').classList.add('fa-caret-up');
+});
+
+  </script>
 </body>
 </html>

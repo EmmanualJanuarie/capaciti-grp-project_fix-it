@@ -20,57 +20,259 @@
   <!-- Utilizing link of main css  -->
   <link rel="stylesheet" href="/main.css">
 
-  <title>fix it</title>
+  <title>fix it | Homepage</title>
+
+  <!--                         Styling for meadia Queries                          -->
+   <style>
+
+@media(max-width: 1500px) {
+        .menu {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 80%;
+          height: 100vh;
+          position: fixed;
+          top: 0;
+          right: -100%;
+          z-index: 100;
+          background-color: #656565;
+          transition: all 0.2s ease-in-out;
+        }
+
+        #cat_dropdown {
+          color: white;
+        }
+
+        html {
+          overflow-y: scroll;
+        }
+
+        .menu-buttons {
+          display: none;
+        }
+
+        #categories_section {
+          display: none;
+        }
+
+        .open-menu, .close-menu {
+          display: block;
+        }
+
+        #check:checked ~ .menu {
+          right: 0;
+        }
+
+        .menu li {
+          margin-top: 40px;
+        }
+
+        .menu li a {
+          padding: 10px;
+          color: white;
+        }
+
+        #content-header {
+          font-size: 70px;
+          position: relative;
+          right: 270px;
+          top: 40px;
+        }
+
+        #landingPage_section .columns{
+            position: relative;
+            right: 260px;
+            display: flex;
+            flex-direction: row;
+            font-size: 25px;
+        }
+      }
+
+      @media(max-width: 700px) {
+        .menu {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 80%;
+          height: 100vh;
+          position: fixed;
+          top: 0;
+          right: -100%;
+          z-index: 100;
+          background-color: #656565;
+          transition: all 0.2s ease-in-out;
+        }
+
+        #cat_dropdown {
+          color: white;
+        }
+
+        html {
+          overflow-y: scroll;
+        }
+
+        .menu-buttons {
+          display: none;
+        }
+
+        #categories_section {
+          display: none;
+        }
+
+        .open-menu, .close-menu {
+          display: block;
+        }
+
+        #check:checked ~ .menu {
+          right: 0;
+        }
+
+        .menu li {
+          margin-top: 40px;
+        }
+
+        .menu li a {
+          padding: 10px;
+          color: white;
+        }
+
+        #content-header {
+          font-size: 70px;
+          position: relative;
+          right: 270px;
+          top: 40px;
+        }
+
+        #landingPage_section .columns{
+            position: relative;
+            right: 260px;
+            display: flex;
+            flex-direction: row;
+            font-size: 25px;
+        }
+      }
+
+      @media screen and (max-width: 610px) {
+        .menu {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 80%;
+          height: 100vh;
+          position: fixed;
+          top: 0;
+          right: -100%;
+          z-index: 100;
+          background-color: #656565;
+          transition: all 0.2s ease-in-out;
+        }
+
+        .menu li {
+          margin-top: 40px;
+        }
+
+        .menu li a {
+          padding: 10px;
+          color: white;
+        }
+
+        .open-menu, .close-menu {
+          display: block;
+        }
+
+        #check:checked ~ .menu {
+          right: 0;
+        }
+
+        .menu-buttons {
+          display: none;
+        }
+
+        #categories_section {
+          display: none;
+        }
+
+        #content-header {
+          font-size: 20px;
+          position: relative;
+          right: 190px;
+          top: 40px;
+        }
+
+        #cat_dropdown {
+          color: white;
+        }
+
+        html {
+          overflow-y: scroll;
+        }
+
+        #content-header{
+              font-size: 50px;
+              position: relative;
+              right: 190px;
+              top:40px;
+            }
+
+        #landingPage_section .columns{
+            position: relative;
+            right: 220px;
+            display: flex;
+            flex-direction: row;
+            font-size: 25px;
+        }
+      }
+
+
+      /* Unsupported devices */
+      @media screen and (max-width: 400px) {
+        .nav-bar{
+          display: none;
+        }
+
+        #content-header{
+             display: none;
+            }
+
+        #landingPage_section .columns{
+            display: none;
+        }
+
+        #landingPage_section {
+          background-image: url('/src/img/DEVICE-NOT-SUPPORTED.png');
+        }
+
+
+      }
+   </style>
 </head>
 <body>
     <!--                            NAVBAR SECTION [START]                           -->
-  <section class="section" id="nav_Section">
-    <div class="hero-body">
-      <!-- Navigation bar code -->
-       <nav class="navbar" role="navigation" aria-label="main navigation">
-           <div class="navbar-brand">
-           <a class="navbar-item" id="navbar_logo" href="/App/home-page/home-page.html">
-               fix it.
-           </a>
-           </div>
-       
-           <div id="navbarBasicExample" class="navbar-menu">
-           <div class="navbar-start">
-               <a class="navbar-item" href="/App/about-page/about-page.html">
-               About
-               </a>
-       
-               <a class="navbar-item" href="/App/services-page/services-page.html">
-               Services
-               </a>
+      <header>
+        <nav>
+            <ul class="nav-bar">
+                <li class="logo"><a class="navbar-item" id="navbar_logo" href="/index.html">
+                    fix it.
+                </a></li>
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li><a href="/App/about-page/about-page.html">About Us</a></li>
+                    <li><a href="/App/services-page/services-page.html">Services</a></li>
+                    <li><a href="/App/contact-page/contact-page.html">Contact Us</a></li>
+                    <li><a href="#Browse by category" id="cat_dropdown">Browse by category <i class="fa-solid fa-caret-down" id="drp-arrow"></i></a></li>
 
-               <a class="navbar-item" href="/App/contact-page/contact-page.html">
-                   Contact
-               </a>
-       
-               <div class="navbar-item has-dropdown is-hoverable">
-               <a class="navbar-link" id="cat_dropdown">
-                   Browse by category
-               </a>
-               </div>
-           </div>
-       
-           <div class="navbar-end">
-               <div class="navbar-item">
-               <div class="buttons">
-                   <a class="button signup-btn" target="_blank" href="/App/signup-page/signup-page.html" id="signupBtn">
-                   <strong>Sign up</strong>
-                   </a>
-                   <a class="button is-light" id="loginBtn" target="_blank" href="/App/login-page/login-page.html" style="background-color: #636363; color:white;">
-                   Log in
-                   </a>
-               </div>
-               </div>
-           </div>
-           </div>
-       </nav>    
-   </div>
-  </section>
+                    <span class="menu-buttons">
+                        <li><a class="button" href="#About" id="signupBtn" target="_blank">Sign Up</a></li>
+                        <li><a class="button" href="#Services" id="loginBtn" target="_blank">Log in</a></li>
+                        <li><a class="button" href="#Services" id="manageBtn" target="_blank">Manage</a></li>
+                    </span>
+                    <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></i></label>
+            </ul>
+        </nav>
+    </header>
 
   <!--                                   NAVBAR SECTION [END]                          -->
 
@@ -185,10 +387,17 @@
         <div class="card-content">
           <div class="content">
             <span id="content-header">Enhance Your Home Experience with <br><u>Certified</u> Professionals</span>
-            <br>  
+            <br>  <br>
 
-               <button class="button is-link is-rounded" style="background-color: white; color: black;" id="more_btn">See more</button>
-               <button class="button is-rounded" id="contactus_btn">Contact Us</button>
+               <div class="columns">
+                  <div class="column" id="seemore_col">
+                    <button class="button is-link is-rounded" style="background-color: white; color: black;" id="more_btn">See more</button>
+                  </div>
+
+                  <div class="column" id="contactus_col">
+                    <button class="button is-rounded" id="contactus_btn">Contact Us</button>
+                  </div>
+               </div>
           </div>
         </div>
       </div>
@@ -204,15 +413,22 @@
     // Variable for category section
     let categories_section = document.getElementById('categories_section');
 
-    // event listener for category section to toggle section
+   // Event listener for category section to toggle section
 document.getElementById('close_btn').addEventListener('click', () => {
     categories_section.style.display = "none";
+    document.getElementById('landingPage_section').style.display = "block";
+    document.getElementById('drp-arrow').classList.remove('fa-caret-up');
+    document.getElementById('drp-arrow').classList.add('fa-caret-down');
 });
 
-// event listener for category section to remove section
+// Event listener for category section to remove section
 document.getElementById('cat_dropdown').addEventListener('click', () => {
     categories_section.style.display = "block";
+    document.getElementById('landingPage_section').style.display = "none";
+    document.getElementById('drp-arrow').classList.remove('fa-caret-down');
+    document.getElementById('drp-arrow').classList.add('fa-caret-up');
 });
+
    </script>
 </body>
 </html>

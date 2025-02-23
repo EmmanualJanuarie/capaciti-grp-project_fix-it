@@ -41,7 +41,7 @@ html{
   }
 
   .card-container{
-    width: 40%;
+    width: 600px;
   }
 
   #signup_header {
@@ -79,7 +79,7 @@ html{
 #mesg1, #mesg2{
     color: black;
     text-align: left;
-    margin: 130px;
+    text-align: center;
 }
 
 #login_btn{

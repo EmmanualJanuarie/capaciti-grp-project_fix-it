@@ -15,7 +15,7 @@ var toggled = false;
 var form_toggled = false;
 
 document.getElementById('more_btn').addEventListener('click', () => {
-    window.location.replace('/App/home-page/home-page.html');
+    window.location.replace('/App/services-page/services-page.html');
 });
 
 document.getElementById('contactus_btn').addEventListener('click', () => {
@@ -75,5 +75,4 @@ function srcollToTop(){
     angle_down.classList.remove('fa-circle-arrow-up');
     angle_down.classList.toggle('fa-circle-arrow-down');
 }
-
 
