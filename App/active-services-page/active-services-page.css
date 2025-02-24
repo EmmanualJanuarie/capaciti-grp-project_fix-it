@@ -147,6 +147,65 @@ html {
 
 /*  ----                                   [End of Nav bar styling ]                                 ---- */
 
+
+/*                                          Styling of carousel for devices [START]                      */
+.carousel-content{
+    font-size: 15px;
+    padding-block: 8px;
+    border-block: 1px solid;
+    display: flex;
+    overflow: hidden;
+    gap: 2rem;
+}
+
+#cat_carousel li a{
+    color: black;
+    flex-direction: column;
+}
+
+#cat_carousel li a:hover{
+    color: orange;
+}
+
+
+#cat_carousel{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 70px;
+    right: 0px;
+    left: 2px;
+
+    z-index: 1;
+    display: none;
+}
+
+.carousel-content ul{
+    list-style: none;
+    flex-shrink: 0;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+
+    --gap:20px;
+    gap: var(--gap);
+
+    animation: scroll 30s linear infinite;
+}
+
+.carousel-content:hover ul{
+   animation-play-state: paused;
+}
+
+
+/* Scrolling effect of categories carousel  */
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
  /*  ----                                   [Categories Section]                                        ---- */
   /* Styling Grid */
   .header_info{
@@ -335,6 +394,14 @@ img {
  /*  ----                                   [End of Pagination Section]                               ---- */
 
 /*  ----                                   [Start of aside Section]                               ---- */
+
+.toggle-icon{
+    display: none;
+}
+
+.responsiveness-card{
+    display: none;
+}
 #aside_section {
     width: 20%;
     float: left;
@@ -666,7 +733,23 @@ hr{
         right: 350px;
     }
 
-    
+
+    .heading-size{
+        display: none;
+    }
+
+    footer{
+        position: relative;
+        top: 200px;
+    }
+
+    #cat_carousel{
+        display: block;
+    }
+
+    .carousel-content{
+        font-size: 25px;
+    }
 
   }
 
@@ -810,9 +893,14 @@ hr{
         top:720vh;
     }
 
+    #search_bar{
+        top: 5%;
+        left: 2%;
+    }
+
   }
 
-  @media(max-width: 800px) {
+  @media(max-width: 900px) {
     .menu {
       flex-direction: column;
       align-items: center;
@@ -929,6 +1017,16 @@ hr{
     .copyright-info{
         right: 250px;
         top: 750px;
+    }
+
+    #search_bar{
+        position: relative;
+        top: 5%;
+        width: 145%;
+    }
+
+    #pagination_column{
+        height: -90px;
     }
 
    
