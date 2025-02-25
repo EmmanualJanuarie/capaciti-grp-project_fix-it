@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fullName = $_POST['flname']; 
     $email = $_POST['email'];
     $pwd = $_POST['pwd'];
+    $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
     $tel = $_POST['tel']; // Corrected from $_Post to $_POST
     $is_businessAcct = isset($_POST['check_business']) ? 1 : 0;//it's a checkbox
 
@@ -29,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare and bind the SQL statement
     $stmnt = $conn->prepare("INSERT INTO registerdata_tb (name, surname, email, pwd, tel, is_businessAcct) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmnt->bind_param("ssssis", $name, $surname, $email, $pwd, $tel, $is_businessAcct); // Corrected the binding types
+    $stmnt->bind_param("ssssis", $name, $surname, $email, $hashedPwd, $tel, $is_businessAcct); // Corrected the binding types
 
     // Executing the statement
     if ($stmnt->execute()) {
