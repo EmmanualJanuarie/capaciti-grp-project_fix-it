@@ -247,14 +247,16 @@ img {
     
   }
   #about-image{
-  
     padding: 16px;
     justify-content: center;
     display: flex;
-    
-
-  
   }
+
+  #about-image .card{
+    background-color: white;
+  }
+
+
   #about-image img{ 
     width: 3000px;
     display: flex;
@@ -262,9 +264,16 @@ img {
     height:100vh;
     align-items: center;
     object-fit: cover;
+    border-radius: 2%;
+    background-color: white;
   
   }
   #about-info .card-content{
+    color: #656565;
+    background-color: white;
+  }
+
+  #about-info .subtitle{
     color: #656565;
   }
   #Team{
@@ -287,7 +296,7 @@ img {
     border-radius: 25px;
   }
   #temb{
-    height: 53vh;
+    height: 50vh;
     width: 30vw;
     object-fit: cover;
   }
@@ -297,7 +306,12 @@ img {
     text-align: center;
     font-size: 30px;
     box-shadow: none;
+    color: #656565;
     
+  }
+
+  #team_images .card{
+    background-color: white;
   }
   #team-intro .card-content { 
     box-shadow: none;
@@ -307,11 +321,19 @@ img {
   }
   #card .team-info{
     box-shadow: none;
+  }
 
-
+  #card-info .card{
+    background-color: white;
+    box-shadow: 0 10px 10px  rgba(0, 0, 0, 0.5) ;
   }
   .team-info{
     box-shadow: none;
+  }
+
+  #team-info .card{
+    background-color: white;
+    box-shadow: 0 10px 10px  rgba(0, 0, 0, 0.1) ;
   }
   #about-info .title{
     font-size: 100px;

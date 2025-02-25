@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Changing body background color */
+html{
+    background-color: white;
+}
+
+#manageForm_Section{
+    display: flex;
+    justify-content: center;
+}
+
+#manageForm_Section #main_card{
+    background-color: white;
+    box-shadow: 0 10px 10px  rgba(0, 0, 0, 0.5) ;
+}
+
+#left_col .card{
+    background-color: white;
+}
+
+#right_col .card{
+    background-color: white;
+}
+
+#right_col .card-content{
+    margin-top: 50px;
+}
+
+/* Styling & Dimensions - Img */
+#left_col img{
+    border-radius: 50%;
+    height: 20vh;
+    border:2px solid black;
+}
+
+#left_col figure{
+    margin-bottom: 20px;
+}
+
+#left_col p{
+    text-align: left;
+    font-size: 20px;
+}
+
+#left_col .card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#left_col #user_name , #user_surname, #user_email{
+    color: #656565;
+    font-size: 30px;
+}
+
+.columns{
+    width: 80vw ;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+#left_col{
+    display: flex;
+    flex: 0 0 40%;
+}
+
+#right_col{
+    display: flex;
+    flex: 0 0 60%;
+}
+
+/* Styling for upload file section */
+#right_col #file{
+    display: none;
+}
+
+#right_col .card{
+    width: 100%;
+}
+
+#right_col .card-content{
+    display: grid;
+    justify-content: center;
+}
+
+#right_col input{
+    margin-top: 20px;
+    background-color: white;
+}
+
+#right_col input::placeholder{
+    color: #656565;
+}
+
+
+#right_col .card{
+   width: 100%;
+}
+#right_col .img_Selector{
+    text-align: center;
+    font-size: 70px;
+}
+
+/* styling for add button */
+#addBtn{
+    background-color: orange !important;
+}
+
+body{
+    background-image: url("/src/img/manage.jpg");
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+label{
+    height: 100px;
+    width: 1000px;
+    border-radius: 6px;
+    border: 1px dashed #999;
+}
+
+label:hover{
+    color:orange;
+    border:1px dashed orange;
+    cursor: pointer;
+}

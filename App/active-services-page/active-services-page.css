@@ -381,6 +381,12 @@ img {
 #page-numbers{
     background-color: white;
     color: #656565;
+    font-size: 30px;
+    text-align: center;
+}
+
+#page-numbers button:hover{
+    color: orange;
 }
 
 #pagination{

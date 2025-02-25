@@ -45,7 +45,7 @@ html{
 .menu-buttons #loginBtn{
   color:white;
 
-  border-color: #676767;
+  background-color: #676767;
 }
 
 .menu{
@@ -161,11 +161,6 @@ html{
     justify-content: center;
 }
  
-
-body{
-    font-family:Outfit;
-    background:linear-gradient(orange,white)
-}
 .contact-container{
     height:60hv;
     display:flex;

@@ -95,17 +95,11 @@ function renderCards(){
 
         // adding columns ta to cardElement
         cardElement.appendChild(columns);
-        // js script code for p tag
-        const ptag = document.createElement('p');
-        ptag.className = 'services-card-text';
-        cardElement.appendChild(ptag);
-
         
-        cardElement.appendChild(prevBtn);
-        cardElement.appendChild(pageNumbers);
-        cardElement.appendChild(nextBtn);
-
-        pagination_col.appendChild(cardContainer);
+        
+        cardContainer.appendChild(prevBtn);
+        cardContainer.appendChild(pageNumbers);
+        cardContainer.appendChild(nextBtn);
 
     });
 

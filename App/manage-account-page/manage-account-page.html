@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CDN Link for Bulma.io -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+    <link rel="stylesheet" href="/App/manage-account-page/manage-account-page.css">
+
+    <!-- Fav icon for website fix it  -->
+    <link rel="icon" type="image/x-icon" href="../../src/img/wrench.png">
+
+    <!-- font awesome link for css file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
+    <title>Manage Account</title>
+
+</head>
+<body>
+    <section class="section is-large" id="manageForm_Section">
+        <div class="card" id="main_card">
+            <div class="card-content">
+              
+                <!-- Adding two columns -->
+                 <div class="columns">
+                    <!-- Column 1 -->
+                    <div class="column" id="left_col">
+                        <div class="card">
+                            <div class="card-content">
+                                <figure>
+                                    <img src="/src/img/default_img.jpg" alt="default image">
+                                </figure>
+
+                                <p id="user_name">John <span id="user_surname">Doe</span></p>
+                                <p id="user_email">john.doe@capaciti.org.za</p>
+                                <hr>
+
+                                <a href="" class="button is-rounded is-danger is-dark" style="color: white;">Delete Account</a>
+                                <a href="" class="button is-rounded">Log Out</a>
+                            </div>
+                          </div>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="column" id="right_col">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="img_Selector">
+                                    <input type="file" id="file">
+                                    <label for="file">Upload Image</label>
+                                </div>
+
+
+                                <input class="input" type="text" placeholder="Company Name">
+                                <input class="input" type="text" placeholder="Location">
+                                <input class="input" type="text" placeholder="Price">
+                                <input class="input" type="submit" value="Add" id="addBtn">
+                            </div>
+                          </div>
+                    </div>
+                 </div>
+            </div>
+          </div>
+    </section>
+
+
+    
+    <script src="/App/manage-account-page/manage-account-page.js"></script>
+</body>
+</html>
