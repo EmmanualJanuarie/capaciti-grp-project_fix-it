@@ -77,17 +77,14 @@
                 <div class="card-content">
                     <form id="signUp_form" action="../../php/signup-submit.php" method="post">
                         <span id="signup_header">Sign Up</span><br><br>
-                        <input class="input is-rounded" type="text" id="flname" placeholder="Full Name e.g.John Doe" />
-
-                        <input class="input is-rounded" type="email" id="email" placeholder="Email Address" />
-
-                        <input class="input is-rounded" type="password" id="pwd" placeholder="Password" />
-
-                        <input class="input is-rounded" type="tel" id="tel" placeholder="tel" />
+                        <input class="input is-rounded" type="text" id="flname" name="flname" placeholder="Full Name e.g.John Doe" required />
+                        <input class="input is-rounded" type="email" id="email" name="email" placeholder="Email Address" required />
+                        <input class="input is-rounded" type="password" id="pwd" name="pwd" placeholder="Password" required />
+                        <input class="input is-rounded" type="tel" id="tel" name="tel" placeholder="tel" required />
 
                         <div class="control">
                             <label class="checkbox"> 
-                                <input type="checkbox" id="check_business" />
+                                <input type="checkbox" id="check_business" name="check_business" />
                                 Business account?
                               </label>
                           </div>
