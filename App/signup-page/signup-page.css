@@ -4,7 +4,7 @@ html{
 
 /* --                                  Login Stylng Section                        */
 #landingPage_section{
-    background-image: url('/src/img/image_3.jpg');
+    background-image: url('../../src/img/image_3.jpg');
     background-size: cover; /* Resize the background image to cover the entire container */
     background-position: center;
     height: 100vh; /* Full viewport height */
@@ -41,7 +41,7 @@ html{
     color: black !important;
   }
 
-  #email, #pwd, #signup_btn{
+  #email, #pwd,#tel, #signup_btn{
     width: 830px;
     margin-top: 20px;
     height: 60px;

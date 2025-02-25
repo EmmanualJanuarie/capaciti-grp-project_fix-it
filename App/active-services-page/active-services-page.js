@@ -4,7 +4,7 @@ document.getElementById('close_btn').addEventListener('click', () => {
     document.getElementById('aside_section').style.display = "block";
     document.getElementById('pagination_section').style.display = "block";
     document.getElementById('footer_section').style.display = "block";
-    window.location.href = "/App/active-services-page/active-services-page.html";
+    window.location.href = "../active-services-page/active-services-page.html";
 });
 
 // event listener for category section to remove section

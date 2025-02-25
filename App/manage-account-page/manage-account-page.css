@@ -6,6 +6,8 @@
 /* Changing body background color */
 html{
     background-color: white;
+    overflow-y: none;
+    overflow-x: none;
 }
 
 #manageForm_Section{
@@ -58,10 +60,11 @@ html{
 }
 
 .columns{
-    width: 80vw ;
+    width: 40vw ;
     display: flex;
     justify-content: center;
     background-color: white;
+    flex-wrap: wrap;
 }
 
 #left_col{
@@ -91,6 +94,8 @@ html{
 #right_col input{
     margin-top: 20px;
     background-color: white;
+    width: 75%;
+    left: 12%;
 }
 
 #right_col input::placeholder{
@@ -111,10 +116,10 @@ html{
     background-color: orange !important;
 }
 
-body{
-    background-image: url("/src/img/manage.jpg");
-    width: 100vw;
-    height: 100vh;
+html{
+    background-image: url("../../src/img/manage.jpg");
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 label{

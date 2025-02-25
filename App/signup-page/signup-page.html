@@ -8,13 +8,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
 
   <!-- Fav icon for website fix it  -->
-  <link rel="icon" type="image/x-icon" href="/src/img/wrench.png">
+  <link rel="icon" type="image/x-icon" href="../../src/img/wrench.png">
 
   <!-- font awesome link for css file -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
 
   <!-- Adding link for css file -->
-  <link rel="stylesheet" href="/App/signup-page/signup-page.css">
+  <link rel="stylesheet" href="../signup-page/signup-page.css">
 
     <title>Sign Up</title>
 
@@ -60,7 +60,7 @@
       @media (max-width: 300px) {
 
           #landingPage_section{
-              background-image: url('/src/img/DEVICE-NOT-SUPPORTED.png');
+              background-image: url('../../src/img/DEVICE-NOT-SUPPORTED.png');
               object-fit: cover;
           }
           .card{
@@ -75,7 +75,7 @@
         <div class="card-container">
             <div class="card frosted-glass">
                 <div class="card-content">
-                    <form>
+                    <form id="signUp_form" action="../../php/signup-submit.php" method="post">
                         <span id="signup_header">Sign Up</span><br><br>
                         <input class="input is-rounded" type="text" id="flname" placeholder="Full Name e.g.John Doe" />
 
@@ -83,9 +83,11 @@
 
                         <input class="input is-rounded" type="password" id="pwd" placeholder="Password" />
 
+                        <input class="input is-rounded" type="tel" id="tel" placeholder="tel" />
+
                         <div class="control">
                             <label class="checkbox"> 
-                                <input type="checkbox" />
+                                <input type="checkbox" id="check_business" />
                                 Business account?
                               </label>
                           </div>
@@ -93,12 +95,13 @@
                         <input class="button is-link is-rounded" type="submit" id="signup_btn" value="Sign Up"/>
                     </form>
 
-                    <span id="mesg">Have an account?<a href="/App/login-page/login-page.html" alt="Link to login page" id="login_btn">login</a></span>
+                    <span id="mesg">Have an account?<a href="../login-page/login-page.html" alt="Link to login page" id="login_btn">login</a></span>
                   </div>
                 </div>
         </div>
        </section>
         <!--                            Landing page columns  SECTION [End]                           -->
     
-</body>
+    <script src="../signup-page/signup-page.js"></script>
+    </body>
 </html>

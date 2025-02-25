@@ -218,7 +218,7 @@ img {
    
 
   #landingPage_section {
-    background-image: url('/src/img/landing_background_image_2.jpg');
+    background-image: url('src/img/landing_background_image_2.jpg');
     background-size: cover; /* Resize the background image to cover the entire container */
     background-position: center;
     height: 100vh; /* Full viewport height */

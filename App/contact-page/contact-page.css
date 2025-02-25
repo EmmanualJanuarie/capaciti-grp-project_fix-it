@@ -274,7 +274,7 @@ section{
  
   }
  body{
-    background-image:url("/src/img/image_contactus.jfif");
+    background-image:url("../../src/img/image_contactus.jfif");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
