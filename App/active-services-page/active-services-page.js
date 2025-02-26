@@ -74,9 +74,17 @@ function renderCards(){
         // creating header 1 tag
         const header_tag = document.createElement('h1');
         header_tag.className = 'header-text';
-        header_tag.textContent = "[Company Name]";
+        header_tag.textContent = "[Tasker's Name]";
         // adding header tag to the  text column
         text_column.appendChild(header_tag);
+
+
+        // paragraph tag for occupation
+        const occupation = document.createElement('p');
+        occupation.className = 'occupation-text';
+        occupation.textContent = "[user's occupation]";
+        // Adding paragraph tag to text_columns
+        text_column.appendChild(occupation);
 
         // paragraph tag for Location
         const location = document.createElement('p');
@@ -91,6 +99,13 @@ function renderCards(){
         price.textContent = "[R0.00]";
         // Adding paragraph text to text columns
         text_column.appendChild(price);
+
+        // paragraph text for viewing services
+        const service_view = document.createElement('a');
+        service_view.className = 'view_service';
+        service_view.textContent = "View Service";
+        // Adding paragraph text to text columns
+        text_column.appendChild(service_view);
 
 
         // adding columns ta to cardElement
