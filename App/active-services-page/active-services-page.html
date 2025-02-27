@@ -8,15 +8,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
 
   <!-- Fav icon for website fix it  -->
-  <link rel="icon" type="image/x-icon" href="../../src/img/wrench.png">
+  <link rel="icon" type="image/x-icon" href="/src/img/wrench.png">
 
   <!-- font awesome link for css file -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
 
 
   <!-- Adding link for css file -->
-  <link rel="stylesheet" href="../active-services-page/active-services-page.css">
-  <link rel="stylesheet" href="../active-services-page/active-services-footer.css">
+  <link rel="stylesheet" href="/App/active-services-page/active-services-page.css">
+  <link rel="stylesheet" href="/App/active-services-page/active-services-footer.css">
 
     <title>Our Services</title>
 </head>
@@ -25,20 +25,20 @@
      <header>
       <nav>
           <ul class="nav-bar">
-              <li class="logo"><a class="navbar-item" id="navbar_logo" href="../../index.html">
+              <li class="logo"><a class="navbar-item" id="navbar_logo" href="/index.html">
                   fix it.
               </a></li>
               <input type="checkbox" id="check">
               <span class="menu">
-                  <li><a href="../about-page/about-page.html">About Us</a></li>
-                  <li><a href="../services-page/services-page.html">Services</a></li>
-                  <li><a href="../contact-page/contact-page.html">Contact Us</a></li>
+                  <li><a href="/App/about-page/about-page.html">About Us</a></li>
+                  <li><a href="/App/services-page/services-page.html">Services</a></li>
+                  <li><a href="/App/contact-page/contact-page.html">Contact Us</a></li>
                   <li><a href="#Browse by category" id="cat_dropdown">Browse by category <i class="fa-solid fa-caret-down" id="drp-arrow"></i></a></li>
 
                   <span class="menu-buttons">
-                    <li><a class="button" href="../signup-page/signup-page.html" id="signupBtn" target="_blank">Sign Up</a></li>
-                    <li><a class="button" href="../login-page/login-page.html" id="loginBtn" target="_blank">Log in</a></li>
-                    <li><a class="button" href="../manage-account-page/manage-account-page.html" id="manageBtn" target="_blank">Manage</a></li>
+                    <li><a class="button" href="/App/signup-page/signup-page.html" id="signupBtn" target="_blank">Sign Up</a></li>
+                    <li><a class="button" href="/App/login-page/login-page.html" id="loginBtn" target="_blank">Log in</a></li>
+                    <li><a class="button" href="/App/manage-account-page/manage-account-page.html" id="manageBtn" target="_blank">Manage</a></li>
                   </span>
                   <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
               </span>
@@ -258,7 +258,7 @@
         <aside id="aside_section">
           <div class="field" id="search_bar">
             <p class="control has-icons-right">
-              <input class="input" type="type" placeholder="Search for service" />
+              <input class="input" type="type" placeholder="Search for service" id="search_input_bar" />
               <span class="icon is-small is-right">
                 <i class="fa-solid fa-magnifying-glass" style="color:black;"></i>
               </span>
@@ -318,7 +318,7 @@
               <div class="heading-size">
                 <h1>Filter By Price</h1>
                 <ul>
-                  <li><a href="">Less than R200</a></li>
+                  <li><a id="#lessThan200">Less than R200</a></li>
                   <li><a href="">R200 - R300</a></li>
                   <li><a href="">R300 - R400</a></li>
                   <li><a href="">R400 - R500</a></li>
@@ -373,7 +373,7 @@
     <div class="columns">
       <div class="footer-column" id="column_1">
         <div class="footer-brand">
-          <a class="navbar-item" id="footer_logo" href="../../index.html" style="background-color: #656565;">
+          <a class="navbar-item" id="footer_logo" href="/index.html" style="background-color: #656565;">
               fix it.
           </a>
           </div>
@@ -406,7 +406,7 @@
           <li><a href="#" class="list-item">Hospitality</a></li>
           <li><a href="#" class="list-item">Finacne</a></li>
           <li><a href="#" class="list-item">Transport</a></li>
-          <li><a href="../services-page/services-page.html" class="list-item">more...</a></li>
+          <li><a href="/App/services-page/services-page.html" class="list-item">more...</a></li>
         </ul>
       </div>
       <div class="column" id="column_3">
@@ -433,9 +433,10 @@
   
 </footer>
 <!--                                  End of Section for footer                                    -->
-
     
-    <script src="../active-services-page/active-services-page.js"></script>
+    <script src="/App/active-services-page/active-services-page.js"></script>
+    <script src="/App/active-services-page/filer_search.js"></script>
+    <!-- <script src="/App/active-services-page/filter_price.js"></script> -->
 
     <!-- Utilizing scripting from Home page -->
    <script>
@@ -457,6 +458,25 @@ document.getElementById('cat_dropdown').addEventListener('click', () => {
 });
 
    </script>
+
+<script>
+  const is_loggedin = localStorage.getItem("logged-In");
+  if(is_loggedin === 'Yes'){
+      document.getElementById('signupBtn').style.display ="none";
+      document.getElementById('loginBtn').style.display ="none";
+      document.getElementById('manageBtn').style.display ="block";
+  }
+ </script>
+   
+   <script>
+    if(searchInput.value.trim() !== '' || document.activeElement === searchInput){
+      document.getElementById('prev-button').style.display = "none";
+      document.getElementById('page-numbers').style.display = "none";
+      document.getElementById('next-button').style.display = "none";
+    }
+   </script>
+
+
     
 </body>
 </html>

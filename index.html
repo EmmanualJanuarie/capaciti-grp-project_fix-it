@@ -427,5 +427,14 @@ document.getElementById('cat_dropdown').addEventListener('click', () => {
 });
 
    </script>
+
+   <script>
+    const is_loggedin = localStorage.getItem("logged-In");
+    if(is_loggedin === 'Yes'){
+        document.getElementById('signupBtn').style.display ="none";
+        document.getElementById('loginBtn').style.display ="none";
+        document.getElementById('manageBtn').style.display ="block";
+    }
+   </script>
 </body>
 </html>

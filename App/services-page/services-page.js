@@ -68,3 +68,32 @@ function showNext_FeatureServicesCard() {
 }
 
 setInterval(showNext_FeatureServicesCard, 3000); // Change slide every 3 seconds
+
+
+document.getElementById('john_doe').addEventListener('click', () =>{
+  alert('We found data for "John Doe"')
+});
+
+document.getElementById('karen').addEventListener('click', () =>{
+  alert('We found data for "Karen Foster"')
+});
+
+document.getElementById('lisa').addEventListener('click', () =>{
+  alert('We found data for "Lisa Langehoven"')
+});
+
+document.getElementById('john_smith').addEventListener('click', () =>{
+  alert('We found data for "John Smith"')
+});
+
+document.getElementById('daniel').addEventListener('click', () =>{
+  alert('We found data for "Daniel Baker"')
+});
+
+document.getElementById('grace').addEventListener('click', () =>{
+  alert('We found data for "Grace Nelson"')
+});
+
+document.getElementById('brown').addEventListener('click', () =>{
+  alert('We found data for "Sophie Brown"')
+});

@@ -309,6 +309,7 @@ img {
 
     justify-content: center;
     grid-template-columns: repeat(3, 1fr);
+    height: 150vh;
 }
 
 .image-item{
@@ -318,6 +319,7 @@ img {
 
 .pag-card{
     background-color: transparent;
+    height: 650px;
 }
 
 .pag-columns{
@@ -538,7 +540,7 @@ img {
     justify-content: center;
     text-align: center;
     position: relative;
-    top: 400px;
+    top: 900px;
 }
 
 /* Postion - column 1 */
