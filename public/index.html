@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CDN Link for Bulma.io -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+>
+
+  <!-- Fav icon for website fix it  -->
+  <link rel="icon" type="image/x-icon" href="/images/wrench.png">
+
+  <!-- font awesome link for css file -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
+
+    <!-- Utilizing link of main css  -->
+    <link rel="stylesheet" href="styles/main.css">
+
+  <title>fix it | Main</title>
+
+  <style>
+    html{
+      background-color: white;
+    }
+
+    #main_section{
+      background-image: url('/images/main.jpg');
+      background-size: cover; /* Resize the background image to cover the entire container */
+      background-position: center;
+      height: 100vh; /* Full viewport height */
+      width: 100vw; /* Full viewport width */
+    }
+
+    #main_section::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(37, 34, 34, 0.7); /* Semi-transparent white overlay */
+      -webkit-backdrop-filter: blur(10px); /* For Safari */
+    }   
+    
+    /* Media querie */
+    @media (max-width:900px){
+      #login_section .card{
+      margin-top: 350px;
+      }
+    }
+  
+  
+        /* NOTSUPPORTED DEVICES */
+        @media (max-width: 300px) {
+  
+            #main_section{
+                background-image: url('../../src/img/DEVICE-NOT-SUPPORTED.png');
+                background-size: cover; /* Resize the background image to cover the entire container */
+                background-position: center;
+                height: 100vh; /* Full viewport height */
+                width: 100vw; /* Full viewport width */
+            }
+            .card{
+                display: none;
+            }
+        }
+  </style>
+</head>
+<body>
+  <div id="main_section">
+    <!-- Creating login page -->
+      <section class="section is-large" id="login_section">
+        <div class="card-container">
+            <div class="card frosted-glass">
+                <div class="card-content">
+                    <form id="login_form">
+                        <span id="signup_header">Log In</span><br><br>
+                        
+                        <div class="field">
+                          <p class="control has-icons-left has-icons-right">
+                            <input class="input is-rounded" type="email" id="login_email" placeholder="johndoe123@gmail.com" />
+                            <span class="icon is-small is-left icon-align-center" style="position: absolute; top: 23px; left: 35px;"> 
+                              <i class="fa-solid fa-envelope"></i>
+                            </span>
+                          </p>
+                        </div>
+
+                        <div class="field">
+                          <p class="control has-icons-left has-icons-right">
+                            <input class="input is-rounded" type="password" id="login_pwd" placeholder="Enter password" />
+                            <span class="icon is-small is-left icon-align-center" style="position: absolute; top: 23px; left: 35px;"> 
+                              <i class="fa-solid fa-lock"></i>
+                            </span>
+                          </p>
+                        </div>
+
+                        <input class="button is-link is-rounded" type="submit" id="login_btn" value="Log In"/>
+                    </form>
+
+                    <span id="mesg1">Don't have an account?<a href="#sign-up" alt="Link to login page" id="login_signup_btn">signup</a></span><br><br>
+                    <span id="mesg2"><a href="#fpwd" id="forgot_btn">Forgot Password</a></span>
+                  </div>
+                </div>
+        </div>
+       </section>
+
+    <!-- Creating signup page -->
+    <section class="section is-large" id="signup_section">
+      <div class="card-container">
+          <div class="card frosted-glass">
+              <div class="card-content">
+                  <form id="signUp_form" method="post">
+                      <span id="signup_header">Sign Up</span><br><br>
+
+                      <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                          <input class="input is-rounded" type="text" id="flname" name="flname" placeholder="Full Name" required />
+                          <span class="icon is-small is-left icon-align-center" style="position: absolute; top: 4px;"> 
+                            <i class="fa-solid fa-user"></i>
+                          </span>
+                        </p>
+                      </div>
+                      
+
+                      <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                          <input class="input is-rounded" type="email" id="signup_email" name="email" placeholder="johndoe123@gmail.com" />
+                          <span class="icon is-small is-left icon-align-center" style="position: absolute; top: 23px;"> 
+                            <i class="fa-solid fa-envelope"></i>
+                          </span>
+                        </p>
+                      </div>
+
+                      <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                          <input class="input is-rounded" type="password" id="signup_pwd" name="pwd" placeholder="Enter password" />
+                          <span class="icon is-small is-left icon-align-center" style="position: absolute; top: 23px;"> 
+                            <i class="fa-solid fa-lock"></i>
+                          </span>
+                        </p>
+                      </div>
+
+                      <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                          <input class="input is-rounded" type="tel" id="tel" name="tel" placeholder="(+27) XXX-XXX-XXX" />
+                          <span class="icon is-small is-left icon-align-center" style="position: absolute; top: 23px;"> 
+                            <i class="fa-solid fa-phone-flip"></i>
+                          </span>
+                        </p>
+                      </div>
+
+                      <div class="control">
+                          <label class="checkbox"> 
+                              <input type="checkbox" id="check_business" name="check_business" />
+                              Business account?
+                            </label>
+                        </div>
+
+                      <button class="button is-link is-rounded" type="submit" id="signup_btn">Sign Up</button>
+                  </form>
+
+                  <span id="mesg">Have an account?<a href="#login" alt="Link to login page" id="signup_login_btn">login</a></span>
+                </div>
+              </div>
+      </div>
+     </section>
+
+      <!-- Creating porget pwd page -->
+      <section class="section is-large" id="fpwd_section">
+        <div class="card-container">
+            <div class="card frosted-glass">
+                <div class="card-content">
+                    <form id="login_form">
+                        <span id="signup_header">Reset Password</span><br><br>
+                        
+                        <div class="field">
+                          <p class="control has-icons-left has-icons-right">
+                            <input class="input is-rounded" type="email" id="fpwd_email" placeholder="johndoe123@gmail.com" />
+                            <span class="icon is-small is-left icon-align-center" style="position: absolute; top: 23px; left: 35px;"> 
+                              <i class="fa-solid fa-envelope"></i>
+                            </span>
+                          </p>
+                        </div>
+
+                        <div class="field">
+                          <p class="control has-icons-left has-icons-right">
+                            <input class="input is-rounded" type="password" id="fpwd_pwd" placeholder="New password" />
+                            <span class="icon is-small is-left icon-align-center" style="position: absolute; top: 23px; left: 35px;"> 
+                              <i class="fa-solid fa-lock"></i>
+                            </span>
+                          </p>
+                        </div>
+
+                        <div class="field">
+                          <p class="control has-icons-left has-icons-right">
+                            <input class="input is-rounded" type="password" id="fpwd_pwd" placeholder="Repeat password" />
+                            <span class="icon is-small is-left icon-align-center" style="position: absolute; top: 23px; left: 35px;"> 
+                              <i class="fa-solid fa-lock"></i>
+                            </span>
+                          </p>
+                        </div>
+
+                        <input class="button is-link is-rounded" type="submit" id="resetPwd" value="Reset Password"/>
+                    </form>
+                  </div>
+                </div>
+        </div>
+       </section>
+
+       <!-- Creating porget pwd page -->
+      <section class="section is-large" id="loading_section">
+        <div class="card-container">
+            <div class="card frosted-glass">
+                  <i class="fa-solid fa-gear fa-spin" id="gear_icon"></i><br>
+
+                  <div id="welcome_msg">
+                      Welcome to 
+                    <span style="color: orange;">fix it.</span>
+                    <span id="username">[username]</span>
+                  </div>
+                </div>
+        </div>
+       </section>
+
+
+  </div>
+  
+  <!-- Styling for redirecting -->
+   <script>
+    const login_section = document.getElementById('login_section');//assigning variable to login section container
+
+    const signup_section = document.getElementById('signup_section');//assigning variable to signup section container
+
+    const fpwd_section = document.getElementById('fpwd_section');//assigning variable to forgot pwd section container
+
+    // Event listener for sign-up direction to toggle section
+    document.getElementById('login_signup_btn').addEventListener('click', () => {
+      login_section.style.display = "none";
+      signup_section.style.display = "flex";
+    });
+
+    // Event listener for login direction to toggle section
+    document.getElementById('signup_login_btn').addEventListener('click', () => {
+      login_section.style.display = "flex";
+      signup_section.style.display = "none";
+    });
+
+    // Event listener for login direction to toggle section
+    document.getElementById('forgot_btn').addEventListener('click', () => {
+      login_section.style.display = "none";
+      fpwd_section.style.display = "flex";
+    });
+   </script>
+
+<script>
+  document.getElementById('signUp_form').addEventListener('submit', async function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      const flname = document.getElementById('flname').value;
+      const email = document.getElementById('signup_email').value;
+      const pwd = document.getElementById('signup_pwd').value;
+      const tel = document.getElementById('tel').value;
+
+      const response = await fetch('/signup', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ flname, email, pwd, tel })
+      });
+
+      if (response.ok) {
+          console.log("User  created successfully");
+          // Optionally redirect or show a success message
+      } else {
+          console.error("Error creating user");
+          // Optionally show an error message
+      }
+  });
+</script>
+
+<script>
+  // Mock user data
+  const mockUser   = {
+      email: "johndoe123@gmail.com",
+      password: "password123"
+  };
+  
+  // Event listener for the login form submission
+  document.getElementById('login_form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+      
+      // Get the values from the input fields
+      const email = document.getElementById('login_email').value;
+      const password = document.getElementById('login_pwd').value;
+      
+      // Check if the entered email and password match the mock data
+      if (email === mockUser .email && password === mockUser .password) {
+          // Successful login
+          document.getElementById('welcome_msg').innerHTML = `Welcome to <span style="color: orange;">fix it.</span> <span id="username">${email}</span>`;
+          document.getElementById('loading_section').style.display = "flex"; // Show loading section
+          document.getElementById('login_section').style.display = "none"; // Hide login section
+          
+          // Redirect to home page after 3 seconds
+          setTimeout(function() {
+              window.location.href = 'home-page.html'; // Change 'home.html' to your actual home page URL
+          }, 3000); // 3000 milliseconds = 3 seconds
+      } else {
+          // Failed login
+          alert("Invalid email or password. Please try again.");
+      }
+  });
+</script>
+
+  <!-- scripting -->
+   <script src="scripts/mongodb-signup.js"></script>
+</body>
+</html>

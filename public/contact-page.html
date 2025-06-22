@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CDN Link for Bulma.io -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+    <link rel="stylesheet" href="styles/contact-page.css">
+
+    <!-- Fav icon for website fix it  -->
+    <link rel="icon" type="image/x-icon" href="images/wrench.png">
+
+    <!-- font awesome link for css file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
+
+
+
+    <title>Contact Us</title>
+</head>
+<body>
+   <!-- NAVBAR SECTION [START] -->
+   <header>
+    <nav>
+        <ul class="nav-bar">
+            <li class="logo"><a class="navbar-item" id="navbar_logo" href="home-page.html">
+                fix it.
+            </a></li>
+            <input type="checkbox" id="check">
+            <span class="menu">
+                <li><a href="about-page.html">About Us</a></li>
+                <li><a href="services-page.html">Services</a></li>
+                <li><a href="contact-page.html">Contact Us</a></li>
+                <li><a href="#Browse by category" id="cat_dropdown">Browse by category <i class="fa-solid fa-caret-down" id="drp-arrow"></i></a></li>
+
+                <span class="menu-buttons">
+                        <li>
+                            <a class="button" href="javascript:void(0);" id="signupBtn">Sign Out</a>
+                        </li>
+                </span>
+                <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
+            </span>
+            <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></i></label>
+        </ul>
+    </nav>
+</header>
+
+   
+<!-- NAVBAR SECTION [END] -->
+
+<!-- Form For contact us [START] -->
+<section class="section is-large" id="contactusForm">
+  <div class="card">
+    <div class="card-content">
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <h2 class="title">Contact Us</h2>
+        <input type="hidden" name="access_key" value="806464ef-d400-442b-9715-41569a79d6e8">
+        <input class="input" type="text" id="name" placeholder="Name" name="Name"Required><br><br>
+        <input class="input" type="text"  id="surname" placeholder="Surname" surname="Surname"Required><br><br>
+         <input class="input" type="tel" id="tel" placeholder="Phone" phone="Phone"Required><br><br>
+        <input class="input" type="email" id="email" placeholder="Email" email="Email"Required><br><br>
+        <textarea class="textarea" id="message" placeholder="Message" message="Message"Required></textarea><br><br>
+
+        <input class="button" id="btn" type="submit" value="Submit"><br><br>
+        <input class="button" id="btn" type="reset" value="Clear" style="background-color: orange;">
+        
+      </form>
+     </div>
+   </div>
+  
+  </section>
+
+    <!-- Form For contact us [END] -->
+
+ <!--                                   Section for footer                                    -->
+ <section class="section is-medium" id="footer_section" style="background-color: #656565;">
+    <div class="columns">
+      <div class="column" id="column_1">
+        <div class="footer-brand">
+          <a class="navbar-item" id="footer_logo" href="home-page.html" style="background-color: #656565;">
+              fix it.
+          </a>
+          </div>
+          <p id="footer_logo_subtext">Empowering skilled individuals to connect,<br>
+            create, and thrive. Bridging the gap between<br>
+            unemployment and opportunity by providing a <br>platform
+            for talented workers to offer their services to the community</p>
+  
+            <div class="contact_logo">
+              <a href="#fixit_facebook_account">
+                <i class="fa-brands fa-square-facebook"></i>
+              </a>
+              <a href="#fixit_instagram_account">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#fixit_x.com_account">      
+                <i class="fa-brands fa-square-x-twitter"></i>
+              </a>
+              <a href="#fixit_LinkedIn_account">      
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+      </div>
+      <div class="column" id="column_2">
+        <span class="column2_header">Services</span>
+        <ul id="column2_list">
+          <li><a href="#" class="list-item">Education</a></li>
+          <li><a href="#" class="list-item">Home Decor</a></li>
+          <li><a href="#" class="list-item">Transport</a></li>
+          <li><a href="#" class="list-item">Hospitality</a></li>
+          <li><a href="#" class="list-item">Finacne</a></li>
+          <li><a href="#" class="list-item">Transport</a></li>
+          <li><a href="active-services-page.html" class="list-item">more...</a></li>
+        </ul>
+      </div>
+      <div class="column" id="column_3">
+        <span class="column3_header">Useful Links</span>
+        <ul id="column3_list"> 
+          <li><a href="services-page.html" class="list-item">Services</a></li>
+          <li><a href="#faqs" class="list-item">FAQs</a></li>
+          <li><a href="#help" class="list-item">Help</a></li>
+          <li><a href="index.html#sign-up" class="list-item">Sign-up</a></li>
+        </ul>
+      </div>
+      <div class="column" id="column_4">
+        <span class="column4_header">Company</span>
+        <ul id="column4_list">
+          <li><a href="#" class="list-item">About Us</a></li>
+          <li><a href="#" class="list-item">Contact</a></li>
+        </ul>
+      </div>
+      <hr>
+      <p class="copyright-info">Copyright&copy;  2025 Design and Develop by Tri-tech </p>
+    </div>
+  </section>
+  
+  
+  <!--                                  End of Section for footer                                    -->
+ <!-- Utilizing scripting from Home page -->
+ <script>
+    // Variable for category section
+    let categories_section = document.getElementById('categories_section');
+
+   // Event listener for category section to toggle section
+document.getElementById('close_btn').addEventListener('click', () => {
+    categories_section.style.display = "none";
+    document.getElementById('drp-arrow').classList.remove('fa-caret-up');
+    document.getElementById('drp-arrow').classList.add('fa-caret-down');
+});
+
+// Event listener for category section to remove section
+document.getElementById('cat_dropdown').addEventListener('click', () => {
+    categories_section.style.display = "block";
+    document.getElementById('drp-arrow').classList.remove('fa-caret-down');
+    document.getElementById('drp-arrow').classList.add('fa-caret-up');
+});
+
+   </script>
+
+   <!-- Script to direct user to manage account form  -->
+   <script>
+    document.getElementById('manageBtn').addEventListener('click', ()=>{
+      window.location.href = "../manage-account-page/manage-acount-page.html";
+    });
+   </script>
+
+<script>
+  const is_loggedin = localStorage.getItem("logged-In");
+  if(is_loggedin === 'Yes'){
+      document.getElementById('signupBtn').style.display ="none";
+      document.getElementById('loginBtn').style.display ="none";
+      document.getElementById('manageBtn').style.display ="block";
+  }
+ </script>
+</body>
+</html>

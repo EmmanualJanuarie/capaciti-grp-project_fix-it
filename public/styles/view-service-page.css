@@ -1,0 +1,92 @@
+html{
+    overflow-y: hidden;
+    background-color: white;
+}
+
+/*  ----                                   [Start of Services card Section]                               ---- */
+#services_grid_container{
+    display: flex;
+    gap: 20px;
+
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    top: 70px;
+
+}
+
+#services_grid_container .columns{
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    border-radius:20px 20px 20px 20px;
+}
+
+#services_grid_container .card{
+    background-color: white;
+    width: 40%;
+}
+
+.column-vertical-mode{
+    display: grid;
+    flex-direction: column;
+   
+}
+
+
+/* Styling of image */
+.column > img{
+    border-radius:20px 20px 0px 0px;
+    width: 100%;
+}
+
+#img_column{
+    margin-bottom: 100px;
+}
+
+#services_grid_container > .grid-card{
+    width: 500px;
+}
+
+#services_grid_container{
+    gap: 10px;
+    justify-content: center;
+}
+
+
+.text-title{
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+
+    font-size: 30px;
+}
+
+.text-subtitle{
+    color: #656565;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.view-btn{
+    color:#656565;
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+#services_categories_cards i {
+    font-size: 30px;
+}
+
+
+
+.text-column{
+    position: relative;
+    bottom: 70px;
+}
+
+/*  ----                                   [End of Services card Section]                               ---- */
+
+/* More styling */
+#view-service_section{
+    background-color: white;
+}

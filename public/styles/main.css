@@ -1,0 +1,203 @@
+/* -----  LOGIN SECTION   -------- */
+html{
+  overflow-y: hidden;
+}
+
+#login_section{
+  display: flex; /*change to flex*/
+  justify-content: center;
+  text-align: center;
+}
+
+#signup_section{
+  display: none;
+  justify-content: center;
+  text-align: center;
+}
+
+#fpwd_section{
+  display: none;
+  justify-content: center;
+  text-align: center;
+}
+
+#loading_section{
+  display: none;
+  justify-content: center;
+  text-align: center;
+}
+
+#login_section .card , #signup_section .card, #fpwd_section .card{
+  margin-top: 150px;
+}
+
+input::placeholder{
+  color: #656565 !important;
+  position: relative;
+}
+
+#login_section #login_email , #login_section #login_pwd, #login_section #signup_btn{
+  width: 85%;
+  height: 60px;
+  margin: 20px;
+  background-color: white ;
+  color: black;
+}
+
+#fpwd_section #fpwd_email, #fpwd_section #fpwd_pwd, #fpwd_section #signup_btn{
+  width: 85%;
+  height: 60px;
+  margin: 20px;
+  background-color: white ;
+  color: black;
+}
+
+.card-container{
+  width: 600px;
+}
+
+#signup_header {
+  font-size: 40px;
+  color: white;
+}
+
+#signup_btn{
+  background-color: black ;
+  color: white;
+}
+
+#fpwd_section #signup_btn{
+  background-color: black ;
+  color: white;
+}
+
+#login_section #signup_btn:hover{
+  background-color: #656565;
+}
+
+.frosted-glass {
+  background: transparent; /* White with 30% opacity */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+  padding: 20px; /* Padding inside the card */
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle border */
+}
+
+span{
+  color: white;
+  text-align: center;
+} 
+
+#login_signup_btn{
+  text-decoration: underline;
+  color: white;
+}
+
+#forgot_btn{
+  color: white;
+}
+
+#login_signup_btn:hover, #forgot_btn:hover{
+  color: #656565;
+}
+
+/* ----   SIGN UP STYLING   ---- */
+  #signup_section #flname{
+    width: 830px;
+    height: 60px;
+    margin: 0px;
+    background-color: white ;
+    color: black;
+  }
+
+  #signup_section #signup_email, #signup_pwd,#tel, #signup_section #signup_btn
+  , #login_section #login_btn, #fpwd_section #resetPwd{
+    width: 100%;
+    margin-top: 20px;
+    height: 60px;
+    margin-bottom: 0px;
+    background-color: white ;
+    color: black;
+  }
+
+  #login_section #login_btn{
+    margin-bottom: 20px;
+  }
+
+  .card-container{
+    width: 600px;
+  }
+
+  #signup_section #signup_btn, #login_section #login_btn, #fpwd_section #resetPwd{
+    background-color: black ;
+    color: white;
+
+    width: 84%;
+  }
+
+  #signup_section #signup_btn:hover, #login_section #login_btn:hover
+  ,#fpwd_section #resetPwd:hover {
+    background-color: white;
+    color: black;
+  }
+
+#signup_section .control{
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#mesg{
+  color: white;
+}
+
+#signup_login_btn{
+    text-decoration: underline;
+    color: white;
+}
+
+#signup_login_btn:hover{
+    color: #656565;
+}
+
+#signup_section .icon-align-center{
+  font-size: 21px;
+  color: #656565;
+}
+
+#login_section .icon-align-center{
+  font-size: 21px;
+  color: #656565;
+}
+
+#fpwd_section .icon-align-center{
+  font-size: 21px;
+  color: #656565;
+}
+
+/* Loading section */
+#loading_section{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#loading_section #gear_icon{
+  font-size: 150px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+
+#loading_section .card {
+  border-color: transparent;
+  margin-top: 210px;
+}
+
+#welcome_msg{
+  font-size: 50px;
+  color: white;
+}
