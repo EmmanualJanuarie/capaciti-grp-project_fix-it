@@ -1,68 +1,43 @@
-/* Reset margins */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
+/* Fix It Intro Section */
+.fixit-intro {
+  padding: 3rem 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #363636;
 }
 
-/* Hero Section */
-.about-hero {
-  background: linear-gradient(135deg, #ff9f1c, #ffbf69);
-  color: white;
-  padding: 4rem 1rem;
+/* Testimonials Section */
+.testimonials-section {
+  padding: 3rem 1.5rem;
 }
 
-/* Team Card Styling */
-.team-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  background-color: white;
+.testimonial-box {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem 2rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
-.team-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-.team-card .image img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  border-bottom: 4px solid #ff9f1c;
+.testimonial-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Social icons */
-.social-icons {
-  margin-top: 1rem;
+.testimonial-text {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: #4a4a4a;
+  margin-bottom: 1.25rem;
 }
-.social-icons a {
+
+.has-text-weight-semibold {
   color: #ff9f1c;
-  margin: 0 10px;
-  transition: color 0.2s ease;
-}
-.social-icons a:hover {
-  color: #ffbf69;
+  font-size: 1.1rem;
 }
 
-/* Footer Styling */
-.footer {
-  padding: 2rem 1rem;
-}
-.footer a {
-  color: #ff9f1c;
-}
-.footer a:hover {
-  color: #ffbf69;
-}
-
-/* Responsive tweaks */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .team-card .title {
-    font-size: 1.25rem;
-  }
-  .team-card .subtitle {
-    font-size: 0.9rem;
+  .testimonial-text {
+    font-size: 1rem;
   }
 }
