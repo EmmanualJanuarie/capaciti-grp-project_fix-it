@@ -1,82 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <!-- Bulma CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="images/wrench.png" />
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles/home-page.css" />
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CDN Link for Bulma.io -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+  <!-- Fav icon for website fix it  -->
+  <link rel="icon" type="image/x-icon" href="images/wrench.png">
+
+  <!-- font awesome link for css file -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
+
+
+  <!-- Utilizing link of main css  -->
+  <link rel="stylesheet" href="styles/home-page.css">
+
   <title>fix it | Homepage</title>
+
+  <!--                         Styling for meadia Queries                          -->
+   <style>
+
+@media(max-width: 1500px) {
+        .menu {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 80%;
+          height: 100vh;
+          position: fixed;
+          top: 0;
+          right: -100%;
+          z-index: 100;
+          background-color: #656565;
+          transition: all 0.2s ease-in-out;
+        }
+
+        #cat_dropdown {
+          color: white;
+        }
+
+        html {
+          overflow-y: scroll;
+        }
+
+        .menu-buttons {
+          display: none;
+        }
+
+        #categories_section {
+          display: none;
+        }
+
+        .open-menu, .close-menu {
+          display: block;
+        }
+
+        #check:checked ~ .menu {
+          right: 0;
+        }
+
+        .menu li {
+          margin-top: 40px;
+        }
+
+        .menu li a {
+          padding: 10px;
+          color: white;
+        }
+
+        #content-header {
+          font-size: 70px;
+          position: relative;
+          right: 270px;
+          top: 40px;
+        }
+
+        #landingPage_section .columns{
+            position: relative;
+            right: 260px;
+            display: flex;
+            flex-direction: row;
+            font-size: 25px;
+        }
+      }
+
+      @media(max-width: 700px) {
+        .menu {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 80%;
+          height: 100vh;
+          position: fixed;
+          top: 0;
+          right: -100%;
+          z-index: 100;
+          background-color: #656565;
+          transition: all 0.2s ease-in-out;
+        }
+
+        #cat_dropdown {
+          color: white;
+        }
+
+        html {
+          overflow-y: scroll;
+        }
+
+        .menu-buttons {
+          display: none;
+        }
+
+        #categories_section {
+          display: none;
+        }
+
+        .open-menu, .close-menu {
+          display: block;
+        }
+
+        #check:checked ~ .menu {
+          right: 0;
+        }
+
+        .menu li {
+          margin-top: 40px;
+        }
+
+        .menu li a {
+          padding: 10px;
+          color: white;
+        }
+
+        #content-header {
+          font-size: 70px;
+          position: relative;
+          right: 270px;
+          top: 40px;
+        }
+
+        #landingPage_section .columns{
+            position: relative;
+            right: 260px;
+            display: flex;
+            flex-direction: row;
+            font-size: 25px;
+        }
+      }
+
+      @media screen and (max-width: 610px) {
+        .menu {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 80%;
+          height: 100vh;
+          position: fixed;
+          top: 0;
+          right: -100%;
+          z-index: 100;
+          background-color: #656565;
+          transition: all 0.2s ease-in-out;
+        }
+
+        .menu li {
+          margin-top: 40px;
+        }
+
+        .menu li a {
+          padding: 10px;
+          color: white;
+        }
+
+        .open-menu, .close-menu {
+          display: block;
+        }
+
+        #check:checked ~ .menu {
+          right: 0;
+        }
+
+        .menu-buttons {
+          display: none;
+        }
+
+        #categories_section {
+          display: none;
+        }
+
+        #content-header {
+          font-size: 20px;
+          position: relative;
+          right: 190px;
+          top: 40px;
+        }
+
+        #cat_dropdown {
+          color: white;
+        }
+
+        html {
+          overflow-y: scroll;
+        }
+
+        #content-header{
+              font-size: 50px;
+              position: relative;
+              right: 190px;
+              top:40px;
+            }
+
+        #landingPage_section .columns{
+            position: relative;
+            right: 220px;
+            display: flex;
+            flex-direction: row;
+            font-size: 25px;
+        }
+      }
+
+
+      /* Unsupported devices */
+      @media screen and (max-width: 400px) {
+        .nav-bar{
+          display: none;
+        }
+
+        #content-header{
+             display: none;
+            }
+
+        #landingPage_section .columns{
+            display: none;
+        }
+
+        #landingPage_section {
+          background-image: url('/src/img/DEVICE-NOT-SUPPORTED.png');
+        }
+
+
+      }
+   </style>
 </head>
 <body>
-  <!-- NAVBAR SECTION -->
-  <header>
-  <nav>
-    <a href="index.html" id="navbar_logo">fix it.</a>
+    <!--                            NAVBAR SECTION [START]                           -->
+      <header>
+        <nav>
+            <ul class="nav-bar">
+                <li class="logo"><a class="navbar-item" id="navbar_logo" href="index.html">
+                    fix it.
+                </a></li>
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li><a href="about-page.html">About Us</a></li>
+                    <li><a href="services-page.html">Services</a></li>
+                    <li><a href="contact-page.html">Contact Us</a></li>
+                    <li><a href="#Browse by category" id="cat_dropdown">Browse by category <i class="fa-solid fa-caret-down" id="drp-arrow"></i></a></li>
 
-    <input type="checkbox" id="check" />
-    <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></label>
-    <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
+                    <span class="menu-buttons">
+                        <li>
+                            <a class="button" href="javascript:void(0);" id="signupBtn">Sign Out</a>
+                        </li>
+                    </span>
+                    <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></i></label>
+            </ul>
+        </nav>
+    </header>
 
-    <ul class="menu">
-      <li><a href="about-page.html">About Us</a></li>
-      <li><a href="services-page.html">Services</a></li>
-      <li><a href="contact-page.html">Contact Us</a></li>
-      <li><a href="#" id="cat_dropdown">Browse by category <i class="fa-solid fa-caret-down"></i></a></li>
-      <li><a href="javascript:void(0);" class="button is-orange" id="signupBtn">Sign Out</a></li>
-    </ul>
-  </nav>
-</header>
+  <!--                                   NAVBAR SECTION [END]                          -->
 
-  <!-- CATEGORIES SECTION -->
-  <section class="section is-medium" id="categories_section" style="display:none;">
+  <!--                            Categories SECTION [START]                           -->
+
+  <section class="section is-medium" id="categories_section">
     <div class="header_info">
       <h1 class="title">What are you looking for?</h1>
-      <h2 class="subtitle">Select a category to start your journey.</h2>
+    <h2 class="subtitle">
+      Select a category to start your journey.
+    </h2>
     </div>
-    <div class="grid-container">
-      <!-- Keep your grid cards as is, omitted here for brevity -->
-    </div>
+
+    <!-- grid for categories -->
+    <div class="grid-container"> 
+      <div class="grid-card">
+          <i class="fa-solid fa-seedling"></i>
+          <h2>Home Improvement and Renovationg</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-person-chalkboard"></i>
+          <h2>Education</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-computer"></i>
+          <h2>Information Technology</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-toolbox" id="mechanic_icon"></i>
+          <h2>Automotive Service</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-faucet-drip"></i>
+          <h2>Pumbing and Pipefitting.</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-paint-roller"></i>
+          <h2>Home Decor</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-car"></i>
+          <h2>Transport</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-regular fa-object-group"></i>
+          <h2>Creative Service</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-kitchen-set"></i>
+          <h2>Hospitality</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-house"></i>
+          <h2>Home and Personal Care</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-mask"></i>
+          <h2>Beauty and Wellness</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-plane-departure"></i>
+          <h2>Entertainment and Leisure</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-heart-pulse"></i>
+          <h2>Health and Fitness</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-coins"></i>
+          <h2>Financial and Insurance</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-paw"></i>
+          <h2>Pet Services</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-house-lock"></i>
+          <h2>Home Security</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-broom"></i>
+          <h2>Specialty Cleaning</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-truck-front"></i>
+          <h2>Moving and Relocation</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-laptop"></i>
+          <h2>Remote and Virtual Learning</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-stapler"></i>
+          <h2>Clerical Work</h2>
+      </div>
+      <div class="grid-card">
+        <i class="fa-solid fa-person-digging"></i>
+          <h2>Manual Labour</h2>
+      </div>
+</div>
+    
     <div class="close" id="close_btn">Close</div>
   </section>
 
-  <!-- LANDING PAGE SECTION -->
-  <section class="section is-large" id="landingPage_section">
-    <div class="card-container">
+  <!--                            Categories SECTION [End]                           -->
+
+
+    <!--                            Landing page columns  SECTION [START]                           -->
+    <section class="section is-large" id="landingPage_section">
+     <div class="card-container">
       <div class="card">
         <div class="card-content">
           <div class="content">
-            <span id="content-header">
-              Enhance Your Home Experience with <br /><u>Certified</u> Professionals
-            </span>
-            <br /><br />
-            <div class="columns">
-              <div class="column" id="seemore_col">
-                <button class="button is-link is-rounded" id="more_btn" style="background-color: white; color: black;">
-                  See more
-                </button>
-              </div>
-              <div class="column" id="contactus_col">
-                <button class="button is-rounded" id="contactus_btn">Contact Us</button>
-              </div>
-            </div>
+            <span id="content-header">Enhance Your Home Experience with <br><u>Certified</u> Professionals</span>
+            <br>  <br>
+
+               <div class="columns">
+                  <div class="column" id="seemore_col">
+                    <button class="button is-link is-rounded" style="background-color: white; color: black;" id="more_btn">See more</button>
+                  </div>
+
+                  <div class="column" id="contactus_col">
+                    <button class="button is-rounded" id="contactus_btn">Contact Us</button>
+                  </div>
+               </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+     </div>
+    </section>
+     <!--                            Landing page columns  SECTION [End]                           -->
+  
+  <!-- Script tag for landing page -->
+  <script src="script.js"></script>
 
-  <!-- JS -->
-  <script src="scripts/home-page.js"></script>
+  <!-- Utilizing scripting from Home page -->
+   <script>
+    // Variable for category section
+    let categories_section = document.getElementById('categories_section');
+
+   // Event listener for category section to toggle section
+document.getElementById('close_btn').addEventListener('click', () => {
+    categories_section.style.display = "none";
+    document.getElementById('landingPage_section').style.display = "block";
+    document.getElementById('drp-arrow').classList.remove('fa-caret-up');
+    document.getElementById('drp-arrow').classList.add('fa-caret-down');
+});
+
+// Event listener for category section to remove section
+document.getElementById('cat_dropdown').addEventListener('click', () => {
+    categories_section.style.display = "block";
+    document.getElementById('landingPage_section').style.display = "none";
+    document.getElementById('drp-arrow').classList.remove('fa-caret-down');
+    document.getElementById('drp-arrow').classList.add('fa-caret-up');
+});
+
+   </script>
+
+   <script>
+    const is_loggedin = localStorage.getItem("logged-In");
+    if(is_loggedin === 'Yes'){
+        document.getElementById('signupBtn').style.display ="none";
+        document.getElementById('loginBtn').style.display ="none";
+        document.getElementById('manageBtn').style.display ="block";
+    }
+   </script>
+
+   <script>
+    // Sign out functionality
+    document.getElementById('signupBtn').addEventListener('click', function() {
+        // Clear the login state
+        localStorage.removeItem("logged-In");
+        
+        // Redirect to the login page
+        window.location.href = 'index.html'; // Change 'index.html' to your actual login page URL
+    });
+</script>
 </body>
 </html>
