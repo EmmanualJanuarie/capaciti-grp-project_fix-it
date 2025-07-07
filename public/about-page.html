@@ -13,6 +13,29 @@
   <link rel="stylesheet" href="styles/about-page.css" />
 </head>
 <body>
+  <header>
+  <nav class="nav-bar" role="navigation" aria-label="main navigation">
+    <div id="navbar_logo">Fix It</div>
+    
+    <!-- Menu toggle for mobile -->
+    <input type="checkbox" id="check" />
+    <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="menu-buttons">
+      <button id="loginBtn" class="button is-small is-warning">Login</button>
+      <button id="signupBtn" class="button is-small is-warning">Sign Up</button>
+    </div>
+  </nav>
+</header>
+
 
   <!-- Hero Title -->
   <section class="hero is-white is-bold has-text-centered about-hero">
