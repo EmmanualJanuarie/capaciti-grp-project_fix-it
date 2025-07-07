@@ -1,159 +1,201 @@
+<!-- New About Us Page with Glider.js Carousel Integration -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-    <link rel="icon" type="image/x-icon" href="images/wrench.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
-    <link rel="stylesheet" href="styles/about-page.css">
-    <title>About Us</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Fix It</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #ffa500, #ff6347);
+      color: white;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .testimonial img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+    }
+
+    .team-member img {
+      border-radius: 1rem;
+      object-fit: cover;
+      height: 300px;
+      width: 100%;
+    }
+
+    .glider-contain {
+      margin: 2rem 0;
+    }
+
+    .glider-prev, .glider-next {
+      background-color: #ffa500;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar is-fixed-top">
-            <div class="navbar-brand">
-                <a class="navbar-item" id="navbar_logo" href="home-page.html">fix it.</a>
-                <div class="navbar-burger" id="burger" role="button" aria-label="menu" aria-expanded="false">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </div>
-            </div>
-            <div class="navbar-menu" id="navbarMenu">
-                <div class="navbar-end">
-                    <a class="navbar-item" href="about-page.html">About Us</a>
-                    <a class="navbar-item" href="services-page.html">Services</a>
-                    <a class="navbar-item" href="contact-page.html">Contact Us</a>
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">Browse by category</a>
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item" href="#">Category 1</a>
-                            <a class="navbar-item" href="#">Category 2</a>
-                            <a class="navbar-item" href="#">Category 3</a>
-                        </div>
-                    </div>
-                    <div class="navbar-item">
-                        <a class="button is-warning" id="signupBtn">Sign Out</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <!-- Hero Section -->
+  <section class="hero is-medium">
+    <div class="hero-body has-text-centered">
+      <p class="title is-1">Welcome to Fix It</p>
+      <p class="subtitle is-4">Empowering talent, connecting opportunities, and building a community where skills shine.</p>
+    </div>
+  </section>
 
-    <section class="section" id="categories_section">
-        <div class="header_info">
-            <h1 class="title">What are you looking for?</h1>
-            <h2 class="subtitle">Select a category to start your journey.</h2>
+  <!-- What We Do & Mission -->
+  <section class="section">
+    <div class="container">
+      <div class="columns is-variable is-8">
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-4">What We Do</p>
+              <p class="subtitle is-6">
+                Fix-It is a platform designed to help skilled individuals find clients and opportunities. Whether you're a freelancer, part-timer, or full-time pro, we connect you with those who need your services.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="grid-container"> 
-            <!-- Category Cards -->
-            <div class="grid-card"><i class="fa-solid fa-seedling"></i><h2>Home Improvement</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-person-chalkboard"></i><h2>Education</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-computer"></i><h2>Information Technology</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-toolbox"></i><h2>Automotive Service</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-faucet-drip"></i><h2>Plumbing</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-paint-roller"></i><h2>Home Decor</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-car"></i><h2>Transport</h2></div>
-            <div class="grid-card"><i class="fa-regular fa-object-group"></i><h2>Creative Service</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-kitchen-set"></i><h2>Hospitality</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-house"></i><h2>Home Care</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-mask"></i><h2>Beauty and Wellness</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-plane-departure"></i><h2>Entertainment</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-heart-pulse"></i><h2>Health and Fitness</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-coins"></i><h2>Financial Services</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-paw"></i><h2>Pet Services</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-house-lock"></i><h2>Home Security</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-broom"></i><h2>Cleaning Services</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-truck-front"></i><h2>Moving Services</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-laptop"></i><h2>Remote Learning</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-stapler"></i><h2>Clerical Work</h2></div>
-            <div class="grid-card"><i class="fa-solid fa-person-digging"></i><h2>Manual Labour</h2></div>
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-4">Our Mission</p>
+              <p class="subtitle is-6">
+                We aim to bridge the gap between skilled professionals and job opportunities by offering a space to display expertise, collaborate, and grow. Our community supports diversity, excellence, and opportunity.
+              </p>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="section" id="about-info">
-        <h1 class="title">Welcome to Fix It</h1>
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <p>What we do</p>
-                        <h2 class="subtitle">Fix-It connects skilled individuals with those in need of their expertise.</h2>
-                        <p>We provide a platform for professionals to showcase their talents and earn a livelihood.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <p>Our Mission</p>
-                        <h2 class="subtitle">To bridge the gap between skilled professionals and clients.</h2>
-                        <p>We aim to create a thriving community where individuals can display their skills and find job opportunities.</p>
-                    </div>
-                </div>
-            </div>
+  <!-- Testimonials Carousel -->
+  <section class="section has-background-light">
+    <div class="container">
+      <h2 class="section-title has-text-centered">What People Are Saying</h2>
+      <div class="glider-contain">
+        <div class="glider">
+          <div class="card testimonial has-text-centered p-4">
+            <img src="images/image1.jpg" alt="user" />
+            <p class="title is-5">Lihle Biko</p>
+            <p class="subtitle is-6">Marketing Director</p>
+            <p class="content">"I loved how the app allowed me to find a plumber real quick. My tap is fixed!"</p>
+          </div>
+          <div class="card testimonial has-text-centered p-4">
+            <img src="images/image2.jpg" alt="user" />
+            <p class="title is-5">Hope Well</p>
+            <p class="subtitle is-6">Software Developer</p>
+            <p class="content">"The service was good and the provider was so friendly."</p>
+          </div>
+          <div class="card testimonial has-text-centered p-4">
+            <img src="images/image3.jpg" alt="user" />
+            <p class="title is-5">Justin Dior</p>
+            <p class="subtitle is-6">Lecturer</p>
+            <p class="content">"I won't need to look for service providers again, thanks to Fix It."</p>
+          </div>
         </div>
-    </section>
+        <button class="glider-prev">«</button>
+        <button class="glider-next">»</button>
+      </div>
+    </div>
+  </section>
 
-    <section class="about-us-card-item" id="about-image">
-        <div class="card">
-            <img src="images/fixwrench.png.jpg" alt="fixit">
+  <!-- Meet the Team -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title has-text-centered">Meet Our Team</h2>
+      <div class="columns is-multiline">
+        <div class="column is-one-third">
+          <div class="card team-member">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/Emmanuel.png.jfif" alt="Emmanual" />
+              </figure>
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-5">Emmanual</p>
+              <p class="subtitle is-6">Founder & Developer</p>
+            </div>
+          </div>
         </div>
-    </section>
+        <!-- Add more team members -->
+      </div>
+    </div>
+  </section>
 
-    <section class="section" id="footer_section">
-        <div class="columns">
-            <div class="column">
-                <div class="footer-brand">
-                    <a class="navbar-item" id="footer_logo" href="home-page.html">fix it.</a>
-                </div>
-                <p id="footer_logo_subtext">Empowering skilled individuals to connect, create, and thrive.</p>
-                <div class="contact_logo">
-                    <a href="#fixit_facebook_account"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href="#fixit_instagram_account"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#fixit_x.com_account"><i class="fa-brands fa-square-x-twitter"></i></a>
-                    <a href="#fixit_LinkedIn_account"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="column">
-                <span class="column2_header">Services</span>
-                <ul id="column2_list">
-                    <li><a href="#" class="list-item">Education</a></li>
-                    <li><a href="#" class="list-item">Home Decor</a></li>
-                    <li><a href="#" class="list-item">Transport</a></li>
-                    <li><a href="#" class="list-item">Hospitality</a></li>
-                    <li><a href="#" class="list-item">Finance</a></li>
-                    <li><a href="active-services-page.html" class="list-item">More...</a></li>
-                </ul>
-            </div>
-            <div class="column">
-                <span class="column3_header">Useful Links</span>
-                <ul id="column3_list"> 
-                    <li><a href="services-page.html" class="list-item">Services</a></li>
-                    <li><a href="#faqs" class="list-item">FAQs</a></li>
-                    <li><a href="#help" class="list-item">Help</a></li>
-                </ul>
-            </div>
-            <div class="column">
-                <span class="column4_header">Company</span>
-                <ul id="column4_list">
-                    <li><a href="#" class="list-item">About Us</a></li>
-                    <li><a href="#" class="list-item">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <hr>
-        <p class="copyright-info">Copyright &copy; 2025 Design and Develop by Tri-tech</p>
-    </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Fix It</strong> by Tri-Tech. Empowering communities through skilled connections.<br>
+        &copy; 2025 All rights reserved.
+      </p>
+    </div>
+  </footer>
 
-    <script src="scripts/about-page.js"></script>  
-    <script>
-        // Navbar burger functionality
-        document.getElementById('burger').addEventListener('click', function() {
-            const menu = document.getElementById('navbarMenu');
-            menu.classList.toggle('is-active');
-        });
-    </script>
+  <!-- JS for Glider Carousel -->
+  <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+      new Glider(document.querySelector('.glider'), {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        draggable: true,
+        dots: '.dots',
+        arrows: {
+          prev: '.glider-prev',
+          next: '.glider-next'
+        },
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
 </body>
+
 </html>
